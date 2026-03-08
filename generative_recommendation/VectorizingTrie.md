@@ -36,7 +36,7 @@
 
 ## 推荐等级：有实践价值
 
-![alt text](./imgs/VectorizingTrie.png)
+![alt text](../imgs/VectorizingTrie.png)
 
 **请帮忙点赞、转发，谢谢。欢迎干货投稿 \ 论文宣传\ 合作交流**
 
