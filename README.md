@@ -22,8 +22,25 @@
 2. **克隆仓库**：`git clone https://github.com/lmxhappy/StepByStepLearningAI.git`
 3. **贡献**：欢迎提交PR，分享你的学习笔记或代码实现。我们一起进步！
 
+## 目录结构 & 内容说明
+
+### 📁 子目录导航
+
+- **[跨域](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/CrossDomainRecommendation)**
+  跨领域推荐。
+
+- **[用户行为序列建模](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/BehaviorSequenceModeling)**
+  用户的历史行为序列建模，包括超长序列建模和普通序列建模。
+
+- **[生成式推荐](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/GR)**
+  生成式推荐。
+
+- **[SID](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/SID)**
+  神经网络基础、CNN、RNN、Transformer 等深度学习模型与实践。
+
+
 ## 联系方式
-- 作者：思达-刘明星
+- 作者：刘明星
 - 微信：lmxhappy
 - 知乎：[@思达-刘明星](https://www.zhihu.com/people/wang-wang-20-73)
 - 反馈：欢迎在公众号留言或issue中讨论。
