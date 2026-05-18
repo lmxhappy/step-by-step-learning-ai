@@ -67,6 +67,10 @@
   两塔架构的深度召回。
   - [CS3](./deep-retrieval/cs3.md)
 
+- **[损失函数]()**
+  排序、分类等核心损失函数的创新与优化。
+  - [VarBPR](./loss-functions/tpami.md)
+
 - **[ML Infra]()**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
   - [IEFF](./ml-infra/IEFF.md)
