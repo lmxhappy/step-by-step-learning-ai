@@ -36,6 +36,7 @@
   - [STCA](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/stca.md)
   - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/Ultra-HSTU.md)
   - [MoS](./behavior-sequence-modeling/mos.md)
+  - [Sample Is Feature](./behavior-sequence-modeling/sample-is-feature.md)
 
 
 - **[生成式推荐](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/GR)**
