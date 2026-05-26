@@ -52,6 +52,10 @@
   - [QuaSID](./sid/QuaSID.md)
   - [DGI](./sid/DGI.md)
 
+- **[冷启动](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/cold-start)**
+  冷启动问题的解决方案，包括合成数据生成等方向。
+  - [LLM合成查询生成 (Airbnb)](./cold-start/llm-synthetic-query.md)
+
 - **[特征交叉]()**
   - [MGDIN](./feature-cross/MGDIN.md)
   - [EST](./feature-cross/est.md)
