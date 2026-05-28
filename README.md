@@ -71,6 +71,7 @@
 - **[双塔召回](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/deep-retrieval)**
   两塔架构的深度召回。
   - [CS3](./deep-retrieval/cs3.md)
+  - [LLM语义召回 (Meta)](./deep-retrieval/llm-retrieval.md)
 
 - **[损失函数]()**
   排序、分类等核心损失函数的创新与优化。
