@@ -37,6 +37,7 @@
   - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/Ultra-HSTU.md)
   - [MoS](./behavior-sequence-modeling/mos.md)
   - [Sample Is Feature](./behavior-sequence-modeling/sample-is-feature.md)
+  - [GenLI 生成式长兴趣建模 (美团)](./behavior-sequence-modeling/genli.md)
 
 
 - **[生成式推荐](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/GR)**
