@@ -47,6 +47,7 @@
   - [VectorizingTrie](./generative-recommendation/static.md)
   - [GEM-Rec](./generative-recommendation/gem-rec.md)
   - [RCLRec](./generative-recommendation/rclrec.md)
+  - [级联生成式LLM首页个性化 (Instacart)](./generative-recommendation/instacart-cascaded-generative.md)
 
 - **[SID](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/SID)**
   语义ID学习与生成式检索。
