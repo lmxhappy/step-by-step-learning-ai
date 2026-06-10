@@ -13,10 +13,9 @@
 
 SIF由两个关键组件组成：
 ### 1. 对序列item做分词
-
 每个历史交互item是一个完整的特征元组（用户画像，物品，上下文，交叉特征），将所有这些特征都用起来，但是又不能是一个特长的拼接表征，所以对其做信息的压缩，那么就要做分词。
 
-方法：先按语义把特征分成 G个组，每组再按粒度 B 把特征分成小组，每小组是一个sub-token，使用独立的线性投影，投影到固定维度d₀。对每个 sub-token 做 M 级 残差量化(RVQ)，得到离散码本索引。这样，一个序列item被压缩成T个token，对应极少的 bits（如648 bits），却保留了几乎全部原始样本信息。
+方法：先按语义把特征分成 G个组，每组再按粒度 B 把特征分成小组，每小组是一个sub-token，使用独立的线性投影，投影到固定维度d₀。对每个 sub-token 做 M 级 残差量化(RVQ)，得到离散码本索引。这样，一个序列item被压缩成T（T = G × B × M）个token，对应极少的 bits（如648 bits），却保留了几乎全部原始样本信息。
 
 不像RQ-VAE，RVQ是做多级残差量化，没有完整的 Encoder-Decoder 重建结构，用多个 codebook 向量叠加来近似原始向量，精度更高。
 
@@ -30,8 +29,8 @@ SIF由两个关键组件组成：
 基于 MLP-Mixer 思想的分解设计，对序列（由历史item和target组成的）做建模，由 N 个 SIF Block 堆叠而成。之后，对target item的 T 个 sub-token 做 mean-pooling，再接两层 MLP 得到 CTR/CVR 分数。
 
 其中，每个 Block 做三步分解（关键在于注意力方向的分离）：
-* 行注意力：每个序列item内部的 T 个 sub-token 之间做 self-attention，捕捉 user-item-context 等组间相关性。
-* 列注意力：在同一 sub-token 位置上，所有历史序列item（包括target item）做 self-attention，建模时序动态，让当前请求能充分“看”历史样本。
+* 行注意力：每个序列item内部的 T 个 sub-token 之间做 self-attention，捕捉 user-item-context 等组间相关性。这样，每个sub-token就融合了其它sub-token的信息。
+* 列注意力：在同一 sub-token 位置上，所有历史序列item（包括target item）做 self-attention，建模时序动态，让当前请求能充分“看”历史样本。这样，每个sub-token就融合了其它历史序列item同位置的sub-token的信息。特别的，target item的每个sub-token融合了历史序列的同位置的sub-token。
 * Token-level FFN：位置-wise 的非线性变换。
 
 两个损失：
@@ -44,6 +43,7 @@ SIF由两个关键组件组成：
 ## 心得：
 * 美团多篇论文专注将item的特征尽可能的用起来，提升模型效果，这是一种胖化。算是引领了一个方向。
 * 更多特征大概率是有利于序列建模的，但是限于之前的技术的局限，无法将大量特征作为序列item的表征。但是，自从近年来残差量化技术成熟之后，用它可以将大量特征，设置是全量特征都融入其表征了。
+* RVQ 通常用于压缩多模态大模型（如视频、文本编码器）输出的连续语义向量。本文则将 RVQ 用在普通的结构化特征组 embed 上，目的不是压缩语义，而是把几百个异构特征字段统一成相同格式的 token，方便接入 Transformer。这是对 RVQ 的一种非常规用法。
 
 ## 愚见
 * 要大胆的创造术语，或者把口语化的说法直接写到论文里，在这方面Meta就很敢。本文对序列item做分词，其实就是胖化。

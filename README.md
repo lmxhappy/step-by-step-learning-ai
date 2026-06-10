@@ -56,9 +56,10 @@
   - [QuaSID](./sid/QuaSID.md)
   - [DGI](./sid/DGI.md)
 
-- **[冷启动](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/cold-start)**
-  冷启动问题的解决方案，包括合成数据生成等方向。
-  - [LLM合成查询生成 (Airbnb)](./cold-start/llm-synthetic-query.md)
+- **[LLM4Rec](./llm4rec/)**
+  LLM 在推荐/召回中的各类应用范式。
+  - [LLM语义召回 (Meta) — LLM as annotator](./llm4rec/meta-llm-retrieval.md)
+  - [LLM合成查询生成 (Airbnb) — 数据增强](./llm4rec/llm-synthetic-query.md)
 
 - **[特征交叉]()**
   - [MGDIN](./feature-cross/MGDIN.md)
@@ -75,7 +76,6 @@
 - **[双塔召回](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/deep-retrieval)**
   两塔架构的深度召回。
   - [CS3](./deep-retrieval/cs3.md)
-  - [LLM语义召回 (Meta)](./deep-retrieval/llm-retrieval.md)
 
 - **[损失函数]()**
   排序、分类等核心损失函数的创新与优化。
