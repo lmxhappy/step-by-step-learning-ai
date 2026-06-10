@@ -26,65 +26,62 @@
 
 ### 📁 子目录导航
 
-- **[跨域](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/CrossDomainRecommendation)**
+- **[跨域](./cross-domain-recommendation/)**
   跨领域推荐。
-  - [MTFM](./cross-domain-recommendation/MTFM.md)
+  - [MTFM](./cross-domain-recommendation/meituan-mtfm.md)
   - [YouTube Music跨域知识蒸馏](./cross-domain-recommendation/youtube-music-cross-domain.md)
 
-- **[用户行为序列建模](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/BehaviorSequenceModeling)**
+- **[用户行为序列建模](./behavior-sequence-modeling/)**
   用户的历史行为序列建模，包括超长序列建模和普通序列建模。
-  - [STCA](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/stca.md)
+  - [STCA](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/bytedance-stca.md)
   - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/Ultra-HSTU.md)
-  - [MoS](./behavior-sequence-modeling/mos.md)
-  - [Sample Is Feature](./behavior-sequence-modeling/sample-is-feature.md)
-  - [GenLI 生成式长兴趣建模 (美团)](./behavior-sequence-modeling/genli.md)
+  - [MoS](./behavior-sequence-modeling/meta-mos.md)
+  - [Sample Is Feature](./behavior-sequence-modeling/meituan-sample-is-feature.md)
+  - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
   - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/uxsid.md)
 
-
-- **[生成式推荐](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/GR)**
+- **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
-  - [OneLive](./generative-recommendation/OneLive.md)
-  - [Sigma](./generative-recommendation/Sigma.md)
-  - [VectorizingTrie](./generative-recommendation/static.md)
-  - [GEM-Rec](./generative-recommendation/gem-rec.md)
-  - [RCLRec](./generative-recommendation/rclrec.md)
-  - [级联生成式LLM首页个性化 (Instacart)](./generative-recommendation/instacart-cascaded-generative.md)
-  - [CQ-SID 搜索LLM生成式召回 (阿里)](./generative-recommendation/cq-sid.md)
+  - [OneLive (快手)](./generative-recommendation/kuaishou-onelive.md)
+  - [Sigma (阿里)](./generative-recommendation/ali-sigma.md)
+  - [VectorizingTrie (Google)](./generative-recommendation/google-static.md)
+  - [GEM-Rec (Google)](./generative-recommendation/google-gem-rec.md)
+  - [RCLRec (阿里)](./generative-recommendation/ali-rclrec.md)
+  - [CQ-SID 搜索LLM生成式召回 (阿里)](./generative-recommendation/ali-cq-sid.md)
 
-- **[SID](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/SID)**
+- **[SID](./sid/)**
   语义ID学习与生成式检索。
-  - [QuaSID](./sid/QuaSID.md)
-  - [DGI](./sid/DGI.md)
+  - [QuaSID (快手)](./sid/kuaishou-quasid.md)
+  - [DGI (阿里)](./sid/ali-dgi.md)
 
 - **[LLM4Rec](./llm4rec/)**
   LLM 在推荐/召回中的各类应用范式。
   - [LLM语义召回 (Meta) — LLM as annotator](./llm4rec/meta-llm-retrieval.md)
-  - [LLM合成查询生成 (Airbnb) — 数据增强](./llm4rec/llm-synthetic-query.md)
+  - [LLM合成查询生成 (Airbnb) — 数据增强](./llm4rec/airbnb-llm-synthetic-query.md)
+  - [级联生成式LLM首页个性化 (Instacart) — LLM as ranker](./llm4rec/instacart-cascaded-generative.md)
 
-- **[特征交叉]()**
-  - [MGDIN](./feature-cross/MGDIN.md)
-  - [EST](./feature-cross/est.md)
+- **[特征交叉](./feature-cross/)**
+  - [MGDIN (阿里)](./feature-cross/ali-mgdin.md)
+  - [EST (阿里)](./feature-cross/ali-est.md)
 
-- **[I2I推荐]()**
+- **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
-  - [DAIAN](./item-to-item/daian.md)
+  - [DAIAN (Google)](./item-to-item/google-daian.md)
 
-- **[大规模召回]()**
-  工业级大规模召回与高效检索。
-  - [HILL](./hill.md)
-
-- **[双塔召回](https://github.com/lmxhappy/StepByStepLearningAI/tree/main/deep-retrieval)**
+- **[双塔召回](./deep-retrieval/)**
   两塔架构的深度召回。
-  - [CS3](./deep-retrieval/cs3.md)
+  - [CS3 (快手)](./deep-retrieval/kuaishou-cs3.md)
+  - [HILL (Meta)](./deep-retrieval/meta-hill.md)
+  - [HSNN (Meta)](./deep-retrieval/meta-hsnn.md)
 
-- **[损失函数]()**
+- **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
-  - [VarBPR](./loss-functions/tpami.md)
+  - [VarBPR](./loss-func/varbpr.md)
 
-- **[ML Infra]()**
+- **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
-  - [IEFF](./ml-infra/IEFF.md)
-  - [Versioned Late Materialization](./ml-infra/paper_2604.24806.md)
+  - [IEFF (Meta)](./ml-infra/meta-ieff.md)
+  - [Versioned Late Materialization](./ml-infra/meta_late_materialization.md)
 
 ## 联系方式
 - 作者：刘明星
