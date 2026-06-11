@@ -1,6 +1,10 @@
 # Step By Step Learning AI
 
-欢迎来到 **StepByStepLearningAI** 仓库！这个仓库是微信公众号“稳扎稳打学AI”的配套资源库，旨在帮助大家逐步、系统地学习人工智能，特别是推荐算法领域。我们每天精挑细选最优质、最新鲜的推荐算法论文，陪你一起保持进步、不断精进。
+[![GitHub stars](https://img.shields.io/github/stars/lmxhappy/step-by-step-learning-ai?style=social)](https://github.com/lmxhappy/step-by-step-learning-ai)
+
+如果这个仓库对你有帮助，欢迎点击右上角 **Star ⭐** 支持一下，让更多人发现它！
+
+欢迎来到 **StepByStepLearningAI** 仓库！这个仓库是微信公众号”稳扎稳打学AI”的配套资源库，旨在帮助大家逐步、系统地学习人工智能，特别是推荐算法领域。我们每天精挑细选最优质、最新鲜的推荐算法论文，陪你一起保持进步、不断精进。
 
 ## 关于公众号“稳扎稳打学AI”
 - **公众号介绍**：关注我，每天为你精选推荐算法paper，帮助你稳扎稳打地学习AI。公众号由刘明星（微信: lmxhappy）运营，内容聚焦于推荐、广告和搜索等。
