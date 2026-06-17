@@ -87,6 +87,10 @@
   - [IEFF (Meta)](./ml-infra/meta-ieff.md)
   - [Versioned Late Materialization](./ml-infra/meta_late_materialization.md)
 
+- **[长尾问题](./long-tail/)**
+  长尾样本、稀疏特征、低频物品的建模与优化。
+  - [UTTSI 特征随机丢弃+集成解决稀疏样本预测不准 (阿里)](./long-tail/uttsi.md)
+
 ## 联系方式
 - 作者：刘明星
 - 微信：lmxhappy
