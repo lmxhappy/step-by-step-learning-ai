@@ -43,6 +43,7 @@
   - [Sample Is Feature](./behavior-sequence-modeling/meituan-sample-is-feature.md)
   - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
   - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/uxsid.md)
+  - [TokenMinds 用户生成式表征双输出 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
