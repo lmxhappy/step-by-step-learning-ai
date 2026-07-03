@@ -44,6 +44,7 @@
   - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
   - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/uxsid.md)
   - [TokenMinds 用户生成式表征双输出 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
+  - [EST (阿里)](./behavior-sequence-modeling/ali-est.md)
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
@@ -67,7 +68,6 @@
 
 - **[特征交叉](./feature-cross/)**
   - [MGDIN (阿里)](./feature-cross/ali-mgdin.md)
-  - [EST (阿里)](./feature-cross/ali-est.md)
 
 - **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
