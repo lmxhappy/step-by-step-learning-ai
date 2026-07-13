@@ -44,6 +44,7 @@
   - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
   - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/uxsid.md)
   - [TokenMinds 用户生成式表征双输出 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
+  - [UniSGR 生成式SID与排序统一框架 (阿里)](./behavior-sequence-modeling/unisgr.md)
   - [EST (阿里)](./behavior-sequence-modeling/ali-est.md)
 
 - **[生成式推荐](./generative-recommendation/)**
@@ -54,11 +55,11 @@
   - [GEM-Rec (Google)](./generative-recommendation/google-gem-rec.md)
   - [RCLRec (阿里)](./generative-recommendation/ali-rclrec.md)
   - [CQ-SID 搜索LLM生成式召回 (阿里)](./generative-recommendation/ali-cq-sid.md)
+  - [DGI (阿里)](./generative-recommendation/ali-dgi.md)
 
 - **[SID](./sid/)**
   语义ID学习与生成式检索。
   - [QuaSID (快手)](./sid/kuaishou-quasid.md)
-  - [DGI (阿里)](./sid/ali-dgi.md)
 
 - **[LLM4Rec](./llm4rec/)**
   LLM 在推荐/召回中的各类应用范式。
