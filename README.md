@@ -38,14 +38,15 @@
 - **[用户行为序列建模](./behavior-sequence-modeling/)**
   用户的历史行为序列建模，包括超长序列建模和普通序列建模。
   - [STCA](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/bytedance-stca.md)
-  - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/Ultra-HSTU.md)
+  - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/meta-ultra-HSTU.md)
   - [MoS](./behavior-sequence-modeling/meta-mos.md)
   - [Sample Is Feature](./behavior-sequence-modeling/meituan-sample-is-feature.md)
   - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
-  - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/uxsid.md)
+  - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)
   - [TokenMinds 用户生成式表征双输出 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
-  - [UniSGR 生成式SID与排序统一框架 (阿里)](./behavior-sequence-modeling/unisgr.md)
-  - [EST (阿里)](./behavior-sequence-modeling/ali-est.md)
+  - [UniSGR 生成式SID与排序统一框架 (阿里)](./behavior-sequence-modeling/alibaba-unisgr.md)
+  - [CMSL 多序列构造/纯净意图流 (Meta)](./behavior-sequence-modeling/meta-cmsl.md)
+  - [EST (阿里)](./behavior-sequence-modeling/alibaba-est.md)
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
@@ -60,6 +61,7 @@
 - **[SID](./sid/)**
   语义ID学习与生成式检索。
   - [QuaSID (快手)](./sid/kuaishou-quasid.md)
+  - [AKT-Rec 聚类相关特征提升长尾 (阿里)](./sid/alibaba-akt-rec.md)
 
 - **[LLM4Rec](./llm4rec/)**
   LLM 在推荐/召回中的各类应用范式。
@@ -72,17 +74,22 @@
 
 - **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
-  - [DAIAN (Google)](./item-to-item/google-daian.md)
+  - [DAIAN (阿里)](./item-to-item/alibaba-daian.md)
 
 - **[双塔召回](./deep-retrieval/)**
   两塔架构的深度召回。
   - [CS3 (快手)](./deep-retrieval/kuaishou-cs3.md)
   - [HILL (Meta)](./deep-retrieval/meta-hill.md)
   - [HSNN (Meta)](./deep-retrieval/meta-hsnn.md)
+  - [RankGraph 聚类用于图召回 (Meta)](./deep-retrieval/graph-retrieval/rankgraph-2.md)
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
   - [VarBPR](./loss-func/varbpr.md)
+
+- **[表征学习](./representation-learning/)**
+  嵌入表征质量、表示坍缩等问题的建模与优化。
+  - [RankUp 解决大规模排序模型表示坍缩 (腾讯)](./representation-learning/tencent-rankup.md)
 
 - **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。

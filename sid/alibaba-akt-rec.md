@@ -10,6 +10,7 @@
 
 ## 解读：
 在原有特征的基础上，增加了user和target的所在簇的相关特征。
+
 具体的，将 user 和 item 的表征显式分解为 Cluster Embedding 与 Individual Embedding，并通过对比学习和正交正则化，提升了 cluster 级表征的质量。在此基础上，通过 Target Attention 建模个体粒度用户兴趣；同时，利用 semantic ID 进行硬检索，聚合同簇特征，建模簇粒度用户兴趣。最终通过自适应门控将两个视图融合，得到更全面的表示输入主网络。
 
 ### （1） user和item的量化
