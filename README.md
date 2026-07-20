@@ -71,6 +71,7 @@
 
 - **[特征交叉](./feature-cross/)**
   - [MGDIN (阿里)](./feature-cross/ali-mgdin.md)
+  - [SlimPer 多层多槽位Target Attention增强 (Meta)](./feature-cross/meta-slimper.md)
 
 - **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
