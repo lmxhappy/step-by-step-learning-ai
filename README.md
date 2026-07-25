@@ -32,75 +32,75 @@
 
 - **[跨域](./cross-domain-recommendation/)**
   跨领域推荐。
-  - [MTFM](./cross-domain-recommendation/meituan-mtfm.md)
-  - [YouTube Music跨域知识蒸馏](./cross-domain-recommendation/youtube-music-cross-domain.md)
+  - [MTFM — 异构多场景推荐 Foundation Model (美团)](./cross-domain-recommendation/meituan-mtfm.md)
+  - [YouTube Music 跨域蒸馏 — 零样本跨域知识蒸馏，新歌收听+11% (YouTube)](./cross-domain-recommendation/youtube-music-cross-domain.md)
 
 - **[用户行为序列建模](./behavior-sequence-modeling/)**
   用户的历史行为序列建模，包括超长序列建模和普通序列建模。
-  - [STCA](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/bytedance-stca.md)
-  - [Ultra-HSTU](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/meta-ultra-HSTU.md)
-  - [MoS](./behavior-sequence-modeling/meta-mos.md)
-  - [Sample Is Feature](./behavior-sequence-modeling/meituan-sample-is-feature.md)
-  - [GenLI 生成式长兴趣建模](./behavior-sequence-modeling/meta-genli.md)
-  - [UxSID 超长序列建模 (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)
-  - [TokenMinds 用户生成式表征双输出 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
-  - [UniSGR 生成式SID与排序统一框架 (阿里)](./behavior-sequence-modeling/alibaba-unisgr.md)
-  - [CMSL 多序列构造/纯净意图流 (Meta)](./behavior-sequence-modeling/meta-cmsl.md)
-  - [EST (阿里)](./behavior-sequence-modeling/alibaba-est.md)
+  - [STCA — 超长序列建模，完播率+3% (字节)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/bytedance-stca.md)
+  - [Ultra-HSTU — HSTU 2.0 超长序列建模 (Meta)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/meta-ultra-HSTU.md)
+  - [MoS — 序列聚类+MoE 搞定长序列 (Meta)](./behavior-sequence-modeling/meta-mos.md)
+  - [Sample Is Feature — 序列样本分词，CTR+2% (美团)](./behavior-sequence-modeling/meituan-sample-is-feature.md)
+  - [GenLI — 生成式长兴趣建模，RPM+1.6% (美团)](./behavior-sequence-modeling/meituan-genli.md)
+  - [UxSID — 用聚类搞定超长序列建模，收入+0.3% (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)
+  - [TokenMinds — 用户生成式SID特征双输出表征 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
+  - [UniSGR — 增加用户SID特征，GMV+6% (阿里)](./behavior-sequence-modeling/alibaba-unisgr.md)
+  - [CMSL — 用户行为序列转成纯净意图流 (Meta)](./behavior-sequence-modeling/meta-cmsl.md)
+  - [EST — 异构特征统一建模，RPM+3% (阿里)](./behavior-sequence-modeling/alibaba-est.md)
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
-  - [OneLive (快手)](./generative-recommendation/kuaishou-onelive.md)
-  - [Sigma (阿里)](./generative-recommendation/ali-sigma.md)
-  - [VectorizingTrie (Google)](./generative-recommendation/google-static.md)
-  - [GEM-Rec (Google)](./generative-recommendation/google-gem-rec.md)
-  - [RCLRec (阿里)](./generative-recommendation/ali-rclrec.md)
-  - [CQ-SID 搜索LLM生成式召回 (阿里)](./generative-recommendation/ali-cq-sid.md)
-  - [DGI (阿里)](./generative-recommendation/ali-dgi.md)
+  - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
+  - [Sigma — 生成式推荐，GMV+8% (阿里)](./generative-recommendation/ali-sigma.md)
+  - [VectorizingTrie — 生成式召回解码提速最高1000倍 (Google)](./generative-recommendation/google-static.md)
+  - [GEM-Rec — 统一推荐与广告的生成式推荐 (Google)](./generative-recommendation/google-gem-rec.md)
+  - [RCLRec — 稀疏目标的生成式推荐，广告收入+2% (阿里国际)](./generative-recommendation/ali-rclrec.md)
+  - [CQ-SID — 搜索LLM生成式召回，贡献七成成交 (阿里)](./generative-recommendation/ali-cq-sid.md)
+  - [DGI — SID与GR联合训练，RPM+1.11% (阿里)](./generative-recommendation/ali-dgi.md)
 
 - **[SID](./sid/)**
   语义ID学习与生成式检索。
-  - [QuaSID (快手)](./sid/kuaishou-quasid.md)
-  - [AKT-Rec 聚类相关特征提升长尾 (阿里)](./sid/alibaba-akt-rec.md)
+  - [QuaSID — SID 量化新方法，GMV+2% (快手)](./sid/kuaishou-quasid.md)
+  - [AKT-Rec — 聚类相关特征提升长尾，GMV+3% (阿里)](./sid/alibaba-akt-rec.md)
 
 - **[LLM4Rec](./llm4rec/)**
   LLM 在推荐/召回中的各类应用范式。
-  - [LLM语义召回 (Meta) — LLM as annotator](./llm4rec/meta-llm-retrieval.md)
-  - [LLM合成查询生成 (Airbnb) — 数据增强](./llm4rec/airbnb-llm-synthetic-query.md)
-  - [级联生成式LLM首页个性化 (Instacart) — LLM as ranker](./llm4rec/instacart-cascaded-generative.md)
+  - [LLM语义召回 — LLM as annotator (Meta)](./llm4rec/meta-llm-retrieval.md)
+  - [LLM合成查询生成 — 数据增强 (Airbnb)](./llm4rec/airbnb-llm-synthetic-query.md)
+  - [级联生成式LLM首页个性化 — LLM as ranker (Instacart)](./llm4rec/instacart-cascaded-generative.md)
 
 - **[特征交叉](./feature-cross/)**
-  - [MGDIN (阿里)](./feature-cross/ali-mgdin.md)
-  - [SlimPer 多层多槽位Target Attention增强 (Meta)](./feature-cross/meta-slimper.md)
-  - [DANet 折扣率显式建模 (阿里)](./feature-cross/ali-danet.md)
+  - [MGDIN — 特征交叉新方法，CTR+3% (阿里)](./feature-cross/ali-mgdin.md)
+  - [SlimPer — 多层多槽位 Target Attention 增强 (Meta)](./feature-cross/meta-slimper.md)
+  - [DANet — 折扣率显式建模，GMV+2% (阿里)](./feature-cross/ali-danet.md)
 
 - **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
-  - [DAIAN (阿里)](./item-to-item/alibaba-daian.md)
+  - [DAIAN — 详情页 I2I 推荐，成交额+2% (阿里)](./item-to-item/alibaba-daian.md)
 
 - **[双塔召回](./deep-retrieval/)**
   两塔架构的深度召回。
-  - [CS3 (快手)](./deep-retrieval/kuaishou-cs3.md)
-  - [HILL (Meta)](./deep-retrieval/meta-hill.md)
-  - [HSNN (Meta)](./deep-retrieval/meta-hsnn.md)
-  - [RankGraph 聚类用于图召回 (Meta)](./deep-retrieval/graph-retrieval/rankgraph-2.md)
+  - [CS3 — 双塔召回，广告收入最高+8% (快手)](./deep-retrieval/kuaishou-cs3.md)
+  - [HILL — 树状聚类索引+深度召回，业务指标+2.57% (Meta)](./deep-retrieval/meta-hill.md)
+  - [HSNN — 深度召回，业务指标+3% (Meta)](./deep-retrieval/meta-hsnn.md)
+  - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/graph-retrieval/rankgraph-2.md)
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
-  - [VarBPR](./loss-func/varbpr.md)
+  - [VarBPR — 改进 BPR 成对损失，应对隐式反馈噪声](./loss-func/varbpr.md)
 
 - **[表征学习](./representation-learning/)**
   嵌入表征质量、表示坍缩等问题的建模与优化。
-  - [RankUp 解决大规模排序模型表示坍缩 (腾讯)](./representation-learning/tencent-rankup.md)
+  - [RankUp — 解决大规模排序模型表示坍缩 (腾讯)](./representation-learning/tencent-rankup.md)
 
 - **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
-  - [IEFF (Meta)](./ml-infra/meta-ieff.md)
-  - [Versioned Late Materialization](./ml-infra/meta_late_materialization.md)
+  - [IEFF — 特征优雅下线，又快又稳 (Meta)](./ml-infra/meta-ieff.md)
+  - [Versioned Late Materialization — 推荐工程架构/特征物化 (Meta)](./ml-infra/meta_late_materialization.md)
 
 - **[长尾问题](./long-tail/)**
   长尾样本、稀疏特征、低频物品、新用户、新item的建模与优化。
-  - [UTTSI 特征随机丢弃+集成解决稀疏样本预测不准 (阿里)](./long-tail/uttsi.md)
+  - [UTTSI — 特征随机丢弃+集成解决稀疏样本预测不准 (阿里)](./long-tail/uttsi.md)
 
 ## 联系方式
 - 作者：刘明星
