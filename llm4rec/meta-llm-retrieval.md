@@ -5,7 +5,7 @@
 ### 论文：LLM Retrieval for Stable and Predictable Ad Recommendations
 ### 网址：https://arxiv.org/pdf/2605.21969
 ### 公司：Meta
-### 思想：LLM的强大理解能力
+### 思想：LLM的理解能力
 ### 方向：召回+LLM4rec+LLM as annotator
 
 ## 解读：

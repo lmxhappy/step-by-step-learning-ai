@@ -5,7 +5,7 @@
 ### 论文：RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation
 ### 网址：https://arxiv.org/html/2606.18379
 ### 公司：Meta
-### 思想：聚类+简化+端对端
+### 思想：聚类、端对端
 ### 方向：图学习+召回+语义SID
 
 ## 解读：

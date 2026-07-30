@@ -5,7 +5,7 @@
 ### 论文：Sample Is Feature: Beyond Item-Level, Toward Sample-Level Tokens for Unified Large Recommender Models
 ### 网址：https://arxiv.org/pdf/2604.15650
 ### 公司：美团
-### 思想：更多数据
+### 思想：更多特征入模、残差量化
 ### 方向：序列建模
 
 ## 解读：

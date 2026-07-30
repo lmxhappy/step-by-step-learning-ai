@@ -5,7 +5,7 @@
 ### 论文：RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems
 ### 网址：https://arxiv.org/html/2604.17878
 ### 公司：腾讯
-### 思想：正则化、冗余、蒸馏、主动注入结构化先验
+### 思想：正则化、知识蒸馏、注入先验
 ### 方向：表示学习
 ## 解读：
 通过 5 个输入阶段的增强机制，让 MetaFormer类模型的特征秩保持"初始高、深层稳定"。

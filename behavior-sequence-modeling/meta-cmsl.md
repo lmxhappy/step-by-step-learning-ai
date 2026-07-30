@@ -5,7 +5,7 @@
 ### 论文：CMSL: Constructive Multi-Sequence Learning for Recommendation Systems
 ### 网址：https://arxiv.org/pdf/2606.28533
 ### 公司：Meta
-### 思想：意图过滤行为——意图表征过滤和表示行为
+### 思想：意图、去噪
 ### 方向：行为序列建模、意图建模
 
 ## 解读：

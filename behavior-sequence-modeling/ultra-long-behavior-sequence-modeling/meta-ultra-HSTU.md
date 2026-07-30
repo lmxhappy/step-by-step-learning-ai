@@ -5,7 +5,7 @@
 ### 论文：Bending the Scaling Law Curve in Large-Scale Recommendation Systems
 ### 网址：https://arxiv.org/pdf/2602.16986
 ### 公司：Meta
-### 思想：弯曲推荐系统的 Scaling Law 曲线
+### 思想：Scaling Law、注意力稀疏化、低精度量化
 ### 方向：超长行为序列建模
 
 ## 解读：

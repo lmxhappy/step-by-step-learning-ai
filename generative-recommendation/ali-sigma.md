@@ -5,7 +5,7 @@
 ### 论文：SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress
 ### 网址：https://arxiv.org/pdf/2602.22913
 ### 公司：阿里国际
-### 思想：
+### 思想：对比学习、知识蒸馏、生成式建模
 ### 方向：生成式推荐+SID
 
 ## 解读：

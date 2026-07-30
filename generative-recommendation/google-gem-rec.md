@@ -5,7 +5,7 @@
 ### 论文：One Model, Two Markets: Bid-Aware Generative Recommendation
 ### 网址：https://arxiv.org/pdf/2603.22231
 ### 公司：Google
-### 思想：
+### 思想：统一建模、生成式建模
 ### 方向：推荐广告一体+GR
 
 ## 解读：

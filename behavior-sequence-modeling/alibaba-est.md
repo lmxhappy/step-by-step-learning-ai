@@ -5,7 +5,7 @@
 ### 论文：EST: Towards Efficient Scaling Laws in Click-Through Rate Prediction via Unified Modeling
 ### 网址：https://arxiv.org/pdf/2602.10811v1
 ### 公司：阿里
-### 思想：精准控制注意力范围
+### 思想：注意力稀疏化
 ### 方向：行为序列建模 + 特征交叉
 
 ## 解读：

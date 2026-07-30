@@ -5,7 +5,7 @@
 ### 论文：RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation
 ### 网址：https://arxiv.org/pdf/2603.28124
 ### 公司：阿里国际
-### 思想：迁移学习——用丰富信号补偿稀疏目标
+### 思想：迁移学习
 ### 方向：生成式推荐+行为序列建模
 
 ## 解读：

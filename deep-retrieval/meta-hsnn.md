@@ -5,7 +5,7 @@
 ### 论文：Hierarchical Structured Neural Network: Efficient Retrieval Scaling for Large Scale Recommendation
 ### 网址：https://arxiv.org/pdf/2408.06653
 ### 公司：Meta
-### 思想：利用 item 聚类中心替代具体 item
+### 思想：聚类
 ### 方向：深度召回
 
 ## 解读：

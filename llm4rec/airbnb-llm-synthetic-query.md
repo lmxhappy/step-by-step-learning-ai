@@ -5,7 +5,7 @@
 ### 论文：Bridging the Cold-Start Gap: LLM-Powered Synthetic Data Generation for Natural Language Search at Airbnb
 ### 网址：https://arxiv.org/pdf/2605.21812
 ### 公司：Airbnb
-### 思想：LLM强大的理解能力
+### 思想：LLM的理解能力
 ### 方向：冷启动+LLM4rec
 
 ## 解读：

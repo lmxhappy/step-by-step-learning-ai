@@ -5,7 +5,7 @@
 ### 论文：Generative Long-term User Interest Modeling for Click-Through Rate Prediction
 ### 网址：https://arxiv.org/pdf/2605.15905
 ### 公司：美团
-### 思想：将用户短期行为作为用户意图
+### 思想：意图
 ### 方向：长行为序列建模
 
 ## 解读：

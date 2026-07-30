@@ -74,6 +74,10 @@
   - [SlimPer — 多层多槽位 Target Attention 增强 (Meta)](./feature-cross/meta-slimper.md)
   - [DANet — 折扣率显式建模，GMV+2% (阿里)](./feature-cross/ali-danet.md)
 
+- **[特征选择](./feature-selection/)**
+  特征重要性评估、低价值特征淘汰等特征治理类论文。
+  - [LO-FAR — 免GPU筛特征，稀疏参数最多砍掉75% (Meta)](./feature-selection/meta-lo-far.md)
+
 - **[I2I推荐](./item-to-item/)**
   I2I（Item-to-Item）推荐。
   - [DAIAN — 详情页 I2I 推荐，成交额+2% (阿里)](./item-to-item/alibaba-daian.md)

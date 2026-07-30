@@ -5,7 +5,7 @@
 ### 论文：Efficient Retrieval Scaling with Hierarchical Indexing for Large Scale Recommendation
 ### 网址：https://arxiv.org/html/2604.12965
 ### 公司：Meta
-### 思想：通过残差量化实现了分层聚类
+### 思想：聚类、残差量化
 ### 方向：深度召回
 
 ## 解读：

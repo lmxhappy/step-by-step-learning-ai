@@ -5,7 +5,7 @@
 ### 论文：Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL
 ### 网址：https://arxiv.org/pdf/2605.14434
 ### 公司：阿里
-### 思想：课程学习、聚类、领域知识注入
+### 思想：课程学习、聚类、注入先验
 ### 方向：生成式召回
 
 ## 解读：

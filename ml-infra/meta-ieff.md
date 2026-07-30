@@ -5,7 +5,7 @@
 ### 论文：Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale
 ### 网址：https://arxiv.org/html/2605.00324
 ### 公司：Meta
-### 思想：在 serving 阶段对特征 coverage / 分布进行弹性渐变（fading），让模型借助持续训练管道自然适应，从而实现"免重训"的特征下线、替换或缩量上线。
+### 思想：渐进式变更
 ### 方向：ML Infra / 特征运维 / 特征生命周期管理
 
 ## 解读：
