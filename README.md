@@ -73,6 +73,7 @@
   - [MGDIN — 特征交叉新方法，CTR+3% (阿里)](./feature-cross/ali-mgdin.md)
   - [SlimPer — 多层多槽位 Target Attention 增强 (Meta)](./feature-cross/meta-slimper.md)
   - [DANet — 折扣率显式建模，GMV+2% (阿里)](./feature-cross/ali-danet.md)
+  - [CCFormer — 长序列层次化压缩+三字段定向交叉，广告收入最高+1.71% (腾讯)](./feature-cross/tencent-ccformer.md)
 
 - **[特征选择](./feature-selection/)**
   特征重要性评估、低价值特征淘汰等特征治理类论文。
