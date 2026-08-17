@@ -68,6 +68,7 @@
   - [LLM语义召回 — LLM as annotator (Meta)](./llm4rec/meta-llm-retrieval.md)
   - [LLM合成查询生成 — 数据增强 (Airbnb)](./llm4rec/airbnb-llm-synthetic-query.md)
   - [级联生成式LLM首页个性化 — LLM as ranker (Instacart)](./llm4rec/instacart-cascaded-generative.md)
+  - [GenRec — LLM直接当精排，一次前向给全目录打分 (Netflix)](./llm4rec/netflix-genrec.md)
 
 - **[特征交叉](./feature-cross/)**
   - [MGDIN — 特征交叉新方法，CTR+3% (阿里)](./feature-cross/ali-mgdin.md)
