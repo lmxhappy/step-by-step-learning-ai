@@ -104,9 +104,9 @@
   - [IEFF — 特征优雅下线，又快又稳 (Meta)](./ml-infra/meta-ieff.md)
   - [Versioned Late Materialization — 推荐工程架构/特征物化 (Meta)](./ml-infra/meta_late_materialization.md)
 
-- **[AI自进化](./self-evolving/)**
-  用AI自动化算法迭代循环本身（提优化方向、自动实验、闭环反馈）。
-  - [Astar — 模型进化机器人，自己提优化方向，GMV+4.86% (阿里)](./self-evolving/ali-astar.md)
+- **[Auto Research](./auto-research/)**
+  用AI自动化算法研发循环本身：提优化方向、写代码、跑实验、闭环反馈。
+  - [Astar — 模型进化机器人，自己提优化方向，GMV+4.86% (阿里)](./auto-research/ali-astar.md)
 
 - **[长尾问题](./long-tail/)**
   长尾样本、稀疏特征、低频物品、新用户、新item的建模与优化。
