@@ -50,6 +50,7 @@
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
+  - [TGR-Reason — 离线reason token注入，新用户曝光转化+13.09% (腾讯)](./generative-recommendation/tencent-tgr.md)
   - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
   - [Sigma — 生成式推荐，GMV+8% (阿里)](./generative-recommendation/ali-sigma.md)
   - [VectorizingTrie — 生成式召回解码提速最高1000倍 (Google)](./generative-recommendation/google-static.md)
