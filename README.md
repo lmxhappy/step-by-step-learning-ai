@@ -14,17 +14,15 @@
 
 
 ## 仓库内容
-这个仓库将逐步上传与公众号同步的资源，包括：
-- **论文笔记和代码**：针对公众号推荐的论文，提供详细解读、代码实现和实验复现。
-- **学习路径**：步步为营的AI学习指南，从基础到高级推荐算法。
-- **示例文件**：
-  - `MTFM.md`：更多技术细节和模型框架（More Technical Framework Markdown）。
-- **未来计划**：TODO。
+这个仓库是公众号「稳扎稳打学AI」的**配套解读笔记库**（与公众号同步更新），主要包括：
+- **论文解读 / 笔记**：针对搜广推相关论文的结构化解读（方法、心得、可信度等），按主题目录组织。
+- **配图与索引**：文中插图与 README 目录导航，方便连读与检索。
+- **说明**：当前以笔记为主，**不以可运行代码 / 实验复现为主**；若个别文章附带脚本或外链，会在文内单独说明。
 
 ## 如何开始
 1. **关注公众号**：搜索“稳扎稳打学AI”或扫描二维码，获取每日论文推荐。
-2. **克隆仓库**：`git clone https://github.com/lmxhappy/StepByStepLearningAI.git`
-3. **贡献**：欢迎提交PR，分享你的学习笔记或代码实现。我们一起进步！
+2. **克隆仓库**：`git clone https://github.com/lmxhappy/step-by-step-learning-ai.git`
+3. **贡献**：欢迎提交 PR，分享你的论文笔记或纠错。我们一起进步！
 
 ## 目录结构 & 内容说明
 
@@ -50,6 +48,7 @@
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
+  - [CONGRATS — 生成式重排，图结构解码器+一致性训练，Long Views+2.18% (快手)](./generative-recommendation/kuaishou-congrats.md)
   - [TGR-Reason — 离线reason token注入，新用户曝光转化+13.09% (腾讯)](./generative-recommendation/tencent-tgr.md)
   - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
   - [Sigma — 生成式推荐，GMV+8% (阿里)](./generative-recommendation/ali-sigma.md)
