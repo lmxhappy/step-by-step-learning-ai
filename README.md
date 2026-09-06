@@ -1,10 +1,28 @@
 # Step By Step Learning AI
 
 [![GitHub stars](https://img.shields.io/github/stars/lmxhappy/step-by-step-learning-ai?style=social)](https://github.com/lmxhappy/step-by-step-learning-ai)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mingxing%20Liu-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/mingxing-liu-b31656284)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=lmxhappy%2Fstep-by-step-learning-ai&label=Visitors&countColor=%23263759&style=flat)](https://github.com/lmxhappy/step-by-step-learning-ai)
 
 如果这个仓库对你有帮助，欢迎点击右上角 **Star ⭐** 支持一下，让更多人发现它！
 
-欢迎来到 **StepByStepLearningAI** 仓库！这个仓库是微信公众号”稳扎稳打学AI”的配套资源库，旨在帮助大家逐步、系统地学习人工智能，特别是推荐算法领域。我们每天精挑细选最优质、最新鲜的推荐算法论文，陪你一起保持进步、不断精进。
+## About (English)
+
+Companion notes for the WeChat account **稳扎稳打学AI** (*Step by Step Learning AI*): structured write-ups of industrial papers in **recommendation systems, computational advertising, and search** (搜广推).
+
+- **What this repo is:** paper interpretation notes synced with the WeChat posts (methods, takeaways, production signals) — organized by topic folders below.
+- **What it is not:** a code-first or full experiment-reproduction warehouse. Occasional scripts/links appear inside a note when relevant.
+- **Author:** Mingxing Liu · [LinkedIn](https://www.linkedin.com/in/mingxing-liu-b31656284) · WeChat: `lmxhappy` · [Zhihu column](https://zhuanlan.zhihu.com/stupid-ai)
+
+```bash
+git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
+```
+
+### Visitor map
+
+![Visitor map](https://visitormap.vercel.app/api?repo=lmxhappy/step-by-step-learning-ai)
+
+欢迎来到本仓库！这是微信公众号「稳扎稳打学AI」的配套资源库，聚焦推荐 / 广告 / 搜索论文解读，陪你一起保持进步、不断精进。
 
 ## 关于公众号“稳扎稳打学AI”
 - **公众号介绍**：关注我，每天为你精选推荐算法paper，帮助你稳扎稳打地学习AI。公众号由刘明星（微信: lmxhappy）运营，内容聚焦于推荐、广告和搜索等。
@@ -113,9 +131,11 @@
   - [UTTSI — 特征随机丢弃+集成解决稀疏样本预测不准 (阿里)](./long-tail/uttsi.md)
 
 ## 联系方式
-- 作者：刘明星
+- 作者：刘明星（Mingxing Liu）
+- LinkedIn：[mingxing-liu-b31656284](https://www.linkedin.com/in/mingxing-liu-b31656284)
 - 微信：lmxhappy
 - 知乎：[@思达-刘明星](https://www.zhihu.com/people/wang-wang-20-73)
-- 反馈：欢迎在公众号留言或issue中讨论。
+- GitHub：[`lmxhappy/step-by-step-learning-ai`](https://github.com/lmxhappy/step-by-step-learning-ai)
+- 反馈：欢迎在公众号留言或 issue 中讨论。
 
 感谢你的关注！让我们稳扎稳打，学好AI！🚀
