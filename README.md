@@ -2,7 +2,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/lmxhappy/step-by-step-learning-ai?style=social)](https://github.com/lmxhappy/step-by-step-learning-ai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mingxing%20Liu-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/mingxing-liu-b31656284)
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=lmxhappy%2Fstep-by-step-learning-ai&label=Visitors&countColor=%23263759&style=flat)](https://github.com/lmxhappy/step-by-step-learning-ai)
+[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lmxhappy.step-by-step-learning-ai)](https://github.com/lmxhappy/step-by-step-learning-ai)
+[![Hits](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai.svg)](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai/)
 
 如果这个仓库对你有帮助，欢迎点击右上角 **Star ⭐** 支持一下，让更多人发现它！
 
@@ -18,9 +19,10 @@ Companion notes for the WeChat account **稳扎稳打学AI** (*Step by Step Lear
 git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 ```
 
-### Visitor map
+### Visitors
 
-![Visitor map](https://visitormap.vercel.app/api?repo=lmxhappy/step-by-step-learning-ai)
+[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lmxhappy.step-by-step-learning-ai)](https://github.com/lmxhappy/step-by-step-learning-ai)
+![Hits](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai.svg)
 
 欢迎来到本仓库！这是微信公众号「稳扎稳打学AI」的配套资源库，聚焦推荐 / 广告 / 搜索论文解读，陪你一起保持进步、不断精进。
 
