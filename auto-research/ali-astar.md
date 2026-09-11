@@ -122,3 +122,4 @@ SFT的天花板是拟合历史成功轨迹，探索不了新东西，所以上GR
 
 ## 推荐您继续阅读：
 * [GenRec — LLM直接当精排，一次前向给全目录打分 (Netflix)](../llm4rec/netflix-genrec.md)
+* [A-MLE — 同一道题的另一个答案：不训专用模型，靠skill库把通用agent喂饱 (Meta)](meta-amle.md)
