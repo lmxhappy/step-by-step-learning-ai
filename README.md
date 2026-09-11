@@ -127,7 +127,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 - **[Auto Research](./auto-research/)**
   用AI自动化算法研发循环本身：提优化方向、写代码、跑实验、闭环反馈。
   - [Astar — 模型进化机器人，自己提优化方向，GMV+4.86% (阿里)](./auto-research/ali-astar.md)
-  - [A-MLE — 调优循环交给Agent跑、工程师只在卡点把关，人均迭代吞吐翻几倍 (Meta)](./auto-research/meta-amle.md)
+  - [A-MLE — 排序模型调优交给Agent，迭代吞吐翻几倍 (Meta)](./auto-research/meta-amle.md)
 
 - **[长尾问题](./long-tail/)**
   长尾样本、稀疏特征、低频物品、新用户、新item的建模与优化。
