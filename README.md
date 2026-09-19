@@ -72,6 +72,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 - **[生成式推荐](./generative-recommendation/)**
   生成式推荐。
+  - [LazFormer — 生成式预训练迁移到精排，GMV+9.85% (阿里国际)](./generative-recommendation/ali-lazformer.md)
   - [CONGRATS — 生成式重排，图结构解码器+一致性训练，Long Views+2.18% (快手)](./generative-recommendation/kuaishou-congrats.md)
   - [TGR-Reason — 离线reason token注入，新用户曝光转化+13.09% (腾讯)](./generative-recommendation/tencent-tgr.md)
   - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
