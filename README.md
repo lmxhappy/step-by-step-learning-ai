@@ -90,6 +90,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 - **[LLM4Rec](./llm4rec/)**
   LLM 在推荐/召回中的各类应用范式。
+  - [SARA — MLLM把用户说的偏好理由扩到千万作者，Hate反馈-8.16% (快手)](./llm4rec/kuaishou-sara.md)
   - [LLM语义召回 — LLM as annotator (Meta)](./llm4rec/meta-llm-retrieval.md)
   - [LLM合成查询生成 — 数据增强 (Airbnb)](./llm4rec/airbnb-llm-synthetic-query.md)
   - [级联生成式LLM首页个性化 — LLM as ranker (Instacart)](./llm4rec/instacart-cascaded-generative.md)
@@ -126,6 +127,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 - **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
+  - [Light Heads — 挂一次性浅塔，新任务实验从24天压到11天 (Google)](./ml-infra/google-light-heads.md)
   - [IEFF — 特征优雅下线，又快又稳 (Meta)](./ml-infra/meta-ieff.md)
   - [Versioned Late Materialization — 推荐工程架构/特征物化 (Meta)](./ml-infra/meta_late_materialization.md)
 

@@ -7,3 +7,5 @@ template.md
 .vscode/
 .claude
 .lingma
+# 公众号排版源文件（base64 内嵌图，体积大，不入库）
+*.html
