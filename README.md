@@ -127,7 +127,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 - **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
-  - [Light Heads — 挂一次性浅塔，新任务实验从24天压到11天 (Google)](./ml-infra/google-light-heads.md)
+  - [Light Heads — 加精排新任务从改代码变成改配置，验证周期24天压到11天 (Google)](./ml-infra/google-light-heads.md)
   - [IEFF — 特征优雅下线，又快又稳 (Meta)](./ml-infra/meta-ieff.md)
   - [Versioned Late Materialization — 推荐工程架构/特征物化 (Meta)](./ml-infra/meta_late_materialization.md)
 

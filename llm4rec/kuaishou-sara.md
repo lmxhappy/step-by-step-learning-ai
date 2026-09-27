@@ -3,7 +3,7 @@
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
 ### 论文：Scaling Articulated Rationales for MLLM-based Recommendation（SARA）
-### 网址：暂未公开（Kuaishou Technology, Technical report, 2026）
+### 网址：https://arxiv.org/abs/2609.17639
 ### 公司：快手
 ### 思想：MLLM 造特征
 ### 方向：llm4rec
@@ -69,7 +69,7 @@ SARA-7B 基于 Qwen2.5-VL-7B，输入是采样视频帧、直播元信息、语�
 
 * 融合那一节是全篇技术含量最高的地方，但 README 只给了一个三行表格，MIM Loss、Gated Residual、层次化 SID 这些关键机制全靠图里的方框自己看出来。想复现的人得盯着 Figure 逐个模块猜。
 * 用户画像、作者描述、正向理由三路共用一个 Shared Encoder，那这三者应该都是文本形态。但用户画像在工业系统里通常是结构化特征，是不是套模板转成了文本、编码器具体用的什么模型，文中都没交代。
-* 论文本身没有公开，引用条目只写了 technical report，没有 arXiv 号。上面的机制细节都来自官方 README 和配图，具体实现以后续放出的正式版本为准。
+* 本文的机制细节主要依据官方 README 与配图整理，arXiv 正式版（2609.17639）刚放出不久，细节以论文为准。
 
 ## 可信度：生产（快手直播，两组独立 1% 流量 A/B，全量部署 30 天+）
 
