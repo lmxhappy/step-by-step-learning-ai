@@ -20,7 +20,7 @@
 对采样数据再做一次按 label 分层的 train/test 划分。这保证了后续评估是 held-out 的，避免了用同一数据既建表又打分带来的乐观偏差。
 
 ### Stage 3: 特征展开
-对训练集和测试集，把变长 ID 列表$x_i^{(j)} = [id_{i,1}^{(j)}, id_{i,2}^{(j)}, \dots, id_{i,k_i}^{(j)}]$
+对训练集和测试集，把变长 ID 列表 $x_i^{(j)} = [id_{i,1}^{(j)}, id_{i,2}^{(j)}, \dots, id_{i,k_i}^{(j)}]$
 展开成“每出现一个 ID 就生成一行”，并复制原样本的 label $y_i$。空列表用占位符 $-1$ 填充。
 形式上：
 $$\mathcal{D}^{(j)}_{\text{train,exp}} = \bigl\{(id_{i,t}^{(j)}, y_i) : t=1,\dots,k_i,\ i\in I_{\text{train}}\bigr\}$$
@@ -33,7 +33,7 @@ $$\mathcal{D}^{(j)}_{\text{train,exp}} = \bigl\{(id_{i,t}^{(j)}, y_i) : t=1,\dot
 1）高频 ID（出现次数 ≥ $K$）
 
 直接计算经验正例率（Empirical Positive Rate）：
-$$s_j(id) = \frac{\text{该 ID 出现时 label=1 的次数}}{\text{该 ID 总出现次数}}$$
+$$s_j(id) = \frac{\#\{\text{id occurs},\ y=1\}}{\#\{\text{id occurs}\}}$$
 这是最朴素、也最稳定的估计。高频 ID 样本够多，这个频率已经很可靠。
 
 （2）低频 / 未见过的 ID（出现次数 < $K$）
