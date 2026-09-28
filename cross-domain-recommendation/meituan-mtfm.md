@@ -69,7 +69,7 @@
 
 模型包含三类 Token：H-token、R-token、T-token。
 
-以 $\{H_i\}$ 为例，序列中每个 item $h_{ij}$ 对应一个 H-token。先对原始特征做 Embedding，再通过 MLP 投影到统一维度 $d_{model}$：
+以 $\{H_i\}$为例，序列中每个 item$h_{ij}$对应一个 H-token。先对原始特征做 Embedding，再通过 MLP 投影到统一维度$d_{model}$：
 
 $$
 h_{ij} = MLP_i(Emb(h_{ij}))
@@ -87,7 +87,7 @@ $$
 t_{i}^s = MLP_{s} (Emb(U^s) \| Emb(C_i^s) \| Emb(I_i^s ))
 $$
 
-其中 $\|$ 为列拼接。所有曝光行为组成矩阵 $T \in R^{L_T \times d_{model}}$。
+其中 $\|$为列拼接。所有曝光行为组成矩阵$T \in R^{L_T \times d_{model}}$。
 
 最终将 H/R/T 三类 Token 按行拼接，作为混合注意力架构输入：
 
@@ -99,7 +99,7 @@ $$
 
 #### Hybrid Target Attention 架构
 
-Transformer架构很适合建模异构 Token 序列，但在多场景长序列下，$O(n^2)$ 复杂度带来显著计算瓶颈。为兼顾效果与效率，我们提出 Hybrid Target Attention：模型由 $B$ 个 Block 堆叠，每个 Block 由 1 层 Full Attention 与 $K$ 层 Target Attention 交替组成，在保留全局依赖建模能力的同时降低计算开销。
+Transformer架构很适合建模异构 Token 序列，但在多场景长序列下，$O(n^2)$复杂度带来显著计算瓶颈。为兼顾效果与效率，我们提出 Hybrid Target Attention：模型由$B$个 Block 堆叠，每个 Block 由 1 层 Full Attention 与$K$ 层 Target Attention 交替组成，在保留全局依赖建模能力的同时降低计算开销。
 我们先介绍 Full Attention Layer 与 Target Attention Layer。
 在 Full Attention Layer 中，先做分组 LayerNorm：不同历史序列 H-token 分组，不同实时序列 R-token 分组，不同场景 T-token 分组，以适配不同来源 Token 的分布差异：
 
@@ -125,7 +125,7 @@ $$
 最后，我们将T-token的新embedding与其他token的上一层embedding进行拼接，从而生成target attention层的输出.通过这种基于Target Attention的混合架构，我们将计算资源优先分配给处理更关键的T-tokens，在显著降低计算资源消耗的同时确保性能不受影响。
 
 ![](https://files.mdnice.com/user/171662/610db714-99e3-496f-be4e-3f13d0b85032.png)
-最后一层的T-tokens的embedding被输入到一个MMoE，来计算多场景不同目标的预估分.该混合架构将复杂度从 $O(N^2)$ 降至 $O(\frac{KNL_T + N^2}{K+1})$（其中 $L_T \ll N$）。实验表明 HTA 可在几乎无损效果下实现约 2 倍训练吞吐提升。
+最后一层的T-tokens的embedding被输入到一个MMoE，来计算多场景不同目标的预估分.该混合架构将复杂度从 $O(N^2)$降至$O(\frac{KNL_T + N^2}{K+1})$（其中 $L_T \ll N$）。实验表明 HTA 可在几乎无损效果下实现约 2 倍训练吞吐提升。
 ## 训练&推理优化
 ### 训练优化
 在LLM领域，通过对文本的tokenization，特征均位于GPU上，训练高效。而在推荐系统中，特征工程繁重并且很多特征位于CPU上,这就导致了位于GPU上的模型和CPU上的特征之间存在阻塞(block)。由于特征处理、模型融合等环节涉及大量Host与Device之间的数据同步和串行依赖,流程中存在较多同步点,Host必须等待Device侧操作完成后才能继续执行,导致整体流程出现较多阻塞(Blocking)。这些CPU-GPU Pipeline Stall严重影响了整个训练性能。
@@ -156,7 +156,7 @@ MTFM在HP(美团首页)、PHF（拼好饭）、SQS（神抢手），分别进行
 
 不同 target/full 注意力比例配置的性能对比。
 
-吞吐定义为单张 NVIDIA A100 GPU 上每秒处理样本数。我们在 7 天训练样本上系统比较了不同混合配置。将网络记为 $(K:P) \times B$，其中 $B$ 为 Block 数，$K$ 和 $P$ 分别是每个 Block 的 Target Attention 层数与 Full Attention 层数。我们也评估了纯 Target Attention（对应 OneRecV2 式 lazy decoder）。
+吞吐定义为单张 NVIDIA A100 GPU 上每秒处理样本数。我们在 7 天训练样本上系统比较了不同混合配置。将网络记为 $(K:P) \times B$，其中 $B$ 为 Block 数，$K$和$P$ 分别是每个 Block 的 Target Attention 层数与 Full Attention 层数。我们也评估了纯 Target Attention（对应 OneRecV2 式 lazy decoder）。
 
 结果表明，1:1 与 3:1 配置相较纯 Full Attention 基本无损甚至略优，同时显著提升吞吐并降低显存；当稀疏比例提升到 5:1 后性能出现约 0.07pp 回落，纯 Target Attention 回落约 0.12pp。引入 GQA 可进一步提升吞吐并降低显存。最终 HTA 相比 Full Attention 获得约 2 倍训练提速。
 

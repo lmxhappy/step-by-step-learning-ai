@@ -20,7 +20,7 @@
 
 判别式模型预估的是给定样本后各种 label 的后验概率，也就是 $p(y\mid x)$。推荐中常见的点击率、转化率和时长预估都属于这一类：给定用户和候选 item，预测用户发生某种行为的概率。
 
-生成式模型学习的是样本与标签的联合分布 $p(x,y)$。在文本生成中，显式的 label $y$ 逐渐被弱化，更多是在建模样本分布 $p(x)$。以一段文本 $x=(x_1,\ldots,x_T)$ 为例：
+生成式模型学习的是样本与标签的联合分布 $p(x,y)$。在文本生成中，显式的 label $y$逐渐被弱化，更多是在建模样本分布$p(x)$。以一段文本 $x=(x_1,\ldots,x_T)$ 为例：
 
 $$p(x)=\prod_{t=1}^{T}p(x_t \mid x_{\lt t})$$
 
@@ -28,7 +28,7 @@ $$p(x)=\prod_{t=1}^{T}p(x_t \mid x_{\lt t})$$
 
 **那么生成式用在重排里有什么意义？**
 
-重排里要生成的样本不是单个 item，而是一条完整的曝光序列。把一次请求的候选集合记作 $C=\{c_1,\ldots,c_n\}$，最终曝光序列记作 $x=(x_1,\ldots,x_m)$。从 $n$ 个候选中选择 $m$ 个 item 并决定顺序，一共有：
+重排里要生成的样本不是单个 item，而是一条完整的曝光序列。把一次请求的候选集合记作 $C=\{c_1,\ldots,c_n\}$，最终曝光序列记作 $x=(x_1,\ldots,x_m)$。从 $n$个候选中选择$m$ 个 item 并决定顺序，一共有：
 
 $|\Omega(C,m)|=A_n^m=\frac{n!}{(n-m)!}$
 
@@ -72,7 +72,7 @@ NAR4Rec 先用 **Candidate Encoder **编码候选 item，再用 **Position Encod
 
 这几个设计解决了 NAR4Rec 当时落地遇到的问题，**但还有两点可以继续往下做：**
 
-- 一方面，线上版本仍然用 $m$ 个固定的 position hidden states 生成长度为 $m$ 的序列。所有合理序列共享同一组位置分布，能够表达的生成路径比较有限。Contrastive Search 是在解码阶段额外加 item 关系，模型内部并没有显式学习 item 依赖。
+- 一方面，线上版本仍然用 $m$个固定的 position hidden states 生成长度为$m$ 的序列。所有合理序列共享同一组位置分布，能够表达的生成路径比较有限。Contrastive Search 是在解码阶段额外加 item 关系，模型内部并没有显式学习 item 依赖。
 
 - 另一方面，Unlikelihood Training 还是要根据后验反馈和阈值划分正负样本。**Generator 学习序列概率，Evaluator 学习用户反馈**，两边依旧分开训练。Evaluator 发现某条序列更好，也无法把这个信息直接传回 Generator。
 
@@ -82,13 +82,13 @@ NAR4Rec 先用 **Candidate Encoder **编码候选 item，再用 **Position Encod
 
 ## Graph\-structured Model
 
-NAR4Rec 原来用 $m$ 个固定的 position hidden states 生成长度为 $m$ 的序列。
+NAR4Rec 原来用 $m$个固定的 position hidden states 生成长度为$m$ 的序列。
 
 问题不只是可选路径少，更重要的是，多种可能的内容组合都要挤在同一组位置分布里。不同序列模式之间容易互相干扰，模型最后也更容易集中到少数高概率 item 上。
 
-CONGRATS 把这 $m$ 个固定位置扩展成 $g=\lambda m$ 个顶点组成的有向无环图。线上 $m=6$、$\lambda=4$，也就是解码器内部有 24 个顶点，最终从中选择一条长度为 6 的路径。不同的内容组合可以由不同路径承载，模型因此有了更大的 hidden states 和路径组合空间。
+CONGRATS 把这 $m$个固定位置扩展成$g=\lambda m$个顶点组成的有向无环图。线上$m=6$、$\lambda=4$，也就是解码器内部有 24 个顶点，最终从中选择一条长度为 6 的路径。不同的内容组合可以由不同路径承载，模型因此有了更大的 hidden states 和路径组合空间。
 
-具体来说，模型会同时学习两个矩阵：预测矩阵 $P$ 表示每个候选 item 在各个顶点上的生成概率，转移矩阵 $E$ 表示顶点之间的转移概率。对于路径 $\tau=(\pi_1,\ldots,\pi_m)$ 和曝光序列 $x$，联合概率由两部分组成：
+具体来说，模型会同时学习两个矩阵：预测矩阵 $P$表示每个候选 item 在各个顶点上的生成概率，转移矩阵$E$表示顶点之间的转移概率。对于路径$\tau=(\pi_1,\ldots,\pi_m)$和曝光序列$x$，联合概率由两部分组成：
 
 $p_\theta(x,\tau\mid u,C)=\prod_{t=1}^{m-1}E_{\pi_t,\pi_{t+1}}\prod_{t=1}^{m}P_{x_t,\pi_t}$
 
@@ -100,13 +100,13 @@ $p_\theta(x\mid u,C)=\sum_{\tau\in\Gamma}p_\theta(x,\tau\mid u,C)$
 
 模型在拟合曝光序列的同时，自行学习面对不同用户、候选集合和目标序列时，哪些顶点组合与转移路径更合适。这个求和可以通过动态规划完成，不需要把所有路径逐条枚举出来。
 
-推理时则必须真正选出一条路径。如果先只按照转移矩阵 $E$ 选路径，再沿着这条路径从 $P$ 中选 item，可能得到次优结果：某个顶点的转移概率很高，但这个顶点上并没有高置信度的候选 item。
+推理时则必须真正选出一条路径。如果先只按照转移矩阵 $E$选路径，再沿着这条路径从$P$ 中选 item，可能得到次优结果：某个顶点的转移概率很高，但这个顶点上并没有高置信度的候选 item。
 
 所以 CONGRATS 使用 **Joint\-lookahead**。选择下一个顶点时，不只看从当前顶点转过去的概率，还提前看这个顶点能够生成的最佳候选：
 
 $\begin{aligned}(\pi_t^*,x_t^*)=\arg\max_{\pi_t,x_t}\;&P_\theta(\pi_t\mid\pi_{t-1},u,C)\\&P_\theta(x_t\mid\pi_t,u,C)\end{aligned}$
 
-也就是把“往哪里走”和“在那里选什么”放在一起判断。转移矩阵和预测矩阵都可以并行算好，线上只需要依次选择 $m$ 个顶点，而重排的 $m$ 通常很小，因此增加的延迟有限。
+也就是把“往哪里走”和“在那里选什么”放在一起判断。转移矩阵和预测矩阵都可以并行算好，线上只需要依次选择 $m$个顶点，而重排的$m$ 通常很小，因此增加的延迟有限。
 
 图结构带来的并不是无约束的随机采样，而是由路径转移和 item 预测共同约束的结构化探索：一边扩大模型可以表达的序列空间，一边守住生成结果的相关性。
 
@@ -126,7 +126,7 @@ $\begin{aligned}(\pi_t^*,x_t^*)=\arg\max_{\pi_t,x_t}\;&P_\theta(\pi_t\mid\pi_{t-
 
 $\begin{aligned}\mathbf{P}^{\prime}&=\operatorname{Softmax}\left(\frac{\mathbf{Z}+\mathbf{r}}{T}\right),\\\mathbf{r}&\sim\operatorname{Gumbel}(0,1)\end{aligned}$
 
-其中 $\mathbf{Z}$ 是 Generator 输出的 item logits，Gumbel 噪声用来模拟离散采样，温度 $T$ 控制分布的尖锐程度。$T$ 越小，结果越接近真正的 one\-hot 选择；但整个计算仍然由连续函数组成，因此可以反向传播。
+其中 $\mathbf{Z}$是 Generator 输出的 item logits，Gumbel 噪声用来模拟离散采样，温度$T$ 控制分布的尖锐程度。$T$ 越小，结果越接近真正的 one\-hot 选择；但整个计算仍然由连续函数组成，因此可以反向传播。
 
 简单来说，它让模型在前向计算中近似“选出一个 item”，同时在反向计算中保留梯度。这样 Evaluator 学到的多目标用户反馈才能穿过生成过程，传回 Generator。
 

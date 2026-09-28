@@ -11,7 +11,7 @@
 ## 解读：
 本文把用户历史从"被动读的一条序列"改成"主动构造的 K 条纯净意图序列"，是一种缓解上下文污染的序列建模新方法。
 
-序列特征与非序列特征，双向交互——先用非序列意图把序列分流成 K 条纯净序列（构造）、各自做 self-attention，再用非序列意图去序列里摘取出 K 个向量 $h$（摘要），$h$ 回灌给下一层非序列。堆叠 L 层后，取最后一层的 K 个 $h$ 拼接，喂给任务头。
+序列特征与非序列特征，双向交互——先用非序列意图把序列分流成 K 条纯净序列（构造）、各自做 self-attention，再用非序列意图去序列里摘取出 K 个向量 $h$（摘要），$h$回灌给下一层非序列。堆叠 L 层后，取最后一层的 K 个$h$ 拼接，喂给任务头。
 
 ### （1）序列特征的处理
 用户在各种模态（点击、点赞、评论等）上产生的行为历史数量巨大、格式各异，直接拼接会带来无法承受的计算开销，因此需要先分组、再压缩成一条长度可控的序列 $\bar X$。
@@ -22,13 +22,13 @@ $$\mathcal{X} = \{X^{(1)}, X^{(2)}, \dots, X^{(B)}\}$$
 
 **1.分组**
 
-$\mathcal{X}_g$ 是从原始的 $\mathcal{X}$（B个交互模态序列）中，按照某个共享属性_同一个曝光场景/页面，挑出/分组得到的子集：$\mathcal{X}_g = {X^{(1)}, \dots, X^{(M)}}$，M ≤ B。也就是说先按surface分组，组内的M个模态序列再一起做压缩（加权求和）。
+$\mathcal{X}_g$是从原始的$\mathcal{X}$（B个交互模态序列）中，按照某个共享属性_同一个曝光场景/页面，挑出/分组得到的子集：$\mathcal{X}_g = {X^{(1)}, \dots, X^{(M)}}$，M ≤ B。也就是说先按surface分组，组内的M个模态序列再一起做压缩（加权求和）。
 
 那么一个$X$就获得了多个$\mathcal{X}_g$
 
 **2.多序列归并**
 
-平台上用户序列极多，直接处理开销巨大。所以要压缩一下。对$\mathcal{X}_g$每个元素（一个模态序列），补齐长度为n，通过特定 MLP 计算 token 权重：$$s_i^{(m)} = \sigma(\text{MLP}^{(m)}(x_i^{(m)}))$$（$  \sigma  $ 是 sigmoid）。
+平台上用户序列极多，直接处理开销巨大。所以要压缩一下。对$\mathcal{X}_g$每个元素（一个模态序列），补齐长度为n，通过特定 MLP 计算 token 权重：$$s_i^{(m)} = \sigma(\text{MLP}^{(m)}(x_i^{(m)}))$$（$\sigma$ 是 sigmoid）。
 
 将token权重乘到token序列的对应元素上。多个$\mathcal{X}_g$，每个$\mathcal{X}_g$都是n长的token序列，求和得到压缩序列：$$\bar{X} = \sum_{m=1}^M (s^{(m)} \cdot X^{(m)}) \in \mathbb{R}^{n \times d}$$
 
@@ -44,7 +44,7 @@ $\mathcal{X}_g$ 是从原始的 $\mathcal{X}$（B个交互模态序列）中，�
 2. 这K个序列再各自经过线性变换，分别生成对应的key和value，最终得到K个Key序列和K个Value序列。
 
 ### （3）序列 attend非序列
- 做cross-attention（Q 来自序列、K/V 来自非序列）。将行为序列的当前压缩序列 $  \bar{X}  $ 投影成 Query $  \mathbf{Q}^l  $，对非行为序列的每组 $  (\mathbf{K}^{l,k}, \mathbf{V}^{l,k})  $ 应用 multi-head attention。生成序列 $\tilde{X}^{(l,k)}$。
+ 做cross-attention（Q 来自序列、K/V 来自非序列）。将行为序列的当前压缩序列 $\bar{X}$ 投影成 Query $\mathbf{Q}^l$，对非行为序列的每组 $(\mathbf{K}^{l,k}, \mathbf{V}^{l,k})$ 应用 multi-head attention。生成序列 $\tilde{X}^{(l,k)}$。
  
  本操作，获得了每个行为定制出来的一份非序列上下文摘要。实现了非序列帮序列去噪分流。
 
@@ -59,11 +59,11 @@ $\mathcal{X}_g$ 是从原始的 $\mathcal{X}$（B个交互模态序列）中，�
 对应的是下图的Self-attention。
 
 ### （5）非序列attend序列特征
-序列特征与非序列特征做cross attention。非序列特征的序列 $s^{(l,1)}, \dots, s^{(l,K)}$ 作为Q，行为序列的 $\tilde{X}^{(l,k)}$ 作为Key和Value，做cross attention，获得了K个这样的序列。
+序列特征与非序列特征做cross attention。非序列特征的序列 $s^{(l,1)}, \dots, s^{(l,K)}$作为Q，行为序列的$\tilde{X}^{(l,k)}$ 作为Key和Value，做cross attention，获得了K个这样的序列。
 
 $\mathbf{h}^{(l,k)} = \text{Cross-Attention}(Q = \mathbf{S}^{(l,k)}, K = \tilde{X}^{(l,k)}, V = \tilde{X}^{(l,k)})$
 
-$h^{(l,k)}$ 的物理意义是——"站在第 $k$ 种意图（非序列）的视角，去这条行为序列里挑出跟这个意图最相关的行为，汇聚成一个定长摘要向量。
+$h^{(l,k)}$的物理意义是——"站在第$k$ 种意图（非序列）的视角，去这条行为序列里挑出跟这个意图最相关的行为，汇聚成一个定长摘要向量。
 另外，本质上就是一次 target-attention（DIN 式）的 pooling，只不过"target"换成了"意图向量"。
 
 对应的是下图的Sequence Summarization。
@@ -77,7 +77,7 @@ K条长度为n的token序列，每个位置上的K个token，拼接输入到各�
 
 ### （7）最终融合
 
-注意，上面的（3）～（6）被打包成一个 CMSL Block，堆叠 L 层。最终融合只取**最后一层**的 K 个摘要向量 $h^{(L,k)}$ 拼接成 $H = [h^{(L,1)} \parallel \cdots \parallel h^{(L,K)}]$，输入多个任务特定头（CTR、CVR 等预测）。
+注意，上面的（3）～（6）被打包成一个 CMSL Block，堆叠 L 层。最终融合只取**最后一层**的 K 个摘要向量 $h^{(L,k)}$拼接成$H = [h^{(L,1)} \parallel \cdots \parallel h^{(L,K)}]$，输入多个任务特定头（CTR、CVR 等预测）。
 
 也就是说，真正喂给 tower 的是（5）里"非序列查序列"产出的摘要向量 $h$——它属于非序列侧、承载了从行为序列提炼来的信息；**行为序列本身不直接进 tower**（只在层间通过（6）序列压缩往下传）。
 
