@@ -33,8 +33,8 @@ $$\mathcal{D}^{(j)}_{\text{train,exp}} = \bigl\{(id_{i,t}^{(j)}, y_i) : t=1,\dot
 1）高频 ID（出现次数 ≥ $K$）
 
 直接计算经验正例率（Empirical Positive Rate）：
-$$s_j(id) = \frac{\#\{\text{id occurs},\ y=1\}}{\#\{\text{id occurs}\}}$$
-这是最朴素、也最稳定的估计。高频 ID 样本够多，这个频率已经很可靠。
+$$s_j(id) = \frac{N_{+}(id)}{N(id)}$$
+其中 $N(id)$ 是该 ID 的总出现次数，$N_{+}(id)$ 是其中 label=1 的次数。这是最朴素、也最稳定的估计。高频 ID 样本够多，这个频率已经很可靠。
 
 （2）低频 / 未见过的 ID（出现次数 < $K$）
 
