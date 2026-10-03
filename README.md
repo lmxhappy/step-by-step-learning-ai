@@ -58,7 +58,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 |---|---|---|
 | **任务范式** | 怎么做推荐 | [生成式推荐](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
 | **表示层** | item / user 怎么表示 | [SID](./sid/) · [表示质量](./representation-quality/) |
-| **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [双塔召回](./deep-retrieval/) |
+| **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [深度召回](./deep-retrieval/) |
 | **数据与特征** | 喂什么进去 | [特征选择](./feature-selection/) |
 | **训练目标** | 优化什么 | [损失函数](./loss-func/) |
 | **业务场景** | 用在哪 | [跨域](./cross-domain-recommendation/) · [I2I推荐](./item-to-item/) |
@@ -128,12 +128,12 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
   I2I（Item-to-Item）推荐。
   - [DAIAN — 详情页 I2I 推荐，成交额+2% (阿里)](./item-to-item/alibaba-daian.md)
 
-- **[双塔召回](./deep-retrieval/)**
-  两塔架构的深度召回。
+- **[深度召回](./deep-retrieval/)**
+  用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。
   - [CS3 — 双塔召回，广告收入最高+8% (快手)](./deep-retrieval/kuaishou-cs3.md)
   - [HILL — 树状聚类索引+深度召回，业务指标+2.57% (Meta)](./deep-retrieval/meta-hill.md)
   - [HSNN — 深度召回，业务指标+3% (Meta)](./deep-retrieval/meta-hsnn.md)
-  - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/graph-retrieval/rankgraph-2.md)
+  - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/meta-rankgraph.md)
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
