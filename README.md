@@ -50,6 +50,23 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 ## 目录结构 & 内容说明
 
+### 🧭 按技术层次导航
+
+下面 14 个分类分属不同的技术层次，这里按层次归组，便于定位；**目录结构本身是平铺的**，每个分类的论文清单见后面的「子目录导航」。
+
+| 层次 | 关注的问题 | 分类 |
+|---|---|---|
+| **任务范式** | 怎么做推荐 | [生成式推荐](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
+| **表示层** | item / user 怎么表示 | [SID](./sid/) · [表征学习](./representation-learning/) |
+| **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [双塔召回](./deep-retrieval/) |
+| **数据与特征** | 喂什么进去 | [特征选择](./feature-selection/) |
+| **训练目标** | 优化什么 | [损失函数](./loss-func/) |
+| **业务场景** | 用在哪 | [跨域](./cross-domain-recommendation/) · [I2I推荐](./item-to-item/) |
+| **问题导向** | 治什么病 | [长尾问题](./long-tail/) |
+| **工程与研发体系** | 怎么跑得动、迭代得快 | [ML Infra](./ml-infra/) · [Auto Research](./auto-research/) |
+
+需要注意的是，**层次之间是正交的**：比如 SID 是表示层技术，既可以喂给生成式模型，也可以当普通特征喂给判别式模型，所以它和「生成式推荐」不是从属关系。同理，一篇论文常常跨多个层次，归类时取其主要贡献所在。
+
 ### 📁 子目录导航
 
 - **[跨域](./cross-domain-recommendation/)**
