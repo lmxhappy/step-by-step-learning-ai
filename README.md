@@ -57,7 +57,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 | 层次 | 关注的问题 | 分类 |
 |---|---|---|
 | **任务范式** | 怎么做推荐 | [生成式推荐](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
-| **表示层** | item / user 怎么表示 | [SID](./sid/) · [表征学习](./representation-learning/) |
+| **表示层** | item / user 怎么表示 | [SID](./sid/) · [表示质量](./representation-quality/) |
 | **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [双塔召回](./deep-retrieval/) |
 | **数据与特征** | 喂什么进去 | [特征选择](./feature-selection/) |
 | **训练目标** | 优化什么 | [损失函数](./loss-func/) |
@@ -139,9 +139,9 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
   排序、分类等核心损失函数的创新与优化。
   - [VarBPR — 改进 BPR 成对损失，应对隐式反馈噪声](./loss-func/varbpr.md)
 
-- **[表征学习](./representation-learning/)**
-  嵌入表征质量、表示坍缩等问题的建模与优化。
-  - [RankUp — 解决大规模排序模型表示坍缩 (腾讯)](./representation-learning/tencent-rankup.md)
+- **[表示质量](./representation-quality/)**
+  连续表示的健康度：隐层表示的秩、表示坍缩等问题的诊断与优化。与 SID 的区别是，这里关注的是模型内部的连续向量，不是 item 的离散编码。
+  - [RankUp — 解决大规模排序模型表示坍缩 (腾讯)](./representation-quality/tencent-rankup.md)
 
 - **[ML Infra](./ml-infra/)**
   机器学习基础设施 / 特征运维 / 模型部署等工程系统类论文。
