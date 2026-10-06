@@ -2,7 +2,7 @@ YouTube stopped logging content embeddings. It logs Semantic IDs and rebuilds th
 
 Paper: Tokens are All You Need - Dual-purpose Semantic IDs, Google (arxiv.org/abs/2607.24865), RecSys 2026 industry-track best paper nomination.
 
-The lineage matters, or this reads as "they stored an integer." Content embeddings used to go straight in as side features, back when sequences were short. Then sequences grew to hundreds of positions, each carrying a dense vector. History length 200 at dimension 256 is 51,200 floats per example - 200KB in FP32, and across billions of examples that is the bandwidth ceiling. Content features got demoted or cut, leaving only cheap ID features.
+The lineage matters, or this reads as "they stored an integer." Content embeddings used to go straight in as side features, back when sequences were short. Then sequences grew to hundreds of positions, each carrying a dense vector: at length 200 and dimension 256 that is 51,200 floats per example, 200KB in FP32, and across billions of examples it becomes the bandwidth ceiling. Content features got demoted or cut.
 
 Then Semantic IDs solved identity generalization. RQ-VAE quantizes the content embedding into hierarchical tokens, which memorize like atomic IDs and generalize like raw content. SIDs became the standard identity feature for sequence items - but carry only identity, not the quantized-away content.
 
@@ -16,7 +16,7 @@ As collaborative identity: each token is a categorical feature into a learnable 
 
 As content: the same tokens hit the injected codebook, then a trainable lightweight decoder (SiDec, an MLP or shallow transformer) rebuilds the content vector under an MSE loss against the original - what the video is about.
 
-Clean division of labor: the first memorizes, the second generalizes. A new video has no interaction history, so its row in the collaborative table is still at initialization, while the content path works from upload. Cold start and the long tail ride on it.
+Clean division of labor: the first memorizes, the second generalizes. A new video has no interaction history, so its row in the collaborative table is still at initialization, while the content path works from upload. Cold start rides on it.
 
 Note the decoder is trainable, not frozen. That is the actual contribution - logging SIDs instead of dense vectors was already the baseline.
 
