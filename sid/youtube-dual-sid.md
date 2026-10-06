@@ -5,7 +5,7 @@
 ### 论文：Tokens are All You Need: Dual-purpose Semantic IDs for Achieving LLM-Level I/O Efficiency in Recommendation Systems
 ### 网址：https://arxiv.org/abs/2607.24865
 ### 公司：Google
-### 思想：以算力换带宽
+### 思想：有损压缩、以算力换带宽
 ### 方向：SID
 
 ## 解读：

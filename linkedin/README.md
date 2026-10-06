@@ -19,6 +19,7 @@
 
 | Post | 作者（LinkedIn 上可找到的） |
 |---|---|
+| `youtube-dual-sid.md` | **Lichan Hong**（Google DeepMind/Brain, Senior Research Director，本人发过该论文的动态，最值得 @）、Xinyang Yi、Romer Rosales、Fabio Soldo、Baolei Li（一作）、Yiping Yuan、Likang Yin、Ling Liu —— 均在 Lichan Hong 的动态里被成功 @ 过，账号确认存在；Yilin Zheng 在那条动态里是纯文字，可能没有账号 |
 | `google-light-heads.md` | Sanjay Surendranath Girija（一作）、Aniruddh Nath、Li Wei、Lukasz Heldt |
 | `meta-amle.md` | 待查 |
 | `kuaishou-sara.md` | 国内团队，LinkedIn 上基本找不到 |
@@ -32,3 +33,4 @@
 | `google-light-heads.md` | [ml-infra/google-light-heads.md](../ml-infra/google-light-heads.md) |
 | `kuaishou-sara.md` | [llm4rec/kuaishou-sara.md](../llm4rec/kuaishou-sara.md) |
 | `meta-amle.md` | [auto-research/meta-amle.md](../auto-research/meta-amle.md) |
+| `youtube-dual-sid.md` | [sid/youtube-dual-sid.md](../sid/youtube-dual-sid.md) |
