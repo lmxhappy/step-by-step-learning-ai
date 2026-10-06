@@ -103,6 +103,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 - **[SID](./sid/)**
   **表示层技术**：怎么把一个 item 压成一串离散的语义 token。关注的是「item 怎么表示」，和上面的任务范式是正交的两件事——SID 可以喂给生成式模型，也可以当普通特征喂给判别式模型。
   本目录收「如何生成 SID」以及不便归入其它分类的用法；SID 作为横切技术，在生成式召回（见上）、序列建模（[UniSGR](./behavior-sequence-modeling/alibaba-unisgr.md)、[UxSID](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)、[TokenMinds](./behavior-sequence-modeling/tokenminds.md)）、负反馈迁移（[SARA](./llm4rec/kuaishou-sara.md)）等场景均有应用，论文散落在相应分类中。
+  - [Tokens are All You Need — 从SID重建内容embedding，长序列用得起内容特征 (YouTube)](./sid/youtube-dual-sid.md)
   - [QuaSID — SID 量化新方法，GMV+2% (快手)](./sid/kuaishou-quasid.md)
   - [AKT-Rec — 聚类相关特征提升长尾，GMV+3% (阿里)](./sid/alibaba-akt-rec.md)
 
