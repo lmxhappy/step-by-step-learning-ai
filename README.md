@@ -28,7 +28,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 ## 关于公众号“稳扎稳打学AI”
 - **公众号介绍**：关注我，每天为你精选推荐算法paper，帮助你稳扎稳打地学习AI。公众号由刘明星（微信: lmxhappy）运营，内容聚焦于推荐、广告和搜索等。
-![e](imgs/qcode.jpg)
+<img src="imgs/qcode.jpg" alt="稳扎稳打学AI 公众号二维码" width="200"/>
 - **paper推荐原则**：我们优先选择高影响力、实用性强的论文，包括但不限于LLM在推荐中的应用、搜索词推荐等实际案例分析。
 - **知乎专栏**：更多内容可查看[稳扎稳打学AI - 知乎专栏](https://zhuanlan.zhihu.com/stupid-ai)，已更新200+篇内容，涵盖热门论文解读。
 
