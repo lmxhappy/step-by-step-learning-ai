@@ -1,6 +1,6 @@
 Kuaishou turns what users say about why they like a streamer into ranking features. Hate feedback down 8.16%.
 
-Paper: SARA - Scaling Articulated Rationales for MLLM-based Recommendation, Kuaishou (arxiv.org/abs/2609.17639)
+Paper: SARA - Scaling Articulated Rationales for MLLM-based Recommendation, Kuaishou (https://arxiv.org/abs/2609.17639)
 
 Clicks, watch time and dislikes record what users did. What users articulate - nostalgia for a hometown, a sense of company, disgust at hard-selling - records why. The catch is volume: that signal is sparse, uneven, and covers few authors.
 

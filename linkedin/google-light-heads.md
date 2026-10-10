@@ -1,6 +1,6 @@
 At YouTube, adding a new ranking task went from a code change to a config change. Experiment cycle: 24 days to 11.
 
-Paper: Lightweight Ranking Heads, Google (arxiv.org/abs/2609.25433)
+Paper: Lightweight Ranking Heads, Google (https://arxiv.org/abs/2609.25433)
 
 Adding a prediction target to a ranker sounds like adding a head. It stalls at two scales. On the model: the new head's gradients reach the shared layers, so the backbone cold-starts and existing tasks regress from negative transfer. On the fleet: dozens of downstream models consuming that score no longer line up, each needing its own retrain - months of fragmentation where nobody dares launch. The real cost was never training, it was the queue.
 

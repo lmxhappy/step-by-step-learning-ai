@@ -1,6 +1,6 @@
 Alibaba International pre-trains its ranking model generatively, then transfers it into the ranker. Two-week A/B: GMV +9.85%.
 
-Paper: LazFormer - Scaling Transformers for Industrial Recommendation via Transferable Generative Pre-training (arxiv.org/abs/2609.14978)
+Paper: LazFormer - Scaling Transformers for Industrial Recommendation via Transferable Generative Pre-training (https://arxiv.org/abs/2609.14978)
 
 Scaling a ranker hits two walls. Sparse params (ID embeddings) and dense params both train from scratch - billions of them, slow and expensive. Pre-train your way out and you hit negative transfer: pre-training features don't line up with ranking-stage ones. LazFormer splits the phases and stitches them with an adapter that does nothing at step zero.
 
@@ -16,7 +16,7 @@ Serving the length. Newest 1,024 tokens stay intact, older ones sum-pool in grou
 
 3 - Asymmetric multi-epoch training
 
-Three epochs, handled asymmetrically: each epoch sparse params reset to their pre-trained state while dense params inherit the previous one. Billions of embeddings re-updated on the same data overfit and wash out the representation they arrived with. Not new - it's the one-epoch overfitting folklore CTR teams have lived with for years.
+Three epochs, handled asymmetrically: sparse params reset to their pre-trained state each epoch while dense params inherit the previous one. Billions of embeddings re-updated on the same data overfit and wash out the representation they arrived with. Not new - it's the one-epoch overfitting folklore CTR teams have lived with for years.
 
 4 - Online
 
@@ -24,7 +24,7 @@ Two weeks against a 3-layer SORT-like ranker: GMV +9.85%, item page views +5.21%
 
 Takeaways
 
-- When pre-training and downstream features don't align, you either mutilate features into alignment or skip pre-training. Zero-init adapters are a third path: new features start at "not participating," and training decides the dose. Ports to any two-stage transfer.
+- When pre-training and downstream features don't align, you either mutilate features into alignment or skip pre-training. Zero-init adapters are a third path: new features start at "not participating," and training decides the dose.
 
 Nitpicks
 

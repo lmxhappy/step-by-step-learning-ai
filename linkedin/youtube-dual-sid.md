@@ -1,6 +1,6 @@
 YouTube stopped logging content embeddings. It logs Semantic IDs and rebuilds the embedding on the accelerator.
 
-Paper: Tokens are All You Need - Dual-purpose Semantic IDs, Google (arxiv.org/abs/2607.24865), RecSys 2026 industry-track best paper nomination.
+Paper: Tokens are All You Need - Dual-purpose Semantic IDs, Google (https://arxiv.org/abs/2607.24865), RecSys 2026 industry-track best paper nomination.
 
 The lineage matters, or this reads as "they stored an integer." Content embeddings used to go straight in as side features, back when sequences were short. Then sequences grew to hundreds of positions, each carrying a dense vector: at length 200 and dimension 256 that is 51,200 floats per example, 200KB in FP32, and across billions of examples it becomes the bandwidth ceiling. Content features got demoted or cut.
 
