@@ -2,7 +2,7 @@ Pinterest ran its ablations online. Not offline-then-confirm - each design choic
 
 Paper: Pin-SCALE, Pinterest, SIGIR '26 (doi.org/10.1145/3805712.3808507)
 
-Semantic IDs help cold start: a fresh item gets an ID at creation, and shared tokens let it inherit parameters from warm items. What nobody had tested systematically is how to wire them into a discriminative retrieval model.
+Semantic IDs help cold start: a fresh item gets an ID at creation, and shared tokens let it inherit parameters from warm ones. What nobody had tested systematically is how to wire them into a discriminative retrieval model.
 
 Generating the SID.  Standard practice quantizes a content embedding. Pin-SCALE swaps the quantizer's input for a representation that already carries collaborative signal - OmniSAGE, their GNN over the user-item graph. Against an in-house text LLM embedding and PinCLIP (image-text aligned), the graph wins: fresh impressions +1.72%.
 
