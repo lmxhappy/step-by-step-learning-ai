@@ -14,13 +14,13 @@ More useful than the winner is the proxy that predicted it. First-level codebook
 
 Feeding the tower. A SID is a token sequence; a two-tower model wants one vector. Most work pools tokens as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine. Pin-SCALE fuses coarse to fine instead. Attention pooling only partly recovers the hierarchy, since it weighs tokens independently.
 
-Where the SID sits differs by surface. Closeup is pin-to-pin, so both towers carry SIDs. Search, Home Feed and shopping are all query- or user-to-item, where the SID lives only on the item side.
+Where the SID sits differs by surface. Closeup is pin-to-pin, so both towers carry SIDs. Search, Home Feed and shopping are query- or user-to-item, so the SID lives only on the item side.
 
 Training the tower. Long-tail SIDs appear rarely, so gradients are weak and embeddings noisy. Two contrastive views supply dense label-free signal.
 
-Cross-tower alignment treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it is a candidate in one batch and a query in another. The biggest single win: sitewide fresh repins +3.67%, with Home Feed DAU +0.05% on rollout. It only works where query and candidate are the same type though - on user-to-item surfaces the loss cannot be constructed at all.
+Cross-tower alignment treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it is a candidate in one batch and a query in another. The biggest single win: sitewide fresh repins +3.67%, with Home Feed DAU +0.05% on rollout. It only works where query and candidate are the same type - on user-to-item surfaces the loss cannot be constructed at all.
 
-Co-occurrence alignment pairs two queries sharing a candidate, and two candidates sharing a query - a cold item has no engagement of its own, but its co-occurrence with popular items is supervision you already have.
+Co-occurrence alignment pairs two queries sharing a candidate, and two candidates sharing a query. A cold item has no engagement of its own, but its co-occurrence with popular items is free supervision.
 
 Takeaways
 
