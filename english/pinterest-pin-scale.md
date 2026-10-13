@@ -1,3 +1,9 @@
+![配图](../imgs/pinterest-pin-scale/linkedin-card.png)
+
+*↑ 发帖时作为图片附件上传，不要复制这一行。正文从下面的分隔线之后开始。*
+
+---
+
 Pinterest ran its ablations online. Not offline-then-confirm - each design choice took a real experiment slot.
 
 Paper: Pin-SCALE, Pinterest, SIGIR '26 — doi.org/10.1145/3805712.3808507
