@@ -4,27 +4,28 @@
 
 ---
 
-Pinterest ran its ablations online. Not offline-then-confirm - each design choice took a real experiment slot.
+Everyone agrees Semantic IDs help cold start. Nobody had systematically tested how to wire them into a discriminative two-tower retriever. Pinterest did, and ran the method comparisons on live traffic.
 
 Paper: Pin-SCALE, Pinterest, SIGIR '26 — doi.org/10.1145/3805712.3808507
 
-Semantic IDs help cold start: a fresh item gets an ID at creation, and shared tokens let it inherit parameters from warm ones. What nobody had tested systematically is how to wire them into a discriminative retrieval model.
+Generating the SID. Standard practice quantizes a content embedding. Pin-SCALE feeds the quantizer something that already carries collaborative signal: OmniSAGE, their GNN over the user-item graph. Against an in-house text embedding and PinCLIP (image-text aligned), the graph wins - fresh impressions +1.72%.
 
-Generating the SID.  Standard practice quantizes a content embedding. Pin-SCALE swaps the quantizer's input for a representation that already carries collaborative signal - OmniSAGE, their GNN over the user-item graph. Against an in-house text LLM embedding and PinCLIP (image-text aligned), the graph wins: fresh impressions +1.72%.
+More useful than the winner is the proxy that predicted it. First-level codebook entropy tracks online performance: OmniSAGE at 10.93 against a ceiling of 11 with 100% utilisation, PinCLIP fusion at 7.42 with 9.7%. Screen tokenizers offline instead of burning experiment slots. Collision rate predicts nothing - OmniSAGE collides more and still wins. The cost: collaborative signal causes drift, so the quantizer needs retraining more often.
 
-More useful than the winner is the proxy that predicted it. First-level codebook entropy correlates with online performance: OmniSAGE sits at 10.93 against a ceiling of 11 with 100% utilisation, PinCLIP fusion at 7.42 with 9.7%. So you can screen tokenizers offline instead of burning experiment slots - while collision rate predicts nothing, since OmniSAGE collides more and still wins. The cost: collaborative signal causes drift, so the quantizer needs retraining more often.
+Feeding the tower. A SID is a token sequence; a two-tower model wants one vector. Most work pools tokens as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine. Pin-SCALE fuses coarse to fine instead. Attention pooling only partly recovers the hierarchy, since it weighs tokens independently.
 
-Feeding the tower.  A SID is a token sequence; a two-tower model wants one vector. Most work pools them as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine - so flattening discards that. Pin-SCALE fuses coarse to fine.
+Where the SID sits differs by surface. Closeup is pin-to-pin, so both towers carry SIDs. Search, Home Feed and shopping are all query- or user-to-item, where the SID lives only on the item side.
 
-Two numbers make the case. Raw concatenation moves repins -0.13%: wiring SIDs in badly is not neutral, it costs. And reversing the order, fine to coarse, halves the gain (+1.63% to +0.61%) - the direction does real work, not just the extra parameters.
+Training the tower. Long-tail SIDs appear rarely, so gradients are weak and embeddings noisy. Two contrastive views supply dense label-free signal.
 
-Training the tower.  Long-tail SIDs appear rarely, so gradients are weak and embeddings stay noisy. Contrastive losses supply dense label-free signal. Cross-tower alignment (Q2C) treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it appears as a candidate in one batch and a query in another. Sitewide fresh repins +3.67%, an order of magnitude above co-occurrence alignment
+Cross-tower alignment treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it is a candidate in one batch and a query in another. The biggest single win: sitewide fresh repins +3.67%, with Home Feed DAU +0.05% on rollout. It only works where query and candidate are the same type though - on user-to-item surfaces the loss cannot be constructed at all.
 
-One caveat the paper does not raise: Q2C needs query and candidate to be the same type. Closeup is pin-to-pin, so it works. In user-to-item retrieval the loss cannot even be constructed.
+Co-occurrence alignment pairs two queries sharing a candidate, and two candidates sharing a query - a cold item has no engagement of its own, but its co-occurrence with popular items is supervision you already have.
 
 Takeaways
 
 - Codebook entropy as an offline screen is the cheapest finding here. Low entropy means a few tokens absorb everything, so a fresh item inherits an average over thousands - no prior at all.
-- Two ways to push collaborative signal into SIDs: change what you feed the quantizer, or let the task loss backprop into the codebook. The first is far lighter and keeps the codebook frozen - which matters if your SIDs are shared across models.
+- Two ways to push collaborative signal into SIDs: change what you feed the quantizer, or let the task loss backprop into the codebook. The first is lighter and keeps the codebook frozen.
+- Eight hierarchy levels is deep. Generative retrieval mostly uses three or four, and eight is uncommon even in discriminative retrieval.
 
-#RecSys #RecommenderSystems #MachineLearning #ColdStart #SIGIR2026
+#RecSys #RecommenderSystems #Pinterest #ColdStart #SIGIR2026
