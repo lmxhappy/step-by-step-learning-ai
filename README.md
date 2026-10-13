@@ -40,7 +40,8 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 
 这个仓库是公众号「稳扎稳打学AI」的**配套解读笔记库**（与公众号同步更新），主要包括：
 - **论文解读 / 笔记**：针对搜广推相关论文的结构化解读（方法、心得、可信度等），按主题目录组织。
-- **[English/](./English/)**：部分解读的英文版，面向海外读者，内容与中文稿一一对应。
+- **英文版**：部分解读配有英文版，与中文稿同目录、同名，后缀 `.en.md`（如 [sid/pinterest-pin-scale.en.md](./sid/pinterest-pin-scale.en.md)）。
+- **[posts/](./posts/)**：英文社交平台的发布稿，压在平台字数上限内，内容是 `.en.md` 的精简版。
 - **配图与索引**：文中插图与 README 目录导航，方便连读与检索。
 - **说明**：当前以笔记为主，**不以可运行代码 / 实验复现为主**；若个别文章附带脚本或外链，会在文内单独说明。
 
@@ -104,7 +105,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
 - **[SID](./sid/)**
   **表示层技术**：怎么把一个 item 压成一串离散的语义 token。关注的是「item 怎么表示」，和上面的任务范式是正交的两件事——SID 可以喂给生成式模型，也可以当普通特征喂给判别式模型。
   本目录收「如何生成 SID」以及不便归入其它分类的用法；SID 作为横切技术，在生成式召回（见上）、序列建模（[UniSGR](./behavior-sequence-modeling/alibaba-unisgr.md)、[UxSID](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)、[TokenMinds](./behavior-sequence-modeling/tokenminds.md)）、负反馈迁移（[SARA](./llm4rec/kuaishou-sara.md)）等场景均有应用，论文散落在相应分类中。
-  - [Pin-SCALE — SID接入双塔召回，冷启转存+3.67%，DAU+0.05% (Pinterest)](./sid/pinterest-pin-scale.md)
+  - [Pin-SCALE — SID接入双塔召回，冷启转存+3.67%，DAU+0.05% (Pinterest)](./sid/pinterest-pin-scale.md) · [EN](./sid/pinterest-pin-scale.en.md)
   - [Tokens are All You Need — 从SID重建内容embedding，长序列用得起内容特征 (YouTube)](./sid/youtube-dual-sid.md)
   - [QuaSID — SID 量化新方法，GMV+2% (快手)](./sid/kuaishou-quasid.md)
   - [AKT-Rec — 聚类相关特征提升长尾，GMV+3% (阿里)](./sid/alibaba-akt-rec.md)

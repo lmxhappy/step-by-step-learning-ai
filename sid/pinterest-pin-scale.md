@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](pinterest-pin-scale.en.md)
+
 ### 论文：Pin-SCALE: Semantic Cascading and Alignment Learning for Engagement-Aware IDs in Cold-Start Recommendations
 ### 网址：https://doi.org/10.1145/3805712.3808507
 ### 公司：Pinterest（SIGIR '26）
