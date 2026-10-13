@@ -1,6 +1,6 @@
 Pinterest ran its ablations online. Not offline-then-confirm - each design choice took a real experiment slot.
 
-Paper: Pin-SCALE, Pinterest, SIGIR '26 (doi.org/10.1145/3805712.3808507)
+Paper: Pin-SCALE, Pinterest, SIGIR '26 — doi.org/10.1145/3805712.3808507
 
 Semantic IDs help cold start: a fresh item gets an ID at creation, and shared tokens let it inherit parameters from warm ones. What nobody had tested systematically is how to wire them into a discriminative retrieval model.
 
@@ -10,9 +10,9 @@ More useful than the winner is the proxy that predicted it. First-level codebook
 
 Feeding the tower.  A SID is a token sequence; a two-tower model wants one vector. Most work pools them as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine - so flattening discards that. Pin-SCALE fuses coarse to fine.
 
-Two numbers make the case. Raw concatenation moves repins -0.13%: wiring SIDs in badly is not neutral, it costs you. And reversing the order, fine to coarse, halves the gain (+1.63% to +0.61%) - the direction does real work, not just the extra parameters.
+Two numbers make the case. Raw concatenation moves repins -0.13%: wiring SIDs in badly is not neutral, it costs. And reversing the order, fine to coarse, halves the gain (+1.63% to +0.61%) - the direction does real work, not just the extra parameters.
 
-Training the tower.  Long-tail SIDs appear rarely, so gradients are weak and embeddings stay noisy. Contrastive losses supply dense label-free signal. Cross-tower alignment (Q2C) treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it appears as a candidate in one batch and a query in another. Sitewide fresh repins +3.67%, an order of magnitude above co-occurrence alignment.
+Training the tower.  Long-tail SIDs appear rarely, so gradients are weak and embeddings stay noisy. Contrastive losses supply dense label-free signal. Cross-tower alignment (Q2C) treats the same item passed through both towers as a positive pair, fixing the representation divergence two-tower models suffer from. A pin with zero engagement still gets aligned, as long as it appears as a candidate in one batch and a query in another. Sitewide fresh repins +3.67%, an order of magnitude above co-occurrence alignment
 
 One caveat the paper does not raise: Q2C needs query and candidate to be the same type. Closeup is pin-to-pin, so it works. In user-to-item retrieval the loss cannot even be constructed.
 
