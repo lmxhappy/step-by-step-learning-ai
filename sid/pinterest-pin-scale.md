@@ -14,6 +14,10 @@
 
 方法按流水线分三块：SID 怎么生成出来、怎么接进双塔、双塔怎么训。
 
+![pic](../imgs/pinterest-pin-scale/framework.png)
+
+左边是 Pinterest 的两个入口（首页流、搜索）通向 Related Pins；右边三个框正好对应下面三节。
+
 ## 1 生成 SID：把协同信号放进量化器的输入
 
 主流的做法，SID 只从内容生成。本文的做法是**换掉送进量化器的那个表征**，用本身就编码了协同信号的，就是用Pinterest 2025年的模型OmniSAGE获得的item embedding，它是用户-item 交互图聚合邻居的 GNN 表征。

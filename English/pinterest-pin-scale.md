@@ -1,4 +1,4 @@
-![配图](../imgs/pinterest-pin-scale/linkedin-card.png)
+![配图](../imgs/pinterest-pin-scale/post-figure.png)
 
 *↑ 发帖时作为图片附件上传，不要复制这一行。正文从下面的分隔线之后开始。*
 
