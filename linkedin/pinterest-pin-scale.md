@@ -1,4 +1,4 @@
-Pinterest ran the ablations online. Not offline-then-confirm - each design choice took a real experiment slot.
+Pinterest ran its ablations online. Not offline-then-confirm - each design choice took a real experiment slot.
 
 Paper: Pin-SCALE, Pinterest, SIGIR '26 (doi.org/10.1145/3805712.3808507)
 
@@ -8,7 +8,7 @@ Generating the SID.  Standard practice quantizes a content embedding. Pin-SCALE 
 
 More useful than the winner is the proxy that predicted it. First-level codebook entropy correlates with online performance: OmniSAGE sits at 10.93 against a ceiling of 11 with 100% utilisation, PinCLIP fusion at 7.42 with 9.7%. So you can screen tokenizers offline instead of burning experiment slots - while collision rate predicts nothing, since OmniSAGE collides more and still wins. The cost: collaborative signal causes drift, so the quantizer needs retraining more often.
 
-Feeding the tower.  A SID is a token sequence; a two-tower model wants one vector. Most work pools them as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine - so flattening discards that. Pin-SCALE fuses coarse to fine instead.
+Feeding the tower.  A SID is a token sequence; a two-tower model wants one vector. Most work pools them as an unordered set or hashes n-grams, but RQ-VAE residuals are ordered - level 1 explains the most variance, later levels refine - so flattening discards that. Pin-SCALE fuses coarse to fine.
 
 Two numbers make the case. Raw concatenation moves repins -0.13%: wiring SIDs in badly is not neutral, it costs you. And reversing the order, fine to coarse, halves the gain (+1.63% to +0.61%) - the direction does real work, not just the extra parameters.
 
