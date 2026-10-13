@@ -4,7 +4,7 @@
 
 Everyone agrees Semantic IDs help cold start. Nobody had tested how to wire them into a discriminative two-tower retriever. Pinterest did, and ran the method comparisons on live traffic.
 
-Paper: Pin-SCALE, Pinterest, SIGIR '26 — doi.org/10.1145/3805712.3808507
+Paper: Pin-SCALE, Pinterest, SIGIR '26 (link in the first comment)
 
 1 — Generating the SID
 

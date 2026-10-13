@@ -11,9 +11,15 @@
 
 ## 发布清单
 
-1. **正文不放链接**。带站外链接的帖子通常被降权，论文链接发完后放**第一条评论**
-2. **@ 原作者**：在编辑框输入 `@` 后从下拉选择，直接粘贴文字不会触发通知
-3. 话题标签 3-5 个，已写在文件末尾
+**原则：帖子必须自足。** 3000 字符内把核心讲完，不依赖任何点击。不写成「导读 + 长文」——带链接的帖子会被降权，读者还要多点一次，两道损耗叠加，总阅读量不如一条自足的帖子。
+
+1. **正文不放任何链接**，包括论文 DOI。正文只写论文名和会议，链接统一放第一条评论
+2. **第一条评论**放两个链接：论文原文 + 本仓库地址（顺带给仓库引流）
+3. **@ 原作者**：在编辑框输入 `@` 后从下拉选择，直接粘贴文字不会触发通知
+4. 话题标签 3-5 个，含公司名（如 `#Pinterest`）和会议（如 `#SIGIR2026`），已写在文件末尾
+5. **配图**：文件开头若有图片引用，发帖时作为附件上传；正文从分隔线 `---` 之后开始复制
+
+> ⚠️ 仓库里目前没有英文完整版——`English/` 下就是帖子本身。所以第一条评论里的仓库链接是给仓库引流用的，不是「完整版在这里」。帖子内容必须独立成立。
 
 ## 各篇原作者
 
@@ -36,3 +42,11 @@
 | `meta-amle.md` | [auto-research/meta-amle.md](../auto-research/meta-amle.md) |
 | `pinterest-pin-scale.md` | [sid/pinterest-pin-scale.md](../sid/pinterest-pin-scale.md) |
 | `youtube-dual-sid.md` | [sid/youtube-dual-sid.md](../sid/youtube-dual-sid.md) |
+
+## 第一条评论模板
+
+```
+Paper: <DOI or arXiv link>
+Fuller notes (Chinese, with caveats the post omits):
+https://github.com/lmxhappy/step-by-step-learning-ai
+```
