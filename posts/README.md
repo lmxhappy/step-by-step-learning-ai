@@ -31,6 +31,7 @@
 | `meta-amle.md` | 待查 |
 | `kuaishou-sara.md` | 国内团队，海外平台上基本找不到 |
 | `ali-lazformer.md` | 同上 |
+| `linkedin-transx.md` | Da Xu（通讯作者）、Liyan Fang、Divya Venugopalan、Sunny Hsu、Xukai Wang、Rishav Chowdhury、Cindy Liang、Nishant Lakshmikanth（均 LinkedIn） |
 
 ## 对应关系
 
@@ -39,6 +40,7 @@
 | `ali-lazformer.md` | [generative-recommendation/ali-lazformer.md](../generative-recommendation/ali-lazformer.md) |
 | `google-light-heads.md` | [ml-infra/google-light-heads.md](../ml-infra/google-light-heads.md) |
 | `kuaishou-sara.md` | [llm4rec/kuaishou-sara.md](../llm4rec/kuaishou-sara.md) |
+| `linkedin-transx.md` | [behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.md](../behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.md) |
 | `meta-amle.md` | [auto-research/meta-amle.md](../auto-research/meta-amle.md) |
 | `pinterest-pin-scale.md` | [sid/pinterest-pin-scale.md](../sid/pinterest-pin-scale.md) |
 | `youtube-dual-sid.md` | [sid/youtube-dual-sid.md](../sid/youtube-dual-sid.md) |

@@ -84,6 +84,7 @@ git clone https://github.com/lmxhappy/step-by-step-learning-ai.git
   - [Sample Is Feature — 序列样本分词，CTR+2% (美团)](./behavior-sequence-modeling/meituan-sample-is-feature.md)
   - [GenLI — 生成式长兴趣建模，RPM+1.6% (美团)](./behavior-sequence-modeling/meituan-genli.md)
   - [UxSID — 用聚类搞定超长序列建模，收入+0.3% (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)
+  - [TransX — 用户序列离线压缩，线上只做候选交叉，CTR+6% (LinkedIn)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.md) · [EN](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.en.md)
   - [TokenMinds — 用户生成式SID特征双输出表征 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
   - [UniSGR — 增加用户SID特征，GMV+6% (阿里)](./behavior-sequence-modeling/alibaba-unisgr.md)
   - [CMSL — 用户行为序列转成纯净意图流 (Meta)](./behavior-sequence-modeling/meta-cmsl.md)
