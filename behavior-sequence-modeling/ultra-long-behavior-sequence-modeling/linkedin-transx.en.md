@@ -46,7 +46,7 @@ Two kinds of sharing cut the cost:
 
 ## A/B
 
-Control is the production HSTU-style sequential model (home feed, landing pages); treatment and control each get 20% of traffic for at least 7 days: CTR +6.02%, conversion +4.45%, DAU +0.26%. CTR lift for heavy / medium / light users is +6.2% / +6.0% / +5.5%, and the gain held over a five-week holdout.
+Control is the production HSTU-style sequential model (home page, landing pages); treatment and control each get 20% of traffic for at least 7 days: CTR +6.02%, conversion +4.45%, DAU +0.26%. CTR lift for heavy / medium / light users is +6.2% / +6.0% / +5.5%, and the gain held over a five-week holdout.
 
 ## Takeaways
 
