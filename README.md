@@ -16,6 +16,7 @@ Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; 
 | Paper | Company | What it's about |
 |---|---|---|
 | [TransX](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.en.md) | LinkedIn | Compress the user's behavior sequence offline into 64 vectors stored as KV; online, candidates only attend to them. CTR +6.02% over an HSTU-style model. |
+| [PAIR](./deep-retrieval/linkedin-pair.en.md) | LinkedIn | Embedding retrieval for Premium people recommendation: a platform-wide member embedding replaced by one fine-tuned on the surface's own clicks. CTR +7.5%, Premium retention +2.1%. |
 | [Pin-SCALE](./sid/pinterest-pin-scale.en.md) | Pinterest | Wiring Semantic IDs into two-tower retrieval for cold start. Fresh repins +3.67%. |
 
 ## Topics

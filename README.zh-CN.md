@@ -80,6 +80,7 @@
   - [LazFormer — 生成式预训练迁移到精排，GMV+9.85% (阿里国际)](./generative-recommendation/ali-lazformer.md)
   - [CONGRATS — 生成式重排，图结构解码器+一致性训练，Long Views+2.18% (快手)](./generative-recommendation/kuaishou-congrats.md)
   - [TGR-Reason — 离线reason token注入，新用户曝光转化+13.09% (腾讯)](./generative-recommendation/tencent-tgr.md)
+  - [OneLatent — 思维链压进3个token，线上不写字也能推理，收入+9.6% (快手)](./generative-recommendation/kuaishou-onelatent.md)
   - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
   - [Sigma — 生成式推荐，GMV+8% (阿里)](./generative-recommendation/ali-sigma.md)
   - [VectorizingTrie — 生成式召回解码提速最高1000倍 (Google)](./generative-recommendation/google-static.md)
@@ -124,6 +125,7 @@
   - [HILL — 树状聚类索引+深度召回，业务指标+2.57% (Meta)](./deep-retrieval/meta-hill.md)
   - [HSNN — 深度召回，业务指标+3% (Meta)](./deep-retrieval/meta-hsnn.md)
   - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/meta-rankgraph.md)
+  - [PAIR — 小场景的向量召回，场景定制带来增益，CTR+7.5% (LinkedIn)](./deep-retrieval/linkedin-pair.md) · [EN](./deep-retrieval/linkedin-pair.en.md)
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
