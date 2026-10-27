@@ -1,9 +1,9 @@
-# Step By Step Learning AI
+<p align="center"><img src="./imgs/banner.png" alt="Step-by-Step Learning AI — Industrial Recommender Systems Paper Deep Dives" width="100%"></p>
+
 
 [![GitHub stars](https://img.shields.io/github/stars/lmxhappy/step-by-step-learning-ai?style=social)](https://github.com/lmxhappy/step-by-step-learning-ai)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mingxing%20Liu-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/mingxing-liu-b31656284)
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lmxhappy.step-by-step-learning-ai)](https://github.com/lmxhappy/step-by-step-learning-ai)
-[![Hits](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai.svg)](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai/)
+[![Hits](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai.svg)](https://github.com/lmxhappy/step-by-step-learning-ai/)
 
 [![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
@@ -34,6 +34,6 @@ All notes are organized by topic folder. Notes not listed above are in Chinese o
 | Problems | [Long tail](./long-tail/) |
 | Engineering | [ML infra](./ml-infra/) · [Auto research](./auto-research/) |
 
-**Author:** Mingxing Liu · [LinkedIn](https://www.linkedin.com/in/mingxing-liu-b31656284) · WeChat `lmxhappy` · [Zhihu](https://zhuanlan.zhihu.com/stupid-ai). If this repo helps you, a ⭐ helps others find it.
+**Author:** Mingxing Liu · WeChat `lmxhappy` · [Zhihu](https://zhuanlan.zhihu.com/stupid-ai). If this repo helps you, a ⭐ helps others find it.
 
 This is a notes repo, not a code or reproduction repo.
