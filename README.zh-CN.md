@@ -80,6 +80,7 @@
   - [LazFormer — 生成式预训练迁移到精排，GMV+9.85% (阿里国际)](./generative-recommendation/ali-lazformer.md)
   - [CONGRATS — 生成式重排，图结构解码器+一致性训练，Long Views+2.18% (快手)](./generative-recommendation/kuaishou-congrats.md)
   - [TGR-Reason — 离线reason token注入，新用户曝光转化+13.09% (腾讯)](./generative-recommendation/tencent-tgr.md)
+  - [GR4AD-X — 生成式广告召回三处打磨，收入+3.07% (快手)](./generative-recommendation/kuaishou-gr4ad-x.md)
   - [OneLatent — 思维链压进3个token，线上不写字也能推理，收入+9.6% (快手)](./generative-recommendation/kuaishou-onelatent.md)
   - [OneLive — 生成式推荐落地直播场景 (快手)](./generative-recommendation/kuaishou-onelive.md)
   - [Sigma — 生成式推荐，GMV+8% (阿里)](./generative-recommendation/ali-sigma.md)
