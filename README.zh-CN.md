@@ -25,8 +25,7 @@
 
 这个仓库是公众号「稳扎稳打学AI」的**配套解读笔记库**（与公众号同步更新），主要包括：
 - **论文解读 / 笔记**：针对搜广推相关论文的结构化解读（方法、心得、可信度等），按主题目录组织。
-- **英文版**：部分解读配有英文版，与中文稿同目录、同名，后缀 `.en.md`（如 [sid/pinterest-pin-scale.en.md](./sid/pinterest-pin-scale.en.md)）。新增英文版时，同时在英文 README（[README.md](./README.md)）的 English write-ups 表里加一行。
-- **[posts/](./posts/)**：英文社交平台的发布稿，压在平台字数上限内，内容是 `.en.md` 的精简版。
+- **英文版**：与中文稿同目录、同名，分两种：`xxx.en.md` 是英文社交平台（LinkedIn）的发布稿，压在平台字数上限内；部分解读还有完整英文版 `xxx.full.en.md`（如 [sid/pinterest-pin-scale.full.en.md](./sid/pinterest-pin-scale.full.en.md)），发布稿末尾链接到它。新增完整英文版时，同时在英文 README（[README.md](./README.md)）的 English write-ups 表里加一行。
 - **配图与索引**：文中插图与 README 目录导航，方便连读与检索。
 - **说明**：当前以笔记为主，**不以可运行代码 / 实验复现为主**；若个别文章附带脚本或外链，会在文内单独说明。
 
@@ -69,7 +68,7 @@
   - [Sample Is Feature — 序列样本分词，CTR+2% (美团)](./behavior-sequence-modeling/meituan-sample-is-feature.md)
   - [GenLI — 生成式长兴趣建模，RPM+1.6% (美团)](./behavior-sequence-modeling/meituan-genli.md)
   - [UxSID — 用聚类搞定超长序列建模，收入+0.3% (快手)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)
-  - [TransX — 用户序列离线压缩，线上只做候选交叉，CTR+6% (LinkedIn)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.md) · [EN](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.en.md)
+  - [TransX — 用户序列离线压缩，线上只做候选交叉，CTR+6% (LinkedIn)](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.md) · [EN](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.full.en.md)
   - [TokenMinds — 用户生成式SID特征双输出表征 (YouTube)](./behavior-sequence-modeling/tokenminds.md)
   - [UniSGR — 增加用户SID特征，GMV+6% (阿里)](./behavior-sequence-modeling/alibaba-unisgr.md)
   - [CMSL — 用户行为序列转成纯净意图流 (Meta)](./behavior-sequence-modeling/meta-cmsl.md)
@@ -93,7 +92,7 @@
 - **[SID](./sid/)**
   **表示层技术**：怎么把一个 item 压成一串离散的语义 token。关注的是「item 怎么表示」，和上面的任务范式是正交的两件事——SID 可以喂给生成式模型，也可以当普通特征喂给判别式模型。
   本目录收「如何生成 SID」以及不便归入其它分类的用法；SID 作为横切技术，在生成式召回（见上）、序列建模（[UniSGR](./behavior-sequence-modeling/alibaba-unisgr.md)、[UxSID](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/kuaishou-uxsid.md)、[TokenMinds](./behavior-sequence-modeling/tokenminds.md)）、负反馈迁移（[SARA](./llm4rec/kuaishou-sara.md)）等场景均有应用，论文散落在相应分类中。
-  - [Pin-SCALE — SID接入双塔召回，冷启转存+3.67%，DAU+0.05% (Pinterest)](./sid/pinterest-pin-scale.md) · [EN](./sid/pinterest-pin-scale.en.md)
+  - [Pin-SCALE — SID接入双塔召回，冷启转存+3.67%，DAU+0.05% (Pinterest)](./sid/pinterest-pin-scale.md) · [EN](./sid/pinterest-pin-scale.full.en.md)
   - [Tokens are All You Need — 从SID重建内容embedding，长序列用得起内容特征 (YouTube)](./sid/youtube-dual-sid.md)
   - [QuaSID — SID 量化新方法，GMV+2% (快手)](./sid/kuaishou-quasid.md)
   - [AKT-Rec — 聚类相关特征提升长尾，GMV+3% (阿里)](./sid/alibaba-akt-rec.md)
@@ -126,7 +125,7 @@
   - [HILL — 树状聚类索引+深度召回，业务指标+2.57% (Meta)](./deep-retrieval/meta-hill.md)
   - [HSNN — 深度召回，业务指标+3% (Meta)](./deep-retrieval/meta-hsnn.md)
   - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/meta-rankgraph.md)
-  - [PAIR — 小场景的向量召回，场景定制带来增益，CTR+7.5% (LinkedIn)](./deep-retrieval/linkedin-pair.md) · [EN](./deep-retrieval/linkedin-pair.en.md)
+  - [PAIR — 小场景的向量召回，场景定制带来增益，CTR+7.5% (LinkedIn)](./deep-retrieval/linkedin-pair.md) · [EN](./deep-retrieval/linkedin-pair.full.en.md)
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。

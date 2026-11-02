@@ -2,7 +2,7 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
-> [English version](linkedin-transx.en.md)
+> [English version](linkedin-transx.full.en.md)
 
 ### 论文：TransX Technical Report: Scaling Sequence Transduction for Recommendation
 ### 网址：https://arxiv.org/abs/2610.20913

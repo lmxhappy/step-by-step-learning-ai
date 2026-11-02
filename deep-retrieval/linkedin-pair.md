@@ -2,7 +2,7 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
-> [English version](linkedin-pair.en.md)
+> [English version](linkedin-pair.full.en.md)
 
 ### 论文：PAIR: Preference-Aligned Intent Retrieval for Premium People Recommendation at LinkedIn
 ### 网址：https://arxiv.org/abs/2610.30941
@@ -11,7 +11,7 @@
 ### 方向：向量召回、LLM embedding
 
 ## 解读：
-这篇没有新技术，本文就是用大家常用的向量召回，给LinkedIn VIP会员推荐其他好友。模型是双塔加历史加权平均，负样本是曝光未点击加随机。
+这篇没有新技术，本文就是用大家常用的向量召回，给LinkedIn VIP会员推荐其他好友。模型是三塔加历史加权平均，负样本是曝光未点击加随机。
 原来：线上用 LinkedIn 平台通用的会员向量，它是很多产品的互动目标上联合训练而获得的，从没用在该场景里，定制训练过；现在：用这个场景的点击数据去微调LLM的画像塔。
 另外，此场景下，之前的推荐逻辑是「相似」，用点击偏好代替简历相似。
 
@@ -60,3 +60,4 @@
 * 入群方法：请您加个人微信lmxhappy，我拉您入群，请备注【公司】（只我个人看，不公开）。
 
 ## 推荐您继续阅读：
+* [Pinterest：SID接入双塔召回，冷启转存+3.67%](../sid/pinterest-pin-scale.md)（同为向量召回落地）

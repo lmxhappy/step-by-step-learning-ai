@@ -9,16 +9,16 @@
 
 Paper write-ups on industrial **recommendation, ads and search** systems: what the method does, what it gained in production A/B tests, and where the claims are weaker than they look.
 
-Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; a growing set has full English versions, listed below. Each English write-up sits next to its Chinese original with the suffix `.en.md`.
+Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; a growing set has full English versions, listed below. Each full English write-up sits next to its Chinese original with the suffix `.full.en.md`; the short LinkedIn post for a paper sits there too, as `.en.md`.
 
 ## English write-ups
 
 | Paper | Company | What it's about |
 |---|---|---|
-| [TransX](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.en.md) | LinkedIn | Compress the user's behavior sequence offline into 64 vectors stored as KV; online, candidates only attend to them. CTR +6.02% over an HSTU-style model. |
-| [GR4AD-X](./generative-recommendation/kuaishou-gr4ad-x.en.md) | Kuaishou | Three parallel fixes to a deployed generative ad retriever: two first-level SID codes for boundary ads, serving-cheap capacity scaling, and per-prefix eCPM value heads in beam search plus a one-step rerank. Revenue +3.07%. |
-| [PAIR](./deep-retrieval/linkedin-pair.en.md) | LinkedIn | Embedding retrieval for Premium people recommendation: a platform-wide member embedding replaced by one fine-tuned on the surface's own clicks. CTR +7.5%, Premium retention +2.1%. |
-| [Pin-SCALE](./sid/pinterest-pin-scale.en.md) | Pinterest | Wiring Semantic IDs into two-tower retrieval for cold start. Fresh repins +3.67%. |
+| [TransX](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.full.en.md) | LinkedIn | Compress the user's behavior sequence offline into 64 vectors stored as KV; online, candidates only attend to them. CTR +6.02% over an HSTU-style model. |
+| [GR4AD-X](./generative-recommendation/kuaishou-gr4ad-x.full.en.md) | Kuaishou | Three parallel fixes to a deployed generative ad retriever: two first-level SID codes for boundary ads, serving-cheap capacity scaling, and per-prefix eCPM value heads in beam search plus a one-step rerank. Revenue +3.07%. |
+| [PAIR](./deep-retrieval/linkedin-pair.full.en.md) | LinkedIn | Embedding retrieval for Premium people recommendation: a platform-wide member embedding replaced by one fine-tuned on the surface's own clicks. CTR +7.5%, Premium retention +2.1%. |
+| [Pin-SCALE](./sid/pinterest-pin-scale.full.en.md) | Pinterest | Wiring Semantic IDs into two-tower retrieval for cold start. Fresh repins +3.67%. |
 
 ## Topics
 

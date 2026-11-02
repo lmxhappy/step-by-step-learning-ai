@@ -9,3 +9,5 @@ template.md
 .lingma
 # 公众号排版源文件（base64 内嵌图，体积大，不入库）
 *.html
+# LinkedIn 发布约定与作者表，仅本地使用
+LINKEDIN.md
