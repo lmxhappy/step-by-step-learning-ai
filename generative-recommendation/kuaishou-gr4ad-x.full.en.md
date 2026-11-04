@@ -79,6 +79,9 @@ The control is the fully deployed GR4AD. Full GR4AD-X gives a cumulative +3.07% 
 * The paper keeps the basic framework of the earlier work, polishes each component, finds problems through data analysis, and solves them with new ideas.
 * It innovates along several dimensions on top of the earlier work. This is a team effort: at two people per direction, it still takes a dozen or so strong MLEs.
 
+## Caveats
+* In the paper's architecture figure, "SID 1, SID 2, SID 3" mean the 1st, 2nd and 3rd codes of one SID (s1, s2, s3), not a first, second and third SID. Since the paper also has Multi-Path SID, where one ad really does have several SIDs, the label is easy to misread. Labeling them s1, s2, s3 would be much clearer.
+
 ## Credibility: production
 
 ## Recommendation: practically useful
