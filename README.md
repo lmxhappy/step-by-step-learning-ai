@@ -28,9 +28,9 @@ All notes are organized by topic folder. Notes not listed above are in Chinese o
 |---|---|
 | Recommendation paradigm | [Generative recommendation](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
 | Representation | [Semantic IDs](./sid/) · [Representation quality](./representation-quality/) |
-| Model architecture | [Behavior sequence modeling](./behavior-sequence-modeling/) · [Feature interaction](./feature-cross/) · [Deep retrieval](./deep-retrieval/) |
+| Model architecture | [Behavior sequence modeling](./behavior-sequence-modeling/) · [Feature interaction](./feature-cross/) · [Deep retrieval](./deep-retrieval/) · [Graph recommendation](./graph-recommendation/) |
 | Data & features | [Feature selection](./feature-selection/) |
-| Training objective | [Loss functions](./loss-func/) |
+| Training objective | [Loss functions](./loss-func/) · [Multi-task learning](./multi-task-learning/) |
 | Scenarios | [Cross-domain](./cross-domain-recommendation/) · [Item-to-item](./item-to-item/) |
 | Problems | [Long tail](./long-tail/) |
 | Engineering | [ML infra](./ml-infra/) · [Auto research](./auto-research/) |

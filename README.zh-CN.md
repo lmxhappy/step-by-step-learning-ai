@@ -38,15 +38,15 @@
 
 ### 🧭 按技术层次导航
 
-下面 14 个分类分属不同的技术层次，这里按层次归组，便于定位；**目录结构本身是平铺的**，每个分类的论文清单见后面的「子目录导航」。
+下面 16 个分类分属不同的技术层次，这里按层次归组，便于定位；**目录结构本身是平铺的**，每个分类的论文清单见后面的「子目录导航」。
 
 | 层次 | 关注的问题 | 分类 |
 |---|---|---|
 | **任务范式** | 怎么做推荐 | [生成式推荐](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
 | **表示层** | item / user 怎么表示 | [SID](./sid/) · [表示质量](./representation-quality/) |
-| **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [深度召回](./deep-retrieval/) |
+| **模型结构** | 网络怎么搭 | [用户行为序列建模](./behavior-sequence-modeling/) · [特征交叉](./feature-cross/) · [深度召回](./deep-retrieval/) · [图推荐](./graph-recommendation/) |
 | **数据与特征** | 喂什么进去 | [特征选择](./feature-selection/) |
-| **训练目标** | 优化什么 | [损失函数](./loss-func/) |
+| **训练目标** | 优化什么 | [损失函数](./loss-func/) · [多任务学习](./multi-task-learning/) |
 | **业务场景** | 用在哪 | [跨域](./cross-domain-recommendation/) · [I2I推荐](./item-to-item/) |
 | **问题导向** | 治什么病 | [长尾问题](./long-tail/) |
 | **工程与研发体系** | 怎么跑得动、迭代得快 | [ML Infra](./ml-infra/) · [Auto Research](./auto-research/) |
@@ -126,6 +126,12 @@
   - [HSNN — 深度召回，业务指标+3% (Meta)](./deep-retrieval/meta-hsnn.md)
   - [RankGraph — 聚类用于图召回，降本增效 (Meta)](./deep-retrieval/meta-rankgraph.md)
   - [PAIR — 小场景的向量召回，场景定制带来增益，CTR+7.5% (LinkedIn)](./deep-retrieval/linkedin-pair.md) · [EN](./deep-retrieval/linkedin-pair.full.en.md)
+
+- **[图推荐](./graph-recommendation/)**
+  用图结构（用户-物品图、异构图等）建模推荐关系。
+
+- **[多任务学习](./multi-task-learning/)**
+  同时优化点击、转化、时长等多个目标，以及多目标之间的融合与平衡。
 
 - **[损失函数](./loss-func/)**
   排序、分类等核心损失函数的创新与优化。
