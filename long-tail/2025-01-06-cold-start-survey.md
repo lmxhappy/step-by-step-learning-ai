@@ -5,6 +5,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](2025-01-06-cold-start-survey.full.en.md)
+
 * 推荐标准：大都是大厂的、少量学术的ranking model。
 * 更新频率：日更。
 * 来源：arxiv.org。

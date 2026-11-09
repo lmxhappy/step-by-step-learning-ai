@@ -1,5 +1,7 @@
 ![VarBPR](https://files.mdnice.com/user/183992/69efb500-749a-4c17-8bca-6887880f91c3.png)
 
+> [English version](varbpr.full.en.md)
+
 https://doi.org/10.48550/arXiv.2503.11067  
 
 https://ieeexplore.ieee.org/document/11429075

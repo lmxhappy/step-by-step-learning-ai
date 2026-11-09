@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](alibaba-akt-rec.full.en.md)
+
 ### 论文：From Head to Tail: Asymmetric Knowledge Transfer in Long-tail Recommendation with Generative Semantic IDs
 ### 网址：https://arxiv.org/pdf/2605.23310
 ### 公司：阿里

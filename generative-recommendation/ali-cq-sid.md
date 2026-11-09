@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](ali-cq-sid.full.en.md)
+
 ### 论文：Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL
 ### 网址：https://arxiv.org/pdf/2605.14434
 ### 公司：阿里

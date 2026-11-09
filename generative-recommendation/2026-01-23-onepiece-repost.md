@@ -1,5 +1,7 @@
 # 全新生成式范式重塑搜推：物品ID序列上也能做推理！
 
+> [English version](2026-01-23-onepiece-repost.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/BEBKjAyYPg3Muf1Xpc2xhw
 > 稳扎稳打学AI 转载 | 发表于 2026-01-23
 > 备注：转载文章，原作者傅聪Cong（OnePiece 作者）。本文是傅聪老师的 OnePiece 解读长文，经其委托转载；归档时只存结构、图片链接与内容摘要，全文见原文链接。

@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](google-light-heads.full.en.md)
+
 ### 论文：Lightweight Ranking Heads: Accelerating Multi-Task Experimentation in Production Recommender Systems
 ### 网址：https://arxiv.org/abs/2609.25433
 ### 公司：Google（YouTube）

@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-cmsl.full.en.md)
+
 ### 论文：CMSL: Constructive Multi-Sequence Learning for Recommendation Systems
 ### 网址：https://arxiv.org/pdf/2606.28533
 ### 公司：Meta
@@ -88,7 +90,7 @@ K条长度为n的token序列，每个位置上的K个token，拼接输入到各�
 
 ## 补充——综合对比：OneTrans / EST / CMSL
 
-三篇工作都在解决"序列特征与非序列特征该如何交互"，但选择的路径完全不同。关系脉络大致是：**OneTrans**（ByteDance）最早提出"一个 Transformer 统一做序列建模+特征交叉"；**EST**（阿里，[ali-est.md](ali-est.md)）自称 OneTrans 2.0，把 OneTrans 因果 mask 隐含的方向性显式模块化，并引入多模态先验做稀疏化；**CMSL**（Meta）关注的是前两者都没提的问题——**一条序列里塞进多种不相关意图导致的"上下文污染"（Context Pollution）**，解法是先把一条行为序列"分流"成 K 条各自纯净的意图序列，再分别建模。
+三篇工作都在解决"序列特征与非序列特征该如何交互"，但选择的路径完全不同。关系脉络大致是：**OneTrans**（ByteDance）最早提出"一个 Transformer 统一做序列建模+特征交叉"；**EST**（阿里，[ali-est.md](alibaba-est.md)）自称 OneTrans 2.0，把 OneTrans 因果 mask 隐含的方向性显式模块化，并引入多模态先验做稀疏化；**CMSL**（Meta）关注的是前两者都没提的问题——**一条序列里塞进多种不相关意图导致的"上下文污染"（Context Pollution）**，解法是先把一条行为序列"分流"成 K 条各自纯净的意图序列，再分别建模。
 
 | 维度 | OneTrans | EST | CMSL |
 |---|---|---|---|

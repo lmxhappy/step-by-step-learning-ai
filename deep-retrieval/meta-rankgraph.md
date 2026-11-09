@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-rankgraph.full.en.md)
+
 ### 论文：RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation
 ### 网址：https://arxiv.org/html/2606.18379
 ### 公司：Meta
@@ -90,7 +92,7 @@
 
 ## 推荐等级：有实践价值
 
-![pic](../../imgs/rankgraph-2.png)
+![pic](../imgs/rankgraph-2.png)
 
 **请帮忙点赞、转发，谢谢。欢迎干货投稿 \ 论文宣传\ 合作交流**
 

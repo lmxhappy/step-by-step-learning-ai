@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](ali-mgdin.full.en.md)
+
 ### 论文：Deferred is Better: A Framework for Multi-Granularity Deferred Interaction of Heterogeneous Features
 ### 网址：https://arxiv.org/pdf/2603.12586
 ### 公司：阿里Lazada

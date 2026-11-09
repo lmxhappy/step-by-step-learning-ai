@@ -1,5 +1,7 @@
 # Meta的one model，全链路gpu算子化
 
+> [English version](2025-12-06-meta-onemodel-silvertorch.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/yvaTutx8PiMoS184ts_Tew
 > 作者：算法工程师刘明星（稳扎稳打学AI）| 发表于 2025-12-06（第三方投稿；修改于2025年12月6日）
 > 注：本文为第三方投稿，版权归投稿作者；此处仅存结构与摘要，全文见原文链接。

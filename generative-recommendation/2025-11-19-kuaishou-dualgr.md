@@ -1,5 +1,7 @@
 # 从检索到生成：快手的Search-based长短期兴趣生成式召回实践
 
+> [English version](2025-11-19-kuaishou-dualgr.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/fh7sW6yYBlNldoWh9v7GIg
 > 作者：算法工程师刘明星（稳扎稳打学AI）| 发表于 2025-11-19（第三方投稿；修改于2025年11月19日）
 > 注：本文为快手作者投稿，版权归投稿作者；此处仅存结构与摘要、图片链接与实验数据，全文见原文链接。

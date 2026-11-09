@@ -1,5 +1,7 @@
 # 推荐算法paper
 
+> [English version](2024-10-24-negative-sampling.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/Z-yddkQiVbMPpy31Lswyrw
 > 作者：算法工程师刘明星（稳扎稳打学AI）| 发表于 2024-10-23
 

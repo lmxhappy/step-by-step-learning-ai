@@ -7,11 +7,17 @@
 
 [![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
+**200+ paper notes on industrial recommendation, ads and search, across 16 topics, updated since October 2024.**
+This is a **notes repo, not a code or reproduction repo**. Every note has a full English version.
+
+### 🚪 Browse by topic (number of notes)
+[Generative recommendation](./generative-recommendation/) 33 · [Behavior sequence modeling](./behavior-sequence-modeling/) 33 · [LLM4Rec](./llm4rec/) 24 · [Deep retrieval](./deep-retrieval/) 23 · [Semantic IDs](./sid/) 15 · [Multi-task learning](./multi-task-learning/) 12 · [Long tail](./long-tail/) 12 · [Feature interaction](./feature-cross/) 12 · [Cross-domain](./cross-domain-recommendation/) 10 · [Loss functions](./loss-func/) 9 · [ML infra](./ml-infra/) 8 · [Representation quality](./representation-quality/) 5 · [Item-to-item](./item-to-item/) 5 · [Graph recommendation](./graph-recommendation/) 4 · [Feature selection](./feature-selection/) 2 · [Auto research](./auto-research/) 2
+
 Paper write-ups on industrial **recommendation, ads and search** systems: what the method does, what it gained in production A/B tests, and where the claims are weaker than they look.
 
-Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; a growing set has full English versions, listed below. Each full English write-up sits next to its Chinese original with the suffix `.full.en.md`; the short LinkedIn post for a paper sits there too, as `.en.md`.
+Every note is written in Chinese for the WeChat account **稳扎稳打学AI** and has a full English version next to it, with the suffix `.full.en.md`. The table below picks a few recent ones.
 
-## English write-ups
+## Recent highlights
 
 | Paper | Company | What it's about |
 |---|---|---|
@@ -23,7 +29,7 @@ Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; 
 
 ## Topics
 
-All notes are organized by topic folder. Notes not listed above are in Chinese only; the full per-paper index is in the [Chinese README](README.zh-CN.md).
+All notes are organized by topic folder; open a folder and read the `.full.en.md` files. The full per-paper index is in the [Chinese README](README.zh-CN.md).
 
 | Layer | Topics |
 |---|---|

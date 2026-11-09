@@ -7,6 +7,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](2025-09-05-microsoft-pcr-ca-video.full.en.md)
+
 👆 [本公众号paper推荐原则](https://mp.weixin.qq.com/s/BhVGu0qH5kTz9N5zpsD3KA)
 
 咱们之前就paper——《PCR-CA: Parallel Codebook Representations with Contrastive Alignment for Multiple-Category App Recommendation》发了一篇导读文章《[推荐算法(2025.8.30)：微软的语义embed对齐，简单有效](https://mp.weixin.qq.com/s/aFfTgavsGzsvU9j5XYianw)》。读者对其反响强烈。今天，有幸邀请到了微软的Bin Tan同学，分享他的paper。

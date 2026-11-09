@@ -1,5 +1,7 @@
 # 淘宝直播SSR-Live：动态语义ID助力模型推理，秒懂直播间精彩瞬间
 
+> [English version](2026-03-04-taobao-ssr-live.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/nu9wHb9-0SRr8Esw7iFPYg
 > 稳扎稳打学AI 转载 | 发表于 2026-03-04
 > 备注：转载文章，原出处「淘天集团智能算法产品」，作者：淘天直播算法团队；该文在公众号页面显示为「仅自己可见」。正文公式由页面渲染的数学公式转写，表格图片的内容另以 Markdown 表格附在对应图片之后。

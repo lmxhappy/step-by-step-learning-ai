@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](ali-danet.full.en.md)
+
 ### 论文：Cheaper is Better: A Discount-Aware Network for Conversion Rate Prediction in E-commerce Recommendation System
 ### 网址：https://arxiv.org/pdf/2607.12578
 ### 公司：阿里

@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](tencent-tgr.full.en.md)
+
 ### 论文：TGR: Advancing Industrial Recommendation from Generative-Paradigm Ranking toward Unified Generation and Reasoning
 ### 网址：https://arxiv.org/abs/2609.00986
 ### 公司：腾讯

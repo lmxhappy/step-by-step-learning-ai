@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-hsnn.full.en.md)
+
 ### 论文：Hierarchical Structured Neural Network: Efficient Retrieval Scaling for Large Scale Recommendation
 ### 网址：https://arxiv.org/pdf/2408.06653
 ### 公司：Meta

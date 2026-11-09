@@ -7,6 +7,12 @@
 
 [![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
+**200+ 篇搜广推论文解读，16 个方向，2024 年 10 月起持续更新。**
+这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
+
+### 🚪 按主题入口（篇数）
+[生成式推荐](./generative-recommendation/) 33 · [用户行为序列建模](./behavior-sequence-modeling/) 33 · [LLM4Rec](./llm4rec/) 24 · [深度召回](./deep-retrieval/) 23 · [SID](./sid/) 15 · [多任务学习](./multi-task-learning/) 12 · [长尾问题](./long-tail/) 12 · [特征交叉](./feature-cross/) 12 · [跨域](./cross-domain-recommendation/) 10 · [损失函数](./loss-func/) 9 · [ML Infra](./ml-infra/) 8 · [表示质量](./representation-quality/) 5 · [I2I推荐](./item-to-item/) 5 · [图推荐](./graph-recommendation/) 4 · [特征选择](./feature-selection/) 2 · [Auto Research](./auto-research/) 2
+
 如果这个仓库对你有帮助，欢迎点击右上角 **Star ⭐** 支持一下，让更多人发现它！
 
 欢迎来到本仓库！这是微信公众号「稳扎稳打学AI」的配套资源库，聚焦推荐 / 广告 / 搜索论文解读，陪你一起保持进步、不断精进。
@@ -25,7 +31,7 @@
 
 这个仓库是公众号「稳扎稳打学AI」的**配套解读笔记库**（与公众号同步更新），主要包括：
 - **论文解读 / 笔记**：针对搜广推相关论文的结构化解读（方法、心得、可信度等），按主题目录组织。
-- **英文版**：与中文稿同目录、同名，分两种：`xxx.en.md` 是英文社交平台（LinkedIn）的发布稿，压在平台字数上限内；部分解读还有完整英文版 `xxx.full.en.md`（如 [sid/pinterest-pin-scale.full.en.md](./sid/pinterest-pin-scale.full.en.md)），发布稿末尾链接到它。新增完整英文版时，同时在英文 README（[README.md](./README.md)）的 English write-ups 表里加一行。
+- **英文版**：每篇解读都有完整英文版，与中文稿同目录、同名，后缀 `.full.en.md`（如 [sid/pinterest-pin-scale.full.en.md](./sid/pinterest-pin-scale.full.en.md)）。新写的解读也同步写英文版。
 - **配图与索引**：文中插图与 README 目录导航，方便连读与检索。
 - **说明**：当前以笔记为主，**不以可运行代码 / 实验复现为主**；若个别文章附带脚本或外链，会在文内单独说明。
 

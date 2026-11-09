@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-ultra-HSTU.full.en.md)
+
 ### 论文：Bending the Scaling Law Curve in Large-Scale Recommendation Systems
 ### 网址：https://arxiv.org/pdf/2602.16986
 ### 公司：Meta

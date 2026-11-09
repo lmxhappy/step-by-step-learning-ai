@@ -1,5 +1,7 @@
 # KDD 2026 \| 快手生成式推荐：从 NAR4Rec 到 CONGRATS
 
+> [English version](kuaishou-congrats.full.en.md)
+
 > 论文：[Non\-autoregressive Generative Models for Reranking Recommendation](https://arxiv.org/pdf/2402.06871)（NAR4Rec，KDD 2024）
 > 
 > 论文：[Breaking the Likelihood Trap: Consistent Generative Recommendation with Graph\-structured Model](https://arxiv.org/abs/2510.10127) （CONGRATS，KDD 2026）

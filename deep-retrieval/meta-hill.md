@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-hill.full.en.md)
+
 ### 论文：Efficient Retrieval Scaling with Hierarchical Indexing for Large Scale Recommendation
 ### 网址：https://arxiv.org/html/2604.12965
 ### 公司：Meta
@@ -28,7 +30,7 @@
 * （2）如果是onehot特征，选择 weighted_count 最高的那个特征值，就从embed layer查出来其embed；如果是multihot特征，就要查出weighted_count大于0的特征值的embed，再做pooling——一个聚类中心。
     * 某个特征值weighted_count的计算方法：该索引节点对应的真实item集合中，是所有拥有该特征的item的加权求和，权重就是attention值，获得一个统计数量weighted_count。
 
-正如[HSNN](./hsnn.md)里描述的MoNN网络，真实item，除了用标签数据做多任务监督学习，还通过半监督学习用更多的无标签数据提升模型效果。本文是将索引节点像真实item一样做类似的训练。
+正如[HSNN](./meta-hsnn.md)里描述的MoNN网络，真实item，除了用标签数据做多任务监督学习，还通过半监督学习用更多的无标签数据提升模型效果。本文是将索引节点像真实item一样做类似的训练。
 
 ### （2）Residual Quantization（残差量化）
 上层的残差，减去伪表征，就是这层的残差。特别的，第一层的残差就是item embedding。

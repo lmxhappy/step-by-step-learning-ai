@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](youtube-dual-sid.full.en.md)
+
 ### 论文：Tokens are All You Need: Dual-purpose Semantic IDs for Achieving LLM-Level I/O Efficiency in Recommendation Systems
 ### 网址：https://arxiv.org/abs/2607.24865
 ### 公司：Google

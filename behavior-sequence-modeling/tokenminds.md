@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](tokenminds.full.en.md)
+
 ### 论文：TokenMinds: Pretrained User Tokens and Embeddings for User Understanding in Large Recommender Systems
 ### 网址：https://arxiv.org/abs/2606.25147
 ### 公司：Google DeepMind / YouTube

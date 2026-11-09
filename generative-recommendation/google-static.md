@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](google-static.full.en.md)
+
 ### 论文：Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators
 ### 网址：https://arxiv.org/pdf/2602.22647
 ### 公司：谷歌

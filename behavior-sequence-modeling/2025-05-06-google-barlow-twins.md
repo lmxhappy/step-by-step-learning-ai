@@ -7,6 +7,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](2025-05-06-google-barlow-twins.full.en.md)
+
 📄 [本公众号paper推荐原则](https://mp.weixin.qq.com/s?__biz=MzkzNDYyNjM1NA==&mid=2247484097&idx=1&sn=18322c279290b555eb030e12953b7c7f&scene=21#wechat_redirect)
 
 1 Sequence Augmentation with Barlow Twins for Sequential Recommendation

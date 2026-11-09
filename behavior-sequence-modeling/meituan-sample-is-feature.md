@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meituan-sample-is-feature.full.en.md)
+
 ### 论文：Sample Is Feature: Beyond Item-Level, Toward Sample-Level Tokens for Unified Large Recommender Models
 ### 网址：https://arxiv.org/pdf/2604.15650
 ### 公司：美团

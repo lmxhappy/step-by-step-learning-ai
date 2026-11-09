@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](airbnb-llm-synthetic-query.full.en.md)
+
 ### 论文：Bridging the Cold-Start Gap: LLM-Powered Synthetic Data Generation for Natural Language Search at Airbnb
 ### 网址：https://arxiv.org/pdf/2605.21812
 ### 公司：Airbnb

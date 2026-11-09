@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](bytedance-stca.full.en.md)
+
 ### 论文：Make It Long, Keep It Fast: End-to-End 10k-Sequence Modeling at Billion Scale on Douyin
 ### 网址：https://arxiv.org/pdf/2511.06077
 ### 公司：字节
@@ -20,7 +22,7 @@
 
 STCA最后的输出表征是所有层的用户兴趣表征的拼接。
 
-![alt text](imgs/stca.png)
+![alt text](../../imgs/stca.png)
 
 ### （2）请求级批处理
 这是训练时候的技巧。实际上，就是HSTU里的多candidate预测。 一个样本只有一个candidate item，而用户的一次请求却有多个样本，它们都对应相同的用户行为序列。

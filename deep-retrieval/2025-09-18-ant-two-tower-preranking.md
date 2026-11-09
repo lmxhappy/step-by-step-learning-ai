@@ -7,6 +7,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](2025-09-18-ant-two-tower-preranking.full.en.md)
+
 👆 [本公众号paper推荐原则](https://mp.weixin.qq.com/s/BhVGu0qH5kTz9N5zpsD3KA)
 
 1 A Learnable Fully Interacted Two-Tower Model for Pre-Ranking System

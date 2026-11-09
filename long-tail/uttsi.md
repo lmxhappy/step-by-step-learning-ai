@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](uttsi.full.en.md)
+
 ### 论文：Selective Test-Time Compute Scaling for Click-Through Rate Prediction via Uncertainty-Triggered Feature Path Exploration
 ### 网址：https://arxiv.org/html/2605.24989
 ### 公司：阿里

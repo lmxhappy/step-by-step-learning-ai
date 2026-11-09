@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta_late_materialization.full.en.md)
+
 ### 论文：Versioned Late Materialization for Ultra-Long Sequence Training in Recommendation Systems at Scale
 ### 网址：https://arxiv.org/pdf/2604.24806
 ### 公司：Meta 

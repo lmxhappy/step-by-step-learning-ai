@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](kuaishou-onelatent.full.en.md)
+
 ### 论文：OneLatent: Latent Reasoning for Efficient Foundation Recommendation Models
 ### 网址：https://arxiv.org/abs/2610.30675
 ### 公司：快手

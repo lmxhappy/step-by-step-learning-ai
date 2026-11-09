@@ -1,5 +1,7 @@
 # 推荐算法(2025.6.28)：Spotify的混流排序非常有效
 
+> [English version](2025-06-27-spotify-audio-centric-mtl.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/aFjFSDYjhJs3gvu2RiclhA
 > 作者：算法工程师刘明星（稳扎稳打学AI）| 发表于 2025-06-27
 

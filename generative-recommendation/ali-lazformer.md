@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](ali-lazformer.full.en.md)
+
 ### 论文：LazFormer: Scaling Transformers for Industrial Recommendation via Transferable Generative Pre-training
 ### 网址：https://arxiv.org/abs/2609.14978
 ### 公司：阿里

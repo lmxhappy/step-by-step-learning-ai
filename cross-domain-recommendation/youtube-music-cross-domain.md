@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](youtube-music-cross-domain.full.en.md)
+
 ### 论文：Zero-shot Cross-domain Knowledge Distillation: A Case study on YouTube Music
 ### 网址：https://arxiv.org/pdf/2603.28994
 ### 公司：谷歌YouTube 团队

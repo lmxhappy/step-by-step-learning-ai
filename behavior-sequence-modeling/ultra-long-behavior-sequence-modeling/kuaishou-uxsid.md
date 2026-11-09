@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](kuaishou-uxsid.full.en.md)
+
 ### 论文：UxSID: Semantic-Aware User Interests Modeling for Ultra-Long Sequence
 ### 网址：https://arxiv.org/pdf/2605.09040
 ### 公司：快手
@@ -52,7 +54,7 @@ target item 的多模态属性（视频帧、文本描述等），用多模态�
 
 ## 推荐等级：有实践价值
 
-![pic](../imgs/)
+![pic](../../imgs/uxsid.png)
 
 
 **请帮忙点赞、转发，谢谢。欢迎干货投稿 \ 论文宣传\ 合作交流**

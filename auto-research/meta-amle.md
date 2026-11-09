@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](meta-amle.full.en.md)
+
 ### 论文：Agentic ML Exploration (A-MLE) for Ads Ranking
 ### 网址：https://arxiv.org/html/2609.08248
 ### 公司：Meta

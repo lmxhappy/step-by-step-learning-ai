@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](netflix-genrec.full.en.md)
+
 ### 论文：GenRec: An LLM-Backed Recommendation Ranker at Netflix
 ### 网址：https://arxiv.org/html/2608.10257
 ### 公司：Netflix

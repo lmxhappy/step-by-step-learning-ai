@@ -1,5 +1,7 @@
 # 推荐算法paper
 
+> [English version](2024-10-28-id-free-token-crossing.full.en.md)
+
 > 原文：https://mp.weixin.qq.com/s/AhrCkAsd74hjrgkG95vb5A
 > 作者：算法工程师刘明星（稳扎稳打学AI）| 发表于 2024-10-27
 

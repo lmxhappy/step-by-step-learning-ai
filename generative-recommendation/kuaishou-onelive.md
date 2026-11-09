@@ -1,5 +1,7 @@
 # 快手OneLive：生成式推荐在直播场景的首次落地！
 
+> [English version](kuaishou-onelive.full.en.md)
+
 ![](../imgs/oneLive/title.png)
 
 TLDR：

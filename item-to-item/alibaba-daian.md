@@ -2,6 +2,8 @@
 
 关注我，每天为你精挑细选最优质、最新鲜的推荐算法paper，陪你一起保持进步、不断精进！
 
+> [English version](alibaba-daian.full.en.md)
+
 ### 论文：DAIAN: Deep Adaptive Intent-Aware Network for CTR Predictionin Trigger-Induced Recommendation
 ### 网址：https://arxiv.org/pdf/2602.13971v1
 ### 公司：阿里

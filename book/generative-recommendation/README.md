@@ -1,7 +1,7 @@
 # 深入理解生成式推荐：设计原则与上线判断
 
 > 开源书 v0.1（草稿） · 微信公众号「稳扎稳打学AI」配套  
-> 作者：刘明星（Mingxing Liu） · [LinkedIn](https://www.linkedin.com/in/mingxing-liu-b31656284) · 微信 `lmxhappy`  
+> 作者：刘明星（Mingxing Liu） · 微信 `lmxhappy`  
 > 写法对齐李博杰《深入理解 AI Agent》开源书路子：**一个公式 · 三根支柱 · 先发后改 · 可验证清单当「实验」**
 
 ## 一句话定位
