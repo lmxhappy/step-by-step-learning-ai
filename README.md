@@ -16,6 +16,7 @@ Most notes are written in Chinese for the WeChat account **稳扎稳打学AI**; 
 | Paper | Company | What it's about |
 |---|---|---|
 | [TransX](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.full.en.md) | LinkedIn | Compress the user's behavior sequence offline into 64 vectors stored as KV; online, candidates only attend to them. CTR +6.02% over an HSTU-style model. |
+| [BRIDGE](./generative-recommendation/kuaishou-bridge.full.en.md) | Kuaishou | Three decoder tricks for guessing Semantic IDs better: a codebook-anchored reasoning token before the first token, privileged EMA self-distillation on the student's own prefix, and a shared loop block that gives harder SID positions more passes. eCPM +0.65%, QPS +20%. |
 | [GR4AD-X](./generative-recommendation/kuaishou-gr4ad-x.full.en.md) | Kuaishou | Three parallel fixes to a deployed generative ad retriever: two first-level SID codes for boundary ads, serving-cheap capacity scaling, and per-prefix eCPM value heads in beam search plus a one-step rerank. Revenue +3.07%. |
 | [PAIR](./deep-retrieval/linkedin-pair.full.en.md) | LinkedIn | Embedding retrieval for Premium people recommendation: a platform-wide member embedding replaced by one fine-tuned on the surface's own clicks. CTR +7.5%, Premium retention +2.1%. |
 | [Pin-SCALE](./sid/pinterest-pin-scale.full.en.md) | Pinterest | Wiring Semantic IDs into two-tower retrieval for cold start. Fresh repins +3.67%. |

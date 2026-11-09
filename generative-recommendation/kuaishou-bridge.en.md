@@ -26,4 +26,7 @@ Takeaways
 
 One caveat: the online A/B reports a single eCPM number and doesn't name the control group, so the three parts can't be separated online.
 
+Full breakdown:
+https://github.com/lmxhappy/step-by-step-learning-ai/blob/main/generative-recommendation/kuaishou-bridge.full.en.md
+
 #Kuaishou #RecommenderSystems #GenerativeRecommendation #SemanticID #MachineLearning
