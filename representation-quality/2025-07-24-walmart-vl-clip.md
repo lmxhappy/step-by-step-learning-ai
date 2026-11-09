@@ -53,7 +53,7 @@ AB：在沃尔玛网站上，相比基线模型，点击率（CTR）提升18.6%�
 
 推荐等级：有实践价值
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6JoibB6eg3um6U7ylKwMick4PibiazkHBz4icybY3p2wYnzMU1ibpSpmujlVw8P9lZYrTndiaJWFFVO6wKfOF4J1P6Qw/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1)
+![](../imgs/6JoibB6eg3un86rsZWnHydZpfZszQzJGy4ticq093AvUU5ibvCq6kwEVBRxSBp62lRS0gT9hRMIHPD8ibPYj6XUd2Q.png)
 
 请帮忙点赞、转发，谢谢。您认为哪篇论文最有潜力应用到实际业务中？
 

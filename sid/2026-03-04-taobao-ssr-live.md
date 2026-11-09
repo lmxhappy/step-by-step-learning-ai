@@ -80,7 +80,7 @@ DecInput = {[[BOS]s, [BOS]d], [c1^s, c1^d], …, [cL^s, cL^d], [q1^1, …, qQ^1,
 
 SSR-Live不仅能利用生成式模型的推理能力，通过动态SID与多模态SID的推理，还能通过判别式模型进行多任务优化，保证推荐的精度和稳定性。
 
-![](https://mmecoa.qpic.cn/sz_mmbiz_png/yFlllLR1oUI9gIRNVTMiazs2Ng6TtCtrWoRvU5cMUygWcLNb8vAC6ia2psgnS6qvVbpNic96I1jkccIkvsPtQYJjPmkBwGFEHHoxA0J52KgYiao/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=1)
+![](../imgs/yFlllLR1oUI9gIRNVTMiazs2Ng6TtCtrWoRvU5cMUygWcLNb8vAC6ia2psgnS6qvVbpNic96I1jkccIkvsPtQYJjPmkBwGFEHHoxA0J52KgYiao.png)
 
 ### 2. SID构建
 
@@ -98,7 +98,7 @@ e_c^(t) = m_c^(t) / N_c^(t)
 
 ### 2.2 直播间多模态SID
 
-![](https://mmecoa.qpic.cn/mmbiz_png/yFlllLR1oULxfHUKPWTobZ1TYgCMwjdFSZTBSNoawGdU5mB0ZZ1eJYArA8JicpXpSGMWrQzHVuTQ2frF6luyeJxQZ359Q27yf5YkIsESHbv8/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=2)
+![](../imgs/yFlllLR1oULxfHUKPWTobZ1TYgCMwjdFSZTBSNoawGdU5mB0ZZ1eJYArA8JicpXpSGMWrQzHVuTQ2frF6luyeJxQZ359Q27yf5YkIsESHbv8.png)
 
 多模态SID同样关键。多模态SID通过多模态大模型生成，捕捉直播间内容的多样性。多模态SID的构建与动态SID类似，采用端到端可学习码本进行量化。
 
@@ -168,7 +168,7 @@ e_c^(t) = m_c^(t) / N_c^(t)
 
 在线推理的工程优化包括模型量化、算子融合、缓存优化等。通过这些优化，模型能够在保证效果的同时，满足在线推理的延迟要求。
 
-![](https://mmecoa.qpic.cn/mmbiz_png/yFlllLR1oULV0RZC3kKhSib39lODTmyr9llkzvxSV3elLNpD0ibJ3EcjxrGDl1YNsPeNIib3qsOJmgicCsDgftM9c4jG9xOXZiaAMdPMXEKvSlPk/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=3)
+![](../imgs/yFlllLR1oULV0RZC3kKhSib39lODTmyr9llkzvxSV3elLNpD0ibJ3EcjxrGDl1YNsPeNIib3qsOJmgicCsDgftM9c4jG9xOXZiaAMdPMXEKvSlPk.png)
 
 ## 三、实验与评估
 
@@ -210,7 +210,7 @@ SSR-Live离线指标上优于线上粗排基线DLRM。
 
 下表展示了同一主播在不同时间点的动态SID变化情况。可以看到，随着直播间热度的变化，动态SID也在不断变化，反映了直播间内容的实时变化。
 
-![](https://mmecoa.qpic.cn/mmbiz_png/yFlllLR1oUJPcicicOViaibKunCNbcKMCTtjWTIl2rO027cnZVCRibTanDcKY7Dwhu7QOic56qH5fmwy9JT2A5qtr7IiaKUOhhY9ANMCsk6pFz13Lo/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=6)
+![](../imgs/yFlllLR1oUJPcicicOViaibKunCNbcKMCTtjWTIl2rO027cnZVCRibTanDcKY7Dwhu7QOic56qH5fmwy9JT2A5qtr7IiaKUOhhY9ANMCsk6pFz13Lo.png)
 
 （上图表格内容转写：）
 
@@ -226,9 +226,9 @@ SSR-Live离线指标上优于线上粗排基线DLRM。
 
 下图展示了不同类型主播的多模态SID。可以看到，不同类型的主播具有不同的多模态SID，反映了直播间内容的多样性。
 
-![](https://mmecoa.qpic.cn/sz_mmbiz_png/yFlllLR1oUK3kWQib4cILIBxnPRicwj2QGfXh8rHH11EiaPUYfgPXsp8TdYFt2VSJ7NlKa8QAHfkM1TwwhJVTXvdoyjibQwpjyFhWibGDTFaetCU/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=7)
+![](../imgs/yFlllLR1oUK3kWQib4cILIBxnPRicwj2QGfXh8rHH11EiaPUYfgPXsp8TdYFt2VSJ7NlKa8QAHfkM1TwwhJVTXvdoyjibQwpjyFhWibGDTFaetCU.png)
 
-![](https://mmecoa.qpic.cn/mmbiz_png/yFlllLR1oUImFQp2phmusaYoqQGf6vnJFYfJkbV7xX3TR6gMxyPGYeiaeibO9fyA1pe0cB1b7uI6r0fnPHlhDuibPjZ8XaNXSACG7z40PjZaoA/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=8)
+![](../imgs/yFlllLR1oUImFQp2phmusaYoqQGf6vnJFYfJkbV7xX3TR6gMxyPGYeiaeibO9fyA1pe0cB1b7uI6r0fnPHlhDuibPjZ8XaNXSACG7z40PjZaoA.png)
 
 ### 3. Scaling分析
 

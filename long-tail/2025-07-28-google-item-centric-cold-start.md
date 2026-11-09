@@ -49,7 +49,7 @@ Beta分布计算简单，只存α和β，不需存所有历史数据。实时更
 
 过滤规则是用Item的后验均值减去2个标准差（这两个上面已经计算），作为阈值。如果预测满意度（排序模型的ctr等预测分数）低于这个阈值，项目就被过滤，不推荐给该用户。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6JoibB6eg3umQibCN8LJQIXpDicdxDGrDjqq7SqqBZAd76I1iczXZOibxX4FaLT1hH2rlsNlIY6arTosP6s3S3icM0LA/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1)
+![](../imgs/6JoibB6eg3ukv0ficT0VkCqE32siccicbkXfohVWyfAjZBXbF7lxJicO4tXyWhAJY2pmo1cNMSY1H99sU7113DKEtEA.png)
 
 贴AB：
 

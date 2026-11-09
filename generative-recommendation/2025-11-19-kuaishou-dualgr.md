@@ -36,7 +36,7 @@
 
 ![](../imgs/6JoibB6eg3ukf7UQgbN3MXqqbV1yws4K6Dkj1uiasHnzg6NmMUyLCnlH8W4HpkfXBdnDlmKELO8oJ7Q43j6I99dg.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6JoibB6eg3ukf7UQgbN3MXqqbV1yws4K6RrIa5OyGkw97ia7KPN82VUztYBbvnlicFKpCyDhpibdk5qbKwf3w43RmA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+![](../imgs/6JoibB6eg3umx89tEFHXPGcMCEOgpUsic4RrIa5OyGkw97ia7KPN82VUztYBbvnlicFKpCyDhpibdk5qbKwf3w43RmA.png)
 
 ## 实验结果
 

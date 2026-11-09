@@ -43,7 +43,7 @@ AB实验：在美团上，相比基线，CTR +2.1%。
 
 推荐等级：有实践价值
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6JoibB6eg3ukB9c1nsnDib4H2EVZoNrtNb2ibnYia6OJ4lLafuM4OEhJ2hA/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1)
+![](../imgs/6JoibB6eg3ukB9c1nsnDib4H2EVZoNrtNb2ibnYia6OJ4lL8AxiaqAx6TCLicXDx6UbFLVd6KkT8ibLlLafuM4OEhJ2hA.png)
 
 请帮忙点赞、转发，谢谢。您认为哪篇论文最有潜力应用到实际业务中？
 

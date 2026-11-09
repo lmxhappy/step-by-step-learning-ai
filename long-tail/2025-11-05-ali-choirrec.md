@@ -49,9 +49,13 @@ AB：在淘宝上，相比基线，低活用户的GMV +3.10%，CTR +0.97%。
 
 推荐等级：有实践价值
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6JoibB6eg3uSgsRj8z0yC1UibnXv0kqjIwV6TiaK4cXQ6PibQ1fI3T5QZx1qJkAiaJ5dZiaVicgEic9Y5tUibWmIuA6VDA/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1)
+![](../imgs/6JoibB6eg3unP4KYTGsTHKInaBSc96vAuBa3YSEbQBEXaNmU5bU48FfMIFGh2wNPaLSCicx7lHlcCibrlHwqHpOPw.png)
 
-<!-- 原页面此处为 ChoirRec 架构图，共 3 个图片元素（上/中/下三部分）；浏览器提取时三者返回了同一个图片地址，故此处只嵌入一次。 -->
+![](../imgs/6JoibB6eg3unP4KYTGsTHKInaBSc96vAu1W2cckQK2YkdRnY6Up0CgwVE2icMcAPF1VF4tlZeg9rsmaG0zlqXYGQ.png)
+
+![](../imgs/6JoibB6eg3unP4KYTGsTHKInaBSc96vAuaDJDyUXIQ6icMdhrwjEFwZ0MvNra0aW2H0SsaibH76Pt9n8ibNNlS4aJA.png)
+
+<!-- ChoirRec 架构图（上/中/下三部分）：2026-11-08 回微信原文取到三个独立图片地址，已全部本地化。 -->
 
 请帮忙点赞、转发，谢谢。
 
