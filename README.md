@@ -7,11 +7,13 @@
 
 [![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
-**200+ paper notes on industrial recommendation, ads and search, across 16 topics, updated since October 2024.**
+**300+ paper notes on industrial recommendation, ads and search, across 16 topics, updated since October 2024.**
 This is a **notes repo, not a code or reproduction repo**. Every note has a full English version.
 
 ### 🚪 Browse by topic (number of notes)
-[Generative recommendation](./generative-recommendation/) 33 · [Behavior sequence modeling](./behavior-sequence-modeling/) 33 · [LLM4Rec](./llm4rec/) 24 · [Deep retrieval](./deep-retrieval/) 23 · [Semantic IDs](./sid/) 15 · [Multi-task learning](./multi-task-learning/) 12 · [Long tail](./long-tail/) 12 · [Feature interaction](./feature-cross/) 12 · [Cross-domain](./cross-domain-recommendation/) 10 · [Loss functions](./loss-func/) 9 · [ML infra](./ml-infra/) 8 · [Representation quality](./representation-quality/) 5 · [Item-to-item](./item-to-item/) 5 · [Graph recommendation](./graph-recommendation/) 4 · [Feature selection](./feature-selection/) 2 · [Auto research](./auto-research/) 2
+[Behavior sequence modeling](./behavior-sequence-modeling/) 54 · [Generative recommendation](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [Deep retrieval](./deep-retrieval/) 36 · [Multi-task learning](./multi-task-learning/) 20 · [Semantic IDs](./sid/) 18 · [Feature interaction](./feature-cross/) 18 · [Cross-domain](./cross-domain-recommendation/) 16 · [Long tail](./long-tail/) 16 · [Loss functions](./loss-func/) 15 · [ML infra](./ml-infra/) 12 · [Representation quality](./representation-quality/) 8 · [Graph recommendation](./graph-recommendation/) 7 · [Item-to-item](./item-to-item/) 5 · [Feature selection](./feature-selection/) 3 · [Auto research](./auto-research/) 2
+
+Plus 15 [early paper lists](./paper-lists/) (Oct–Nov 2024: paper titles with one-line tags, no write-ups).
 
 Paper write-ups on industrial **recommendation, ads and search** systems: what the method does, what it gained in production A/B tests, and where the claims are weaker than they look.
 

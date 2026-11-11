@@ -7,11 +7,13 @@
 
 [![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
-**200+ 篇搜广推论文解读，16 个方向，2024 年 10 月起持续更新。**
+**300+ 篇搜广推论文解读，16 个方向，2024 年 10 月起持续更新。**
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[生成式推荐](./generative-recommendation/) 33 · [用户行为序列建模](./behavior-sequence-modeling/) 33 · [LLM4Rec](./llm4rec/) 24 · [深度召回](./deep-retrieval/) 23 · [SID](./sid/) 15 · [多任务学习](./multi-task-learning/) 12 · [长尾问题](./long-tail/) 12 · [特征交叉](./feature-cross/) 12 · [跨域](./cross-domain-recommendation/) 10 · [损失函数](./loss-func/) 9 · [ML Infra](./ml-infra/) 8 · [表示质量](./representation-quality/) 5 · [I2I推荐](./item-to-item/) 5 · [图推荐](./graph-recommendation/) 4 · [特征选择](./feature-selection/) 2 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 16 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 5 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+
+另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
 如果这个仓库对你有帮助，欢迎点击右上角 **Star ⭐** 支持一下，让更多人发现它！
 
