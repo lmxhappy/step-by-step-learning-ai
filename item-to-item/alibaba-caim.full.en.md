@@ -9,12 +9,12 @@
 ### Area: i2i (the relevant-recommendation feed below an e-commerce product detail page, also called trigger-induced or post-click recommendation)
 
 ## Overview:
-The paper proposes a CTR model for post-click recommendation. It first uses clicks from the last 24 hours and the user profile to rewrite the static trigger into a "dynamic trigger", then uses that to retrieve relevant interests from a year of long-term behavior, and finally splits intent into 5 sub-intent paths (category, brand, shop, price, and overall), which are concatenated with the candidate item and passed through an MLP to predict CTR.
+The paper proposes a CTR model for post-click recommendation. It first uses clicks from the last 24 hours and the user profile to rewrite the static trigger into a "dynamic trigger", then uses that to retrieve relevant interests from a year of long-term behavior, and finally splits intent into 5 sub-intent paths (the trigger's category, brand, shop, price, and overall), which are concatenated with the candidate item and passed through an MLP to predict CTR.
 
 ### Two observations
 **Intent drifts.** Looking at CTR and CVR by exposure position in the relevant-recommendation feed: the further down the user scrolls, the faster CTR and CVR fall for items in the same category as the trigger, compared with items from other categories. In the second half of the feed, other-category items overtake same-category items on CVR. Users arrive for the trigger, then drift into browsing other things. A fixed trigger representation can't follow that. The paper's fix: use recent clicks to rewrite the trigger into a "dynamic trigger" (IEM), then use it to retrieve from long-term behavior to get a "long-term trigger" (IRM).
 
-**Intent is multi-dimensional.** One trigger carries category, brand, shop and price at the same time. A user may like the brand but find it too expensive, or want the category but not care about the brand. Blending all of this into one vector makes it impossible to tell which dimension the user actually cares about. The paper's fix: treat category, brand, shop and price as triggers too, and learn an intent for each.
+**Intent is multi-dimensional.** One trigger carries category, brand, shop and price at the same time. A user may like the brand but find it too expensive, or want the category but not care about the brand. Blending all of this into one vector makes it impossible to tell which dimension the user actually cares about. The paper's fix: treat the trigger's category, brand, shop and price as triggers too, and learn an intent for each.
 
 ### Model architecture
 The behavior sequence is split in two: short-term is clicks in the last 24 hours (truncated to 30), long-term is behaviors over the past year (truncated to 100). Three modules address the two observations: IEM and IRM handle intent drift, producing the dynamic trigger and the long-term trigger, both of which serve as inputs to SIEM; SIEM handles multi-dimensional intent by splitting out sub-intents by attribute.
@@ -34,7 +34,7 @@ The output of IEM, the dynamic trigger, is the query for a 4-head multi-head att
 Note that the query does not include the candidate item, so the long-term sequence representations can be precomputed offline and stored in a KV store, and the whole IEM+IRM path runs once per request.
 
 ### (3) Sub-intent splitting (SIEM)
-SIEM learns user intent. It learns 5 intent vectors along 5 paths: category, brand, shop and price each correspond to one attribute, and the 5th path uses the dynamic trigger and the long-term trigger. In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
+SIEM learns user intent. It learns 5 intent vectors along 5 paths: the trigger's category, brand, shop and price each correspond to one attribute, and the 5th path uses the dynamic trigger and the long-term trigger. In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
 
 Two kinds of input (5 in total):
 * Specific inputs: the trigger's category, brand, shop and price embeddings serve as 4 inputs. The paper doesn't say how these embeddings are obtained; most likely they come from an embedding layer.
@@ -57,11 +57,11 @@ Against the production sequence model as control: orders +6.9%, GMV +7.7%.
 
 ## Takeaways:
 * In post-click recommendation the trigger shouldn't be static: rewrite it into a dynamic anchor using short-term behavior and the user profile, then use it to retrieve from the long sequence to get a long-term trigger.
-* In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
+* In effect, the trigger's category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
 * The main gain of this model comes from upgrading the intent network architecture: PLE + sparse MoE.
 
 ## Caveats
-* The paper doesn't explain how the category, brand, shop and price embeddings are obtained.
+* The paper doesn't explain how the trigger's category, brand, shop and price embeddings are obtained.
 * The paper doesn't describe Explicit Intention Segmentation.
 * There is no explicit trigger-target cross feature; in practice one would very likely be added.
 

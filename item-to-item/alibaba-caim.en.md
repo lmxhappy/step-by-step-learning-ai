@@ -7,17 +7,17 @@ Lazada, detail-page recommendations: halfway down the feed, items from other cat
 Context-Aware User Intent Modeling for Relevant Recommendation in E-commerce (CIKM'26)
 doi.org/10.1145/3799682.3839889
 
-Setting: a user clicks an item (the trigger) and scrolls into the "related items" feed on its detail page. Most trigger-aware rankers encode the trigger once and match everything against it. CAIM (Lazada) rewrites it per request, then splits intent by attribute. As checks for your own detail-page ranker:
+Setting: a user clicks an item (the trigger) and scrolls into the related-items feed on its detail page. Most trigger-aware rankers encode the trigger once and match everything against it. CAIM (Lazada) rewrites it per request, then splits intent by attribute. As checks for your own detail-page ranker:
 
-1. Plot CTR and CVR by exposure position, split by same category as the trigger vs. not. In their feed, same-category items decay faster, and in the second half other categories overtake them on CVR. If your curves look like this, a fixed trigger embedding goes stale before the user is halfway down.
+1. Plot CTR and CVR by exposure position, split by same category as the trigger vs. not. In their feed, same-category items decay faster, and in the second half other categories overtake them on CVR. If yours look like this, a fixed trigger embedding goes stale before the user is halfway down.
 
 2. Rewrite the trigger every request. Mean-pool the last 24h of clicks, project it, the user profile and the trigger into one space, and let an SENet assign one weight per segment. Output: a "dynamic trigger" whose mix of "what they clicked" vs. "what they've been doing" is personalized.
 
 3. Query long-term history with the dynamic trigger, not the candidate. 4-head attention over a year of behavior (100 items) pulls out what matches the current intent, a kind of "long-term trigger". Because the query never sees the candidate, it runs once per request and the long sequence can be precomputed into a KV store. Steps 2+3 alone: orders +4.8%, GMV +4.4%.
 
-4. Treat category, brand, shop and price as four more triggers. A user may trust the brand but find it too pricey, or want the category and not care about the brand. Five paths (four attributes + one general path fed by the dynamic and long-term triggers) go through a PLE with per-path and shared experts, then a sparse MoE shared across paths that routes each path to its top-2 FFNs. This part alone: orders +2.0%, GMV +3.2%. In production, attribute splitting lifted CVR AUC to +0.78% over baseline, and PLE took it to +1.03%.
+4. Treat the trigger's category, brand, shop and price as four more triggers. A user may trust the brand but find it too pricey, or want the category and not care about the brand. Five paths (four attributes + one general path fed by the dynamic and long-term triggers) go through a PLE with per-path and shared experts, then a sparse MoE shared across paths that routes each path to its top-2 FFNs. This part alone: orders +2.0%, GMV +3.2%. In production, attribute splitting lifted CVR AUC to +0.78% over baseline, and PLE took it to +1.03%.
 
-All together: orders +6.9%, GMV +7.7% over 14 days, more than the parts added up.
+All together: orders +6.9%, GMV +7.7% over 14 days, beating the parts' sum.
 
 What I'd take away:
 - A trigger is an intent. The clicked item, its category, brand, shop and price are all triggers worth modeling separately.
