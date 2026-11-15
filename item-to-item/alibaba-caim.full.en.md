@@ -37,7 +37,7 @@ Note that the query does not include the candidate item, so the long-term sequen
 SIEM learns user intent. It learns 5 sub-intent vectors along 5 paths: category, brand, shop and price each correspond to one attribute, and the 5th path uses the dynamic trigger and the long-term trigger. In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
 
 Two kinds of input (5 in total):
-* Specific inputs: the embeddings of category, brand, shop and price serve as 4 inputs. The paper doesn't say how these embeddings are obtained; most likely they come from an embedding layer.
+* Specific inputs: the trigger's category, brand, shop and price embeddings serve as 4 inputs (the paper doesn't say explicitly that they belong to the trigger, but the architecture figure suggests so). The paper doesn't say how these embeddings are obtained; most likely they come from an embedding layer.
 * General input: Concat(dynamic trigger, long-term trigger) serves as one input.
 
 The 5 inputs pass through the following 3 modules in order:

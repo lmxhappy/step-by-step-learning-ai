@@ -39,7 +39,7 @@
 学习用户意图。分 5 路分别学 5 个子意图向量：类目、品牌、店铺、价格 4 路各对应一个属性，第 5 路用动态 trigger 和长期 trigger。可见，将类目、品牌、店铺、价格当作了4个trigger，trigger即意图。
 
 两类（5个）输入：
-* 具体输入：类目、品牌、店铺、价格等4 个的embedding作为4个输入。论文没交代这些 embedding 怎么来，大概率是embed layer获得的。
+* 具体输入：trigger 的类目、品牌、店铺、价格 4 个 embedding 作为 4 个输入（论文没明说是 trigger 的，从架构图看是）。论文没交代这些 embedding 怎么来，大概率是embed layer获得的。
 * 通用输入：Concat(动态 trigger, 长期trigger)作为一个输入。
 
 5个输入，依次通过下面3个顺序模块：
