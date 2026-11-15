@@ -17,7 +17,7 @@ The paper proposes a CTR model for post-click recommendation. It first uses clic
 **Intent is multi-dimensional.** One trigger carries category, brand, shop and price at the same time. A user may like the brand but find it too expensive, or want the category but not care about the brand. Blending all of this into one vector makes it impossible to tell which dimension the user actually cares about. The paper's fix: treat category, brand, shop and price as triggers too, and learn an intent for each.
 
 ### Model architecture
-The behavior sequence is split in two: short-term is clicks in the last 24 hours (truncated to 30), long-term is behaviors over the past year (truncated to 100). Three modules address the two observations: IEM and IRM handle intent drift, producing the current intent (the dynamic trigger) and the relevant long-term interest, both of which serve as inputs to SIEM; SIEM handles multi-dimensional intent by splitting out sub-intents by attribute.
+The behavior sequence is split in two: short-term is clicks in the last 24 hours (truncated to 30), long-term is behaviors over the past year (truncated to 100). Three modules address the two observations: IEM and IRM handle intent drift, producing the dynamic trigger and the long-term trigger, both of which serve as inputs to SIEM; SIEM handles multi-dimensional intent by splitting out sub-intents by attribute.
 
 ![pic](../imgs/caim.png)
 
@@ -34,10 +34,10 @@ The output of IEM, the dynamic trigger, is the query for a 4-head multi-head att
 Note that the query does not include the candidate item, so the long-term sequence representations can be precomputed offline and stored in a KV store, and the whole IEM+IRM path runs once per request.
 
 ### (3) Sub-intent splitting (SIEM)
-SIEM learns user intent. It learns 5 sub-intent vectors along 5 paths: category, brand, shop and price each correspond to one attribute, and the 5th path uses the dynamic trigger and the long-term trigger. In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
+SIEM learns user intent. It learns 5 intent vectors along 5 paths: category, brand, shop and price each correspond to one attribute, and the 5th path uses the dynamic trigger and the long-term trigger. In effect, category, brand, shop and price are treated as 4 triggers: a trigger is an intent.
 
 Two kinds of input (5 in total):
-* Specific inputs: the trigger's category, brand, shop and price embeddings serve as 4 inputs (the paper doesn't say explicitly that they belong to the trigger, but the architecture figure suggests so). The paper doesn't say how these embeddings are obtained; most likely they come from an embedding layer.
+* Specific inputs: the trigger's category, brand, shop and price embeddings serve as 4 inputs. The paper doesn't say how these embeddings are obtained; most likely they come from an embedding layer.
 * General input: Concat(dynamic trigger, long-term trigger) serves as one input.
 
 The 5 inputs pass through the following 3 modules in order:
@@ -50,7 +50,7 @@ The 5 inputs pass through the following 3 modules in order:
 ### (4) Output layer
 The user profile, dynamic trigger, candidate item and the 5 intent vectors are concatenated and passed through an MLP to predict CTR. In production it's a CTR+CVR multi-task model.
 
-**Production iteration path**: the fusion network inside SIEM evolved step by step, with CVR AUC gaining +0.35% (combining tasks by vector concatenation instead of adding logits), +0.78% (introducing sub-intent splitting by category/brand/shop), and +1.03% (switching sub-intent fusion from SENet to PLE), with the last version shipped. In offline ablations, removing SIEM hurts the most.
+**Production iteration path**: the fusion network inside SIEM evolved step by step, with the CVR AUC gain over the production baseline going from +0.35% (combining tasks by vector concatenation instead of adding logits) to +0.78% (introducing sub-intent splitting by category/brand/shop), and then to +1.03% (switching sub-intent fusion from SENet to PLE); the last version shipped. In offline ablations, removing SIEM hurts the most.
 
 ### A/B results
 Against the production sequence model as control: orders +6.9%, GMV +7.7%.
