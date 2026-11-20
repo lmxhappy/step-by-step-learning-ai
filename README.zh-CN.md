@@ -11,7 +11,7 @@
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 16 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 6 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 26 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
 
 另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
@@ -128,6 +128,26 @@
   I2I（Item-to-Item）推荐。
   - [DAIAN — 详情页 I2I 推荐，成交额+2% (阿里)](./item-to-item/alibaba-daian.md)
   - [CAIM — 详情页相关推荐，动态 trigger + 子意图拆分，订单+6.9%、GMV+7.7% (阿里国际)](./item-to-item/alibaba-caim.md)
+  - [CRRN — 后推荐 CTR 模型，trigger-target 门控交叉 + 意图软切换 + 类目 pairwise 损失，CTR+3.87% (阿里天猫)](./item-to-item/alibaba-crrn.md)
+  - [Mercari 相似推荐 — 图文两路 ANN 召回 + MLP 排序，购买+20.4%、再+12.7% (Mercari)](./item-to-item/mercari-hybrid-i2i.md)
+  - [CAMIE — 广告 I2I 召回，共同互动对微调多模态大模型 embedding，一个模型替换两套编码器，CVR+1.9% (Snap)](./item-to-item/snap-camie.md)
+  - [Contextual Ranker — 详情页相似推荐，种子锚定的会话感知排序，CPU 服务，购买率+1.5%~2.4% (eBay)](./item-to-item/ebay-contextual-ranker.md)
+  - [MEDAL — 搭配推荐，穿搭照片挖伪标签 + 自蒸馏 + 按品类对分子空间，仅离线 (Amazon)](./item-to-item/amazon-medal.md)
+  - [E-goi 替代品与互补品 — TF-IDF 找替代、共同购买图上 GAT 找互补，中小商家，仅离线 (E-goi)](./item-to-item/egoi-crossmarket-gat.md)
+  - [GraFS — 功能替代品推荐，Claude 打伪标签 + 语义/行为双通道 HetGAT + 功能组内排序，仅离线 (Amazon)](./item-to-item/amazon-grafs.md)
+  - [Snap 互补品广告 — LLM 生成互补搜索词再检索，many-shot 提示 vs LoRA 微调，仅离线 (Snap)](./item-to-item/snap-llm-complementary-query.md)
+  - [互补品的两种矩阵分解 — user–item 分解 + 类目 PMI 过滤 vs 直接分解共购矩阵，后者线上收入增幅为前者两倍多 (俄罗斯科学院)](./item-to-item/ras-mf-complementary.md)
+  - [Pinterest Closeup 商品召回 — 3 个优先语料库代替全量索引 + 多任务对比学习双塔，转存+33% (Pinterest)](./item-to-item/pinterest-closeup-shopping-ebr.md)
+  - [MESH — Related Pins 召回，query 塔按用户/query Pin/上下文拆三个 DHEN 子塔 + 上下文门控，新内容转存+4.9%、大盘转存+0.96% (Pinterest)](./item-to-item/pinterest-mesh.md)
+  - [GSComGNN — 互补品推荐，频谱 GNN 低通/中通两路表示改用逐维门控融合 + LayerNorm，仅离线 (渤海大学)](./item-to-item/bohai-gscomgnn.md)
+  - [LRN4HCAR — 给一组云 API 推荐互补 API，共调用/功能共现/替代三张图逐个投影 + 交并非组合，仅离线 (燕山大学)](./item-to-item/ysu-lrn4hcar.md)
+  - [PCM-ADHL — 个性化搭配补全，属性专家按重要性残差解耦 + 品类偏好/共现兼容两张超图，仅离线 (青岛科技大学)](./item-to-item/qust-pcm-adhl.md)
+  - [Recommendation by Generation — 不完整 outfit 先在 StyleGAN2 潜空间生成互补单品，再按潜码检索最像的商品，仅离线 (TCS Research)](./item-to-item/tcs-recommendation-by-generation.md)
+  - [CFALR — LoRA 微调 Vicuna 做个性化搭配补全，图像/CF 向量各压成一个 token，整套生成时混入 CF 概率，仅离线 (香港理工大学等)](./item-to-item/polyu-cfalr.md)
+  - [PDOR — 个性化搭配补全，CLIP 向量空间里用扩散模型生成缺的单品再检索，冻结的兼容性判别器当奖励，仅离线 (浙江理工大学)](./item-to-item/zstu-pdor.md)
+  - [Hybrid Music Similarity — 音乐采样相似推荐，元数据超图随机游走 + Word2Vec、音频 Siamese，按属性分列表，仅离线 (韩国电子技术研究院)](./item-to-item/keti-hybrid-music.md)
+  - [UAFM — 穿搭逐件补全，共享 Transformer 接策略头（检索下一件）和价值头（TD 估套装潜力、增益不够就停），仅离线 (香港理工大学等)](./item-to-item/polyu-uafm.md)
+  - [MRMoCo — 上衣配下装打分，MoCo 记忆库把负样本扩到 512 个 + 风格相同、长得像的下装当弱正样本，仅离线 (东华大学)](./item-to-item/dhu-mrmoco.md)
 
 - **[深度召回](./deep-retrieval/)**
   用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。
@@ -165,6 +185,7 @@
 - **[长尾问题](./long-tail/)**
   长尾样本、稀疏特征、低频物品、新用户、新item的建模与优化。
   - [UTTSI — 特征随机丢弃+集成解决稀疏样本预测不准 (阿里)](./long-tail/uttsi.md)
+  - [Vrbo 长尾召回 — LLM 由房源信息生成查询做稠密检索，只追加地并入 ItemCF，免训练，仅离线 (Expedia)](./long-tail/vrbo-llm-candidate-gen.md)
 
 ## 联系方式
 - 作者：刘明星（Mingxing Liu）
