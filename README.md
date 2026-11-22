@@ -5,19 +5,40 @@
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lmxhappy.step-by-step-learning-ai)](https://github.com/lmxhappy/step-by-step-learning-ai)
 [![Hits](https://hits.sh/github.com/lmxhappy/step-by-step-learning-ai.svg)](https://github.com/lmxhappy/step-by-step-learning-ai/)
 
-[![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md) [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
+[![English](https://img.shields.io/badge/README-English-0A66C2?style=for-the-badge)](README.md)
+[![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-c0392b?style=for-the-badge)](README.zh-CN.md)
 
-**300+ paper notes on industrial recommendation, ads and search, across 16 topics, updated since October 2024.**
-This is a **notes repo, not a code or reproduction repo**. Every note has a full English version.
+# Step-by-Step Learning AI
 
-### 🚪 Browse by topic (number of notes)
-[Behavior sequence modeling](./behavior-sequence-modeling/) 54 · [Generative recommendation](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [Deep retrieval](./deep-retrieval/) 36 · [Multi-task learning](./multi-task-learning/) 20 · [Semantic IDs](./sid/) 18 · [Feature interaction](./feature-cross/) 18 · [Cross-domain](./cross-domain-recommendation/) 16 · [Long tail](./long-tail/) 17 · [Loss functions](./loss-func/) 15 · [ML infra](./ml-infra/) 12 · [Representation quality](./representation-quality/) 8 · [Graph recommendation](./graph-recommendation/) 7 · [Item-to-item](./item-to-item/) 26 · [Feature selection](./feature-selection/) 3 · [Auto research](./auto-research/) 2
+**300+ deep-dive notes on industrial recommendation, ads and search papers — 16 topics, updated continuously since October 2024.**
 
-Plus 15 [early paper lists](./paper-lists/) (Oct–Nov 2024: paper titles with one-line tags, no write-ups).
+Every note answers three questions about a production system: **what the method actually does, what it gained in online A/B tests, and where the paper's claims are stronger than the evidence.** No paper-summary filler, no copied abstracts.
 
-Paper write-ups on industrial **recommendation, ads and search** systems: what the method does, what it gained in production A/B tests, and where the claims are weaker than they look.
+> ⭐ **If this repo helps you, please give it a star.** It takes a second, and it helps other recsys engineers find it.
 
-Every note is written in Chinese for the WeChat account **稳扎稳打学AI** and has a full English version next to it, with the suffix `.full.en.md`. The table below picks a few recent ones.
+## Why this repo
+
+- **Production first.** The papers covered here run (or ran) at Meta, Google, LinkedIn, Pinterest, Netflix, Kuaishou, Alibaba, Tencent, ByteDance and Meituan — retrieval, ranking, generative recommendation and the infra underneath.
+- **Numbers included.** Online gains are quoted with the metric and the baseline, e.g. CTR +6.02%, revenue +3.07%, eCPM +0.65% — so you can judge whether a technique is worth your roadmap.
+- **Read critically.** Each note flags what the paper doesn't say: missing ablations, offline-only results, gains that shrink at scale.
+- **Fully bilingual.** Every note is written in Chinese for the WeChat newsletter **稳扎稳打学AI** (10,000+ subscribers) and ships with a complete English version next to it, with the suffix `.full.en.md`.
+- **Notes, not code.** This is a reading repo, not a reproduction repo. The value is in the judgement calls, not in runnable demos.
+
+## 🚀 Start here
+
+New to the repo? These three reading paths are the fastest way in:
+
+**Generative recommendation**
+1. [GR4AD-X](./generative-recommendation/kuaishou-gr4ad-x.full.en.md) — a deployed generative ad retriever, fixed in three places (Kuaishou)
+2. [BRIDGE](./generative-recommendation/kuaishou-bridge.full.en.md) — three decoder tricks for guessing Semantic IDs better (Kuaishou)
+
+**Semantic IDs**
+1. [Pin-SCALE](./sid/pinterest-pin-scale.full.en.md) — wiring Semantic IDs into two-tower retrieval for cold start (Pinterest)
+2. Then browse the [SID folder](./sid/) — 18 notes on how items get turned into discrete tokens
+
+**Long behavior sequences**
+1. [TransX](./behavior-sequence-modeling/ultra-long-behavior-sequence-modeling/linkedin-transx.full.en.md) — compress the user sequence offline, let candidates attend online (LinkedIn)
+2. [PAIR](./deep-retrieval/linkedin-pair.full.en.md) — why a surface-specific embedding beat the platform-wide one (LinkedIn)
 
 ## Recent highlights
 
@@ -29,21 +50,44 @@ Every note is written in Chinese for the WeChat account **稳扎稳打学AI** an
 | [PAIR](./deep-retrieval/linkedin-pair.full.en.md) | LinkedIn | Embedding retrieval for Premium people recommendation: a platform-wide member embedding replaced by one fine-tuned on the surface's own clicks. CTR +7.5%, Premium retention +2.1%. |
 | [Pin-SCALE](./sid/pinterest-pin-scale.full.en.md) | Pinterest | Wiring Semantic IDs into two-tower retrieval for cold start. Fresh repins +3.67%. |
 
-## Topics
+## 🚪 Browse by topic (number of notes)
 
-All notes are organized by topic folder; open a folder and read the `.full.en.md` files. The full per-paper index is in the [Chinese README](README.zh-CN.md).
+[Behavior sequence modeling](./behavior-sequence-modeling/) 54 · [Generative recommendation](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [Deep retrieval](./deep-retrieval/) 36 · [Item-to-item](./item-to-item/) 26 · [Multi-task learning](./multi-task-learning/) 20 · [Semantic IDs](./sid/) 18 · [Feature interaction](./feature-cross/) 18 · [Long tail](./long-tail/) 17 · [Cross-domain](./cross-domain-recommendation/) 16 · [Loss functions](./loss-func/) 15 · [ML infra](./ml-infra/) 12 · [Representation quality](./representation-quality/) 8 · [Graph recommendation](./graph-recommendation/) 7 · [Feature selection](./feature-selection/) 3 · [Auto research](./auto-research/) 2
 
-| Layer | Topics |
-|---|---|
-| Recommendation paradigm | [Generative recommendation](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
-| Representation | [Semantic IDs](./sid/) · [Representation quality](./representation-quality/) |
-| Model architecture | [Behavior sequence modeling](./behavior-sequence-modeling/) · [Feature interaction](./feature-cross/) · [Deep retrieval](./deep-retrieval/) · [Graph recommendation](./graph-recommendation/) |
-| Data & features | [Feature selection](./feature-selection/) |
-| Training objective | [Loss functions](./loss-func/) · [Multi-task learning](./multi-task-learning/) |
-| Scenarios | [Cross-domain](./cross-domain-recommendation/) · [Item-to-item](./item-to-item/) |
-| Problems | [Long tail](./long-tail/) |
-| Engineering | [ML infra](./ml-infra/) · [Auto research](./auto-research/) |
+Plus 15 [early paper lists](./paper-lists/) (Oct–Nov 2024: paper titles with one-line tags, no write-ups).
 
-**Author:** Mingxing Liu · WeChat `lmxhappy` · [Zhihu](https://zhuanlan.zhihu.com/stupid-ai). If this repo helps you, a ⭐ helps others find it.
+## Topics by layer
+
+The 16 topics sit at different layers of a recsys stack. The layers are orthogonal — Semantic IDs, for example, can feed a generative model or an ordinary discriminative ranker — and one paper often spans several layers; each note is filed under its main contribution.
+
+| Layer | Question it answers | Topics |
+|---|---|---|
+| Recommendation paradigm | How do we recommend? | [Generative recommendation](./generative-recommendation/) · [LLM4Rec](./llm4rec/) |
+| Representation | How are items / users represented? | [Semantic IDs](./sid/) · [Representation quality](./representation-quality/) |
+| Model architecture | How is the network built? | [Behavior sequence modeling](./behavior-sequence-modeling/) · [Feature interaction](./feature-cross/) · [Deep retrieval](./deep-retrieval/) · [Graph recommendation](./graph-recommendation/) |
+| Data & features | What goes in? | [Feature selection](./feature-selection/) |
+| Training objective | What do we optimize? | [Loss functions](./loss-func/) · [Multi-task learning](./multi-task-learning/) |
+| Scenarios | Where is it used? | [Cross-domain](./cross-domain-recommendation/) · [Item-to-item](./item-to-item/) |
+| Problems | What does it fix? | [Long tail](./long-tail/) |
+| Engineering | How does it run and iterate? | [ML infra](./ml-infra/) · [Auto research](./auto-research/) |
+
+The full per-paper index is in the [Chinese README](README.zh-CN.md).
+
+## 📖 Also in this repo
+
+- [**Industrial Generative Recommendation: go / no-go judgement for production**](./book/generative-recommendation/) — a book in progress (v0.1 draft, in Chinese). Not another survey of classic recsys: only generative recommendation, read with a production engineer's eye.
+
+## How to use this repo
+
+1. **Read online** — pick a topic above, open a note, read the `.full.en.md` file for English.
+2. **Clone it** — `git clone https://github.com/lmxhappy/step-by-step-learning-ai.git` and grep your own copy.
+3. **Follow along** — new notes land here as they are published on the WeChat newsletter **稳扎稳打学AI**; more long-form content on the [Zhihu column](https://zhuanlan.zhihu.com/stupid-ai) (200+ posts).
+4. **Contribute** — corrections and your own paper notes are welcome via PR or issue.
+
+---
+
+**Author:** Mingxing Liu · WeChat `lmxhappy` · [Zhihu](https://zhuanlan.zhihu.com/stupid-ai)
 
 This is a notes repo, not a code or reproduction repo.
+
+⭐ **Enjoying it? A star helps other engineers discover these notes — thank you!**
