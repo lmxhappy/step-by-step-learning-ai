@@ -11,7 +11,7 @@
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 26 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 33 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
 
 另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
@@ -148,6 +148,13 @@
   - [Hybrid Music Similarity — 音乐采样相似推荐，元数据超图随机游走 + Word2Vec、音频 Siamese，按属性分列表，仅离线 (韩国电子技术研究院)](./item-to-item/keti-hybrid-music.md)
   - [UAFM — 穿搭逐件补全，共享 Transformer 接策略头（检索下一件）和价值头（TD 估套装潜力、增益不够就停），仅离线 (香港理工大学等)](./item-to-item/polyu-uafm.md)
   - [MRMoCo — 上衣配下装打分，MoCo 记忆库把负样本扩到 512 个 + 风格相同、长得像的下装当弱正样本，仅离线 (东华大学)](./item-to-item/dhu-mrmoco.md)
+  - [HW-GATCR — 互补品推荐，按文本语义和类目树给共购边打分当边权 + 双曲加权 GAT + 按度数加噪的对比学习，仅离线 (内蒙古大学)](./item-to-item/imu-hw-gatcr.md)
+  - [SR-Rec — 互补品推荐，低通/中通两个图滤波器分别学相似和相关，内积 + 双线性各打一个分，成对注意力加权，仅离线 (浙江工业大学)](./item-to-item/zjut-sr-rec.md)
+  - [DRSD — 新闻互补推荐，LLM 每轮提新的文章关系标签 + 门控 + 每个关系一个 CTR 专家，去掉专家验证集 loss 不升就剪掉标签，仅离线 (MicroAd 作者个人工作)](./item-to-item/drsd-news-complementary.md)
+  - [Expedia 相似房源多路召回 — IBKNN（ItemCF）+ 异构图 GNN（查询/候选双向量，链接预测）按路内排名百分位取最大值合并，LightGBM 粗排，Recall@300 +14.8%，仅离线 (Expedia)](./item-to-item/expedia-gnn-hybrid-cg.md)
+  - [Swing / Surprise — 淘宝相似图按「两个用户都点过」计分、按这对用户的共同点击数降权；互补图先圈相关类目、再算带时间衰减的先后购买，用相似图聚类补稀疏，线上 A/B (阿里巴巴)](./item-to-item/alibaba-swing.md)
+  - [TGQ-Former — 京东多模态 i2i，用标题、类目引导模型看主图、避开促销贴纸，两路视觉 token 按通道门控后送进 LLM 出向量，仅离线 (清华、京东)](./item-to-item/jd-tgq-former.md)
+  - [APCL — 个性化穿搭补全，偏好分 + 搭配分用 BPR 训练，用相似用户、相似商品聚合出候选的间接表示，对比学习对齐，仅离线 (香港科技大学)](./item-to-item/hkust-apcl.md)
 
 - **[深度召回](./deep-retrieval/)**
   用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。
