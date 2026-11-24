@@ -19,7 +19,7 @@ The paper proposes CFALR: it fine-tunes Vicuna-7B with LoRA, writes the user, th
 Three parts: first, encode users and items into input the LLM can read; then let the LLM pick one item from the candidates, which is the training task; for whole-outfit generation, pick items one by one, mixing in the CF model's score at each step.
 
 #### (1) Hybrid encoding of users and items
-This step produces a sequence of vectors for every item and every user, filling the prompt's three placeholders: user, picked items and candidate items.
+This step produces a sequence of vectors for every item and every user (each vector takes one token position in the prompt, so items and users alike have more than one vector), filling the prompt's three placeholders: user, picked items and candidate items.
 
 **CF features.** A CF model, CPTM, is trained separately first: score = target item's bias − ‖user vector + picked item vector − target item vector‖², trained with BPR. Afterwards, each user's and item's 32-dimensional vector is taken.
 

@@ -11,7 +11,7 @@
 ## Overview:
 Dynamic product advertising (DPA) works like this: after a user views or buys a product (the trigger) on an advertiser's site, the platform shows them ads for related products. Today those are mostly similar products. Someone who just bought an iPhone is unlikely to buy another phone; a case or a screen protector is far more likely to convert.
 
-Complements are hard for two reasons. First, an ad platform only knows which product the user viewed or bought, not the full shopping journey: users interact with ads for scattered products the platform chose to show, which don't add up to a shopping session, so it can't mine "bought together" from large numbers of orders the way an e-commerce site can. Second, complementarity needs product knowledge that isn't in the text of the two items: the authors reproduced a BERT classifier that reaches F1 0.77 on similar products but only 0.04 on complements.
+Complements are hard for two reasons. First, an ad platform only knows which product the user viewed or bought, not the full shopping journey: users interact with ads for scattered products the platform chose to show, which don't add up to a shopping session, so it can't mine "bought together" from large numbers of orders the way an e-commerce site can. Second, complementarity needs product knowledge that isn't in the product description. The authors reproduced the BERT classifier from the ESCI paper (taking a query and product text as input and classifying them as exact, substitute, complement or irrelevant), which reaches F1 0.77 on the substitute class but only 0.04 on the complement class.
 
 The paper's approach has two steps. First, an LLM reads the trigger's title and writes a few search queries describing its complements, e.g. iPhone 16 Pro → "iphone 16 pro case", "magsafe charger". Then those queries are run against a product index, and what comes back is the complementary recommendation. The paper focuses on evaluating the first step. Experiments use only a public dataset, not Snap's own data, and there is no online experiment.
 
@@ -29,20 +29,20 @@ Amazon ESCI is a search dataset where each (query, product) pair is labeled with
 #### (1) Generating queries
 **The prompt has five parts:** task description; generation guidelines (what makes a good complementary query, e.g. matching brand, material, style, gender and age); demonstrations (product title + complementary query); output format (JSON); and a "domain-specific context" block used only in the third setting.
 
-**Three in-context learning (ICL) settings:**
+**Three in-context learning (ICL) settings:** In-context learning means writing examples directly into the prompt (a number of "product title → complementary query" pairs) and letting the LLM follow their pattern to answer for a new product, without updating the model's parameters. The three settings differ in how many examples there are and whether they're labeled.
 - Few-shot: 5 hand-picked demonstrations covering different categories.
 - Many-shot: 1,000 random demonstrations.
 - Unsupervised ICL: 5 demonstrations plus a batch of product titles without queries. The authors' explanation is that these titles help the LLM locate the relevant knowledge it picked up in pre-training.
 
-**Fine-tuning:** LoRA on Vertex AI for Gemini 2.0 Flash and Flash-Lite, trained on either 1,000 pairs or all 27,531. Three input formats were compared: title only, title preceded by the task description, and the same plus the generation guidelines.
+**Fine-tuning:** LoRA on Vertex AI for Gemini 2.0 Flash and Flash-Lite, each model trained once on 1,000 pairs (the same as the many-shot demonstrations) and once on all 27,531. Three input formats were compared: title only, title preceded by the task description, and the same plus the generation guidelines.
 
 #### (2) Retrieval
-Each generated query is run through BM25 and through vector search with Google's text-embedding-005, taking the top 100 from each, and the results are checked against the complements defined above (hit@100, recall@100).
+The generated queries are run through BM25 and through vector search with Google's text-embedding-005, taking the top 100, and the results are checked against the complements defined above (hit@100, recall@100). With 5 queries per product, the paper doesn't say whether each query takes 100 and the results are merged, or 100 are taken in total.
 
 ### Results (offline only)
 **With 5 queries per product**, many-shot generally beats few-shot, larger models beat smaller ones, and Gemini beats GPT. The best is gemini-1.5-pro many-shot, with vector-search hit@100 of 0.683 vs. 0.612 for few-shot; gpt-4.1 many-shot gets 0.675 and gpt-4.1-nano only 0.438.
 
-**Unsupervised ICL:** adding 50 unlabeled product titles to the 5 demonstrations raises vector-search hit@100 from 0.612 to 0.620; going up to 1,000 adds essentially nothing more.
+**Unsupervised ICL:** adding 50 unlabeled product titles to the 5 demonstrations raises vector-search hit@100 from 0.612 to 0.620; going up to 1,000 actually dips slightly to 0.606. The exact-match rate improves more clearly, from 1.1% to 3.1%.
 
 **ICL vs. fine-tuning (1 query per product):** for the same Gemini 2.0 Flash, fine-tuning on 27K pairs gives vector-search hit@100 of 0.505 vs. 0.462 for many-shot ICL. gemini-1.5-pro with many-shot ICL gets 0.508, about the same as the fine-tuned model. On exact-match rate (generated query identical to the label), ICL is higher: 3.0% for many-shot ICL vs. 2.4% after fine-tuning. Fine-tuning needs the task description in the input: with the title alone, BM25 hit@100 is only 0.271; adding the task description brings it to 0.486, and adding the guidelines as well drops it to 0.448.
 

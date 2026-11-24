@@ -11,7 +11,7 @@
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 33 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 39 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
 
 另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
@@ -155,6 +155,12 @@
   - [Swing / Surprise — 淘宝相似图按「两个用户都点过」计分、按这对用户的共同点击数降权；互补图先圈相关类目、再算带时间衰减的先后购买，用相似图聚类补稀疏，线上 A/B (阿里巴巴)](./item-to-item/alibaba-swing.md)
   - [TGQ-Former — 京东多模态 i2i，用标题、类目引导模型看主图、避开促销贴纸，两路视觉 token 按通道门控后送进 LLM 出向量，仅离线 (清华、京东)](./item-to-item/jd-tgq-former.md)
   - [APCL — 个性化穿搭补全，偏好分 + 搭配分用 BPR 训练，用相似用户、相似商品聚合出候选的间接表示，对比学习对齐，仅离线 (香港科技大学)](./item-to-item/hkust-apcl.md)
+  - [TATTOO — 免训练穿搭补全，GPT-4o 按颜色、风格、材质等六个审美维度推理缺的那件，FashionCLIP 融合图文检索，仅离线 (华中科技大学、CMU)](./item-to-item/hust-tattoo.md)
+  - [CCA-Lite — 电子产品配件推荐，TF-IDF 取候选 + 人工类目互补规则过滤 + CCA 两套线性投影对齐主商品和配件，仅离线 (GIET 大学等，印度)](./item-to-item/giet-cca-lite.md)
+  - [DPB-LLM — 套装补全做成选择题，先把用户–商品、套装–商品关系翻译成问答微调 LLM，再用交叉注意力融入 LightGCN 向量，仅离线 (北京邮电大学、清华等)](./item-to-item/bupt-dpb-llm.md)
+  - [上下文 i2i 分解（2013）— 用带时段的隐式反馈张量分解（iTALS、iTALSx）学商品向量，相似度分只在训练时用时段、随时段变化两级，仅离线 (Gravity R&D)](./item-to-item/gravity-ca-i2i-factorization.md)
+  - [多样化相关新闻（2013）— 按实体 Jaccard 圈出相关文章，再按读者评论（实体、情感、评论用户）用贪心最大最小打散，最小哈希 LSH 保实时，仅离线 (QCRI、MIT 等)](./item-to-item/qcri-diverse-related-articles.md)
+  - [冷门商品 i2i（2018）— 用商品到一组热门锚点的距离向量描述商品，由马尔可夫随机场的 Fisher 分数和 Fisher 距离打分，免训练、可融合多种距离，仅离线 (MTA SZTAKI)](./item-to-item/sztaki-fisher-i2i.md)
 
 - **[深度召回](./deep-retrieval/)**
   用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。
