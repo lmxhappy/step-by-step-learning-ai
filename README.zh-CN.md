@@ -11,7 +11,7 @@
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 39 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 45 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
 
 另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
@@ -161,6 +161,12 @@
   - [上下文 i2i 分解（2013）— 用带时段的隐式反馈张量分解（iTALS、iTALSx）学商品向量，相似度分只在训练时用时段、随时段变化两级，仅离线 (Gravity R&D)](./item-to-item/gravity-ca-i2i-factorization.md)
   - [多样化相关新闻（2013）— 按实体 Jaccard 圈出相关文章，再按读者评论（实体、情感、评论用户）用贪心最大最小打散，最小哈希 LSH 保实时，仅离线 (QCRI、MIT 等)](./item-to-item/qcri-diverse-related-articles.md)
   - [冷门商品 i2i（2018）— 用商品到一组热门锚点的距离向量描述商品，由马尔可夫随机场的 Fisher 分数和 Fisher 距离打分，免训练、可融合多种距离，仅离线 (MTA SZTAKI)](./item-to-item/sztaki-fisher-i2i.md)
+  - [CDKG-CE — 多领域知识图谱上的 i2i，实体向量按领域切段、跨领域交叉拼接，ConvKB 式卷积给三元组打分，再按链接预测推荐，不用用户数据，仅离线 (西南交通大学等)](./item-to-item/swjtu-cdkg-ce.md)
+  - [DAEMON — 有向商品图上的相关推荐，每个商品学 source/target 两个向量表达方向，共同浏览边缓解选择偏差，新品按内容接进图，销量+170% (Amazon)](./item-to-item/amazon-daemon.md)
+  - [PF-GNN — 商品图上用变分图自编码器（简化 GCN）学商品向量、按内积推荐，小市场用联邦学习借大市场的经验，仅离线 (AWS 等)](./item-to-item/aws-pf-gnn.md)
+  - [RecoBERT — 没有用户数据的冷启动 i2i，在商品目录上用「标题配不配描述」自监督训练 BERT，推理时标题、描述交叉比较四个相似度，仅离线 (微软)](./item-to-item/microsoft-recobert.md)
+  - [SoundCloud 单曲相似推荐 — 滑动窗口统计前后听过的歌，因子分解机加负采样学向量，顺带加入创作者信息帮长尾，仅离线 (SoundCloud)](./item-to-item/soundcloud-item-item-fm.md)
+  - [DPE-Rec — 扩散语言模型补全套装（生成缺失商品的语义 ID），GRPO 先定大类保多样性，轨迹蒸馏一步填多个 token 提速，仅离线 (亚利桑那州立大学等)](./item-to-item/asu-dpe-rec.md)
 
 - **[深度召回](./deep-retrieval/)**
   用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。
