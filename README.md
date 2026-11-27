@@ -11,7 +11,7 @@
 This is a **notes repo, not a code or reproduction repo**. Every note has a full English version.
 
 ### 🚪 Browse by topic (number of notes)
-[Behavior sequence modeling](./behavior-sequence-modeling/) 54 · [Generative recommendation](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [Deep retrieval](./deep-retrieval/) 36 · [Multi-task learning](./multi-task-learning/) 20 · [Semantic IDs](./sid/) 18 · [Feature interaction](./feature-cross/) 18 · [Cross-domain](./cross-domain-recommendation/) 16 · [Long tail](./long-tail/) 17 · [Loss functions](./loss-func/) 15 · [ML infra](./ml-infra/) 12 · [Representation quality](./representation-quality/) 8 · [Graph recommendation](./graph-recommendation/) 7 · [Item-to-item](./item-to-item/) 45 · [Feature selection](./feature-selection/) 3 · [Auto research](./auto-research/) 2
+[Behavior sequence modeling](./behavior-sequence-modeling/) 54 · [Generative recommendation](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [Deep retrieval](./deep-retrieval/) 36 · [Multi-task learning](./multi-task-learning/) 20 · [Semantic IDs](./sid/) 18 · [Feature interaction](./feature-cross/) 18 · [Cross-domain](./cross-domain-recommendation/) 16 · [Long tail](./long-tail/) 17 · [Loss functions](./loss-func/) 15 · [ML infra](./ml-infra/) 12 · [Representation quality](./representation-quality/) 8 · [Graph recommendation](./graph-recommendation/) 7 · [Item-to-item](./item-to-item/) 59 · [Feature selection](./feature-selection/) 3 · [Auto research](./auto-research/) 2
 
 Plus 15 [early paper lists](./paper-lists/) (Oct–Nov 2024: paper titles with one-line tags, no write-ups).
 

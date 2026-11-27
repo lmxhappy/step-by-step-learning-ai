@@ -11,7 +11,7 @@
 这是**解读笔记库，不是代码复现**：每篇讲清楚方法做了什么、线上 A/B 涨了多少、哪里说得比实际强。
 
 ### 🚪 按主题入口（篇数）
-[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 45 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
+[用户行为序列建模](./behavior-sequence-modeling/) 54 · [生成式推荐](./generative-recommendation/) 45 · [LLM4Rec](./llm4rec/) 42 · [深度召回](./deep-retrieval/) 36 · [多任务学习](./multi-task-learning/) 20 · [SID](./sid/) 18 · [特征交叉](./feature-cross/) 18 · [跨域](./cross-domain-recommendation/) 16 · [长尾问题](./long-tail/) 17 · [损失函数](./loss-func/) 15 · [ML Infra](./ml-infra/) 12 · [表示质量](./representation-quality/) 8 · [图推荐](./graph-recommendation/) 7 · [I2I推荐](./item-to-item/) 59 · [特征选择](./feature-selection/) 3 · [Auto Research](./auto-research/) 2
 
 另有 [早期论文清单](./paper-lists/) 15 期（2024 年 10–11 月，只列论文和一句话标签，没有解读）。
 
@@ -167,6 +167,20 @@
   - [RecoBERT — 没有用户数据的冷启动 i2i，在商品目录上用「标题配不配描述」自监督训练 BERT，推理时标题、描述交叉比较四个相似度，仅离线 (微软)](./item-to-item/microsoft-recobert.md)
   - [SoundCloud 单曲相似推荐 — 滑动窗口统计前后听过的歌，因子分解机加负采样学向量，顺带加入创作者信息帮长尾，仅离线 (SoundCloud)](./item-to-item/soundcloud-item-item-fm.md)
   - [DPE-Rec — 扩散语言模型补全套装（生成缺失商品的语义 ID），GRPO 先定大类保多样性，轨迹蒸馏一步填多个 token 提速，仅离线 (亚利桑那州立大学等)](./item-to-item/asu-dpe-rec.md)
+  - [CLHE — 套装补全，每件商品融合图文/音频、LightGCN 协同向量和 ID 向量，已选几件经自注意力编码成套装向量与候选内积，两级对比学习应对冷启动和残缺输入，仅离线 (新加坡国立大学等)](./item-to-item/nus-clhe.md)
+  - [Bundle-MLLM — 套装补全做成选择题，每件商品写成标题文字加一个多模态 token（图像/音频、LightGCN 向量融合），先纯文字 LoRA 微调 LLM，再训练融合模块，仅离线 (新加坡国立大学等)](./item-to-item/nus-bundle-mllm.md)
+  - [DDBC — 套装补全，每件商品量化成 4 个 token 的语义 ID，整套排成序列做掩码离散扩散（随机遮住再还原），推理时遮住缺的几件分轮填出，DPE-Rec 的基础模型，仅离线 (新加坡国立大学等)](./item-to-item/nus-ddbc.md)
+  - [CFL — 每件商品算出 K 个搭配向量（搭配款该在的位置），候选靠近任一个即算搭配，查询用搭配向量、候选用嵌入使距离不对称，仅离线 (Appier等)](./item-to-item/appier-cfl.md)
+  - [CSA-Net — 子空间权重只由源、目标类目决定，候选按每个可能的源类目各存一份向量建 ANN 索引，部分穿搭里每件单品分别检索再平均融合，仅离线 (亚马逊)](./item-to-item/amazon-csa-net.md)
+  - [OutfitTransformer — 半套单品加写着目标类目/描述的目标 token 一起过 Transformer，输出一个查询向量 KNN 找互补单品，先兼容性预训练再用 set-wise 排序损失微调，仅离线 (亚马逊、普渡大学)](./item-to-item/amazon-outfittransformer.md)
+  - [Li 等（Pinterest Complete The Look）— 从站内穿搭拼贴图自动挖出 100 万套穿搭，三元组损失（负样本取正样本同类目）训风格向量，线上预测类目扩成互补类目后各类目内 ANN 检索，仅离线 (Pinterest)](./item-to-item/pinterest-ctl.md)
+  - [CANN — 已选几件的整图和按颜色、纹理切出的局部区域各过一组注意力，拼成缺的那件的向量与候选内积打分，仅离线 (中国科学技术大学、京东 AI 研究院等)](./item-to-item/ustc-cann.md)
+  - [TransNFCM — 每对互补类目学一个平移向量，触发单品向量加平移向量后按欧氏距离找搭配，图文编码器端到端训练，仅离线 (新加坡国立大学等)](./item-to-item/nus-transnfcm.md)
+  - [AIC — GBDT 从两件单品拼接的属性里抽跨单品规则，规则按属性交叉编码后与图像向量三项联合打分，注意力和交叉贡献给出解释，仅离线 (新加坡国立大学等)](./item-to-item/nus-aic.md)
+  - [DREP — 只用替代边和用户评分边建图，按关系做注意力传播得到商品向量，再用学出的逐维加权距离（含图文跨模态项）给搭配打分，仅离线 (新加坡国立大学等)](./item-to-item/nus-drep.md)
+  - [AKD — 人工筛出 15 条搭配规则改写学生打分作教师，注意力按样本给规则定权重，蒸馏进上下装图文内积打分网络，仅离线 (山东大学等)](./item-to-item/sdu-akd.md)
+  - [PAICM — 冻结属性分类器的属性概率当特征、上衣下装各过 MLP 内积打分，NMF 学兼容/不兼容原型做原型级 BPR，再对照最近兼容原型定位并替换不协调属性，仅离线 (山东大学等)](./item-to-item/sdu-paicm.md)
+  - [NCR — 已搭的几件用 GRU 编码、候选走 MLP，逐维相乘的语义匹配加 TF-IDF 词匹配，一个可学权重向量合成兼容分，仅离线 (沃尔玛、圣克拉拉大学等)](./item-to-item/walmart-ncr.md)
 
 - **[深度召回](./deep-retrieval/)**
   用深度模型做召回，不限架构：双塔、树状索引、图召回都在这里。

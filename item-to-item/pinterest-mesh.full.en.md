@@ -19,7 +19,7 @@ The paper changes only the query tower (the candidate tower is untouched). Query
 The baseline is a "flat" architecture (all feature embeddings concatenated into one vector and fed straight into DHEN for global crossing). Scaling the model up in FLOPs and fitting "Recall@10 ∝ FLOPs to the power β", evergreen content gets β = 0.0274 while fresh content (published less than 28 days ago) gets only 0.0059: more compute barely helps. The authors' explanation is that in the global crossing layer all features are coupled, so the gradient is dominated by high-frequency evergreen content (measured during training, the evergreen gradient norm is 12.4× the fresh one). Fresh-content signal gets drowned out, and the gap widens as the model grows.
 
 ### Model architecture
-Figure (a) is the old approach (one two-tower retrieval model per content tier, four in all), Figure (b) is the paper's goal (one MESH model serving all four corpora), and Figure (c) is MESH's query tower. The query tower has four steps. Steps (1) and (2) correspond to the blue box in Figure (c), one sub-tower per group, with the red lines showing gradient paths that don't interfere across groups; steps (3) and (4) correspond to the "Global crossing & debias backbone" at the top. The zoomed-in panel on the right is the sub-tower's internal structure.
+Figure (a) is the old approach (one two-tower retrieval model per content tier, four in all), Figure (b) is the paper's goal (one MESH model serving all four corpora), and Figure (c) is MESH's query tower. The query tower has three steps, following Figure (c) from bottom to top. Steps (1) and (2) correspond to the blue box, one sub-tower per group, with the red lines showing gradient paths that don't interfere across groups; step (3) corresponds to the "Global crossing & debias backbone" at the top. The zoomed-in panel on the right is the sub-tower's internal structure.
 
 ![pic](../imgs/pinterest-mesh.png)
 
@@ -35,13 +35,14 @@ Each group has an independent sub-tower (the paper calls it a Semantic Amplifier
 
 **Why cross within a group first.** Fresh-content embeddings are under-trained; thrown straight into the global crossing layer, their signal disappears after a few nonlinear layers. Amplifying it repeatedly within the group via residuals lets the features be fully expressed before crossing with other groups. The three sub-towers share no parameters, so fresh-content gradients don't have to compete with evergreen content on the same path.
 
-### (3) Cross-group gated bias correction (RGBC)
-The user token and the query-Pin token are multiplied element-wise to give their match vector. The context token goes through an MLP and a sigmoid to produce a gate of the same dimension, which multiplies the match vector; the context token itself is then added (residual), followed by LayerNorm. This is the input to the global crossing layer.
+**Asynchronous collector (the orange box in the figure).** The three sub-towers run inference asynchronously in parallel; the collector waits until all of them finish, then gathers the three super tokens and passes them to step (3). So the latency of this stage depends only on the slowest sub-tower.
 
-**Why context is handled separately.** Context such as device and time of day correlates with whether a user engages, but has little to do with how good the content is. Using context both as the gate and as a residual lets it absorb this engagement variance, so the user and query-Pin groups only have to model content matching.
+### (3) Cross-group merge and global crossing (the top box in the figure)
+The top box, "Global crossing & debias backbone", holds two consecutive operations. The name puts crossing first, but per the paper's formulas debias comes first and crossing second, because the debias step is also what merges the three super tokens into one vector, and global crossing can only run on the merged vector.
+* **Debias (the paper calls it RGBC).** The user token and the query-Pin token are multiplied element-wise to give their match vector. The context token goes through an MLP and a sigmoid to produce a gate of the same dimension, which multiplies the match vector; the context token itself is then added (residual), followed by LayerNorm, giving a single vector.
+* **Global crossing.** That vector goes through another DHEN crossing layer, then several fully connected layers (ReLU + LayerNorm), outputting a 64-dim L2-normalized query vector (the "Tower embedding" at the very top of the figure), which is dotted with the candidate-tower vector for ANN retrieval.
 
-### (4) Global crossing and output
-Another DHEN global crossing layer follows, then several fully connected layers (ReLU + LayerNorm), outputting a 64-dim L2-normalized query vector, which is dotted with the candidate-tower vector for ANN retrieval.
+**Why it's called debias.** Context such as device and time of day correlates with whether a user engages, but has little to do with how good the content is; the paper treats the engagement variance it causes as bias. Using context both as the gate and as a residual lets it absorb this variance, so the user–query-Pin match vector only has to capture content matching.
 
 **Offline results in one paragraph.** Fresh-content β rises from 0.0059 to 0.0826 (14×), while evergreen β drops to 0.0160; the evergreen-to-fresh gradient-norm ratio falls from 12.4× to 4.7×. In the ablation, removing the within-group sub-towers hurts most, with β nearly back to baseline. Adding a fourth group (splitting the query Pin into engagement and content sub-towers) adds only 0.3%–0.5%, so production uses three groups.
 
